@@ -1,0 +1,111 @@
+# Project: Projet1
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+RES      = Projet1_private.res
+OBJ      = main.o pointer.o grid.o camera.o vector.o menu.o object.o prefab.o objloader.o hud.o prefabAnim.o roue.o porte.o skybox.o boundingbox.o collision.o collisionplane.o collisionsphere.o proceduralObject.o API_OPENGL.o API_DIRECTX.o windows.o switchAPI.o object_directX.o pointerX.o functions.o cameraX.o $(RES)
+LINKOBJ  = main.o pointer.o grid.o camera.o vector.o menu.o object.o prefab.o objloader.o hud.o prefabAnim.o roue.o porte.o skybox.o boundingbox.o collision.o collisionplane.o collisionsphere.o proceduralObject.o API_OPENGL.o API_DIRECTX.o windows.o switchAPI.o object_directX.o pointerX.o functions.o cameraX.o $(RES)
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib32" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib32" -static-libgcc -lopengl32 -lglu32 C:/library/freeglut/lib/freeglut.lib "C:/library/Microsoft DirectX SDK (June 2010)/Lib/x86/d2d1.lib" "C:/library/Microsoft DirectX SDK (June 2010)/Lib/x86/d3d9.lib" "C:/library/Microsoft DirectX SDK (June 2010)/Lib/x86/d3d10.lib" "C:/library/Microsoft DirectX SDK (June 2010)/Lib/x86/d3d10_1.lib" "C:/library/Microsoft DirectX SDK (June 2010)/Lib/x86/d3d11.lib" "C:/library/Microsoft DirectX SDK (June 2010)/Lib/x86/d3dcompiler.lib" "C:/library/Microsoft DirectX SDK (June 2010)/Lib/x86/D3DCSX.lib" "C:/library/Microsoft DirectX SDK (June 2010)/Lib/x86/D3DCSXd.lib" "C:/library/Microsoft DirectX SDK (June 2010)/Lib/x86/d3dx9.lib" "C:/library/Microsoft DirectX SDK (June 2010)/Lib/x86/d3dx9d.lib" "C:/library/Microsoft DirectX SDK (June 2010)/Lib/x86/d3dx10.lib" "C:/library/Microsoft DirectX SDK (June 2010)/Lib/x86/d3dx10d.lib" "C:/library/Microsoft DirectX SDK (June 2010)/Lib/x86/d3dx11.lib" "C:/library/Microsoft DirectX SDK (June 2010)/Lib/x86/d3dx11d.lib" "C:/library/Microsoft DirectX SDK (June 2010)/Lib/x86/d3dxof.lib" "C:/library/Microsoft DirectX SDK (June 2010)/Lib/x86/dinput8.lib" "C:/library/Microsoft DirectX SDK (June 2010)/Lib/x86/dsetup.lib" "C:/library/Microsoft DirectX SDK (June 2010)/Lib/x86/dsound.lib" "C:/library/Microsoft DirectX SDK (June 2010)/Lib/x86/dwrite.lib" "C:/library/Microsoft DirectX SDK (June 2010)/Lib/x86/DxErr.lib" "C:/library/Microsoft DirectX SDK (June 2010)/Lib/x86/dxgi.lib" "C:/library/Microsoft DirectX SDK (June 2010)/Lib/x86/dxguid.lib" "C:/library/Microsoft DirectX SDK (June 2010)/Lib/x86/X3DAudio.lib" "C:/library/Microsoft DirectX SDK (June 2010)/Lib/x86/xapobase.lib" "C:/library/Microsoft DirectX SDK (June 2010)/Lib/x86/xapobased.lib" "C:/library/Microsoft DirectX SDK (June 2010)/Lib/x86/XAPOFX.lib" "C:/library/Microsoft DirectX SDK (June 2010)/Lib/x86/XInput.lib" -m32
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = Projet1.exe
+CXXFLAGS = $(CXXINCS) -m32
+CFLAGS   = $(INCS) -m32
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+main.o: main.cpp
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+
+pointer.o: pointer.cpp
+	$(CPP) -c pointer.cpp -o pointer.o $(CXXFLAGS)
+
+grid.o: grid.cpp
+	$(CPP) -c grid.cpp -o grid.o $(CXXFLAGS)
+
+camera.o: camera.cpp
+	$(CPP) -c camera.cpp -o camera.o $(CXXFLAGS)
+
+vector.o: vector.cpp
+	$(CPP) -c vector.cpp -o vector.o $(CXXFLAGS)
+
+menu.o: menu.cpp
+	$(CPP) -c menu.cpp -o menu.o $(CXXFLAGS)
+
+object.o: object.cpp
+	$(CPP) -c object.cpp -o object.o $(CXXFLAGS)
+
+prefab.o: prefab.cpp
+	$(CPP) -c prefab.cpp -o prefab.o $(CXXFLAGS)
+
+objloader.o: objloader.cpp
+	$(CPP) -c objloader.cpp -o objloader.o $(CXXFLAGS)
+
+hud.o: hud.cpp
+	$(CPP) -c hud.cpp -o hud.o $(CXXFLAGS)
+
+prefabAnim.o: prefabAnim.cpp
+	$(CPP) -c prefabAnim.cpp -o prefabAnim.o $(CXXFLAGS)
+
+roue.o: roue.cpp
+	$(CPP) -c roue.cpp -o roue.o $(CXXFLAGS)
+
+porte.o: porte.cpp
+	$(CPP) -c porte.cpp -o porte.o $(CXXFLAGS)
+
+skybox.o: skybox.cpp
+	$(CPP) -c skybox.cpp -o skybox.o $(CXXFLAGS)
+
+boundingbox.o: boundingbox.cpp
+	$(CPP) -c boundingbox.cpp -o boundingbox.o $(CXXFLAGS)
+
+collision.o: collision.cpp
+	$(CPP) -c collision.cpp -o collision.o $(CXXFLAGS)
+
+collisionplane.o: collisionplane.cpp
+	$(CPP) -c collisionplane.cpp -o collisionplane.o $(CXXFLAGS)
+
+collisionsphere.o: collisionsphere.cpp
+	$(CPP) -c collisionsphere.cpp -o collisionsphere.o $(CXXFLAGS)
+
+proceduralObject.o: proceduralObject.cpp
+	$(CPP) -c proceduralObject.cpp -o proceduralObject.o $(CXXFLAGS)
+
+API_OPENGL.o: API_OPENGL.cpp
+	$(CPP) -c API_OPENGL.cpp -o API_OPENGL.o $(CXXFLAGS)
+
+API_DIRECTX.o: API_DIRECTX.cpp
+	$(CPP) -c API_DIRECTX.cpp -o API_DIRECTX.o $(CXXFLAGS)
+
+windows.o: windows.cpp
+	$(CPP) -c windows.cpp -o windows.o $(CXXFLAGS)
+
+switchAPI.o: switchAPI.cpp
+	$(CPP) -c switchAPI.cpp -o switchAPI.o $(CXXFLAGS)
+
+object_directX.o: object_directX.cpp
+	$(CPP) -c object_directX.cpp -o object_directX.o $(CXXFLAGS)
+
+pointerX.o: pointerX.cpp
+	$(CPP) -c pointerX.cpp -o pointerX.o $(CXXFLAGS)
+
+functions.o: functions.cpp
+	$(CPP) -c functions.cpp -o functions.o $(CXXFLAGS)
+
+cameraX.o: cameraX.cpp
+	$(CPP) -c cameraX.cpp -o cameraX.o $(CXXFLAGS)
+
+Projet1_private.res: Projet1_private.rc icone.rc
+	$(WINDRES) -i Projet1_private.rc -F pe-i386 --input-format=rc -o Projet1_private.res -O coff 
+

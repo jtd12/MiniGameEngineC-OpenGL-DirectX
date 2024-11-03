@@ -1,0 +1,72 @@
+---beginObj1-----
+Obj1pos locX: -29Obj1pos locY1: 21Obj1pos locY2: 1Obj1pos locY: 5Obj1pos locY3: 1Obj1pos locY5: 0Obj1pos locY4: 0Obj1pos locY6: 0Obj1pos locY7: 0.5Obj1pos locY8: 0.8Obj1pos locY9: 0.8obj1pos locZ: -11
+Obj1pos locX: -29Obj1pos locY1: 21Obj1pos locY2: 1Obj1pos locY: 5Obj1pos locY3: 1Obj1pos locY5: 0Obj1pos locY4: 0Obj1pos locY6: 0Obj1pos locY7: 0.5Obj1pos locY8: 0.8Obj1pos locY9: 0.8obj1pos locZ: 30
+Obj1pos locX: -69Obj1pos locY1: 21Obj1pos locY2: 1Obj1pos locY: 5Obj1pos locY3: 1Obj1pos locY5: 0Obj1pos locY4: 0Obj1pos locY6: 0Obj1pos locY7: 0.5Obj1pos locY8: 0.8Obj1pos locY9: 0.8obj1pos locZ: 50
+Obj1pos locX: -69Obj1pos locY1: 21Obj1pos locY2: 1Obj1pos locY: 5Obj1pos locY3: 1Obj1pos locY5: 0Obj1pos locY4: 0Obj1pos locY6: 0Obj1pos locY7: 0.5Obj1pos locY8: 0.8Obj1pos locY9: 0.8obj1pos locZ: 2
+Obj1pos locX: -29Obj1pos locY1: 21Obj1pos locY2: 10Obj1pos locY: 5Obj1pos locY3: 1Obj1pos locY5: 0Obj1pos locY4: 0Obj1pos locY6: 0Obj1pos locY7: 0.5Obj1pos locY8: 0.8Obj1pos locY9: 0.8obj1pos locZ: -11
+
+----endObj1-----
+---beginObj2-----
+----endObj2-----
+---beginObj3-----
+Obj1pos locX_3: 11Obj1pos locY1_3: 12Obj1pos locY2_3: 1Obj1pos locY_3: 1Obj1pos locY3_3: 1Obj1pos locY5_3: 0Obj1pos locY4_3: 0Obj1pos locY6_2: 0Obj1pos locY7_3: 0.5Obj1pos locY8_3: 0.8Obj1pos locY9_3: 0.8Obj1pos locZ_3: 17
+
+----endObj3-----
+---beginObj4-----
+----endObj4-----
+---beginVehicule-----
+----endVehicule-----
+---beginCharacter-----
+----endCharacter-----
+---beginObj5-----
+Obj1pos locX_7: 12Obj1pos locY1_7: 5Obj1pos locY2_7: 11Obj1pos locY_7: 706Obj1pos locY3_7: 756Obj1pos locY5_7: 0Obj1pos locY4_7: 0Obj1pos locY6_7: 0Obj1pos locZ_7: 28
+
+----endObj5-----
+---beginPobj1-----
+----endPobj1-----
+---beginPobj2-----
+----endPobj2-----
+---beginPobj3-----
+----endPobj3-----
+---beginPobj4-----
+----endPobj4-----
+---beginPobj5-----
+----endPobj5-----
+---beginPobj6-----
+----endPobj6-----
+---beginPobj7-----
+----endPobj7-----
+---beginPobj8-----
+----endPobj8-----
+---beginPobj9-----
+----endPobj9-----
+---beginPobj10-----
+----endPobj10-----
+---beginPobj11-----
+Pobj1pos PlocX_11: 12Pobj1pos PlocY1_11: 5Pobj1pos PlocY2_11: 3Pobj1pos PlocY_11: 3Pobj1pos PlocY3_11: 3Pobj1pos PlocY5_11: 0Pobj1pos PlocY4_11: 0Pobj1pos PlocY6_11: 0Pobj1pos PlocY7_11: 0Pobj1pos PlocY8_11: 0Pobj1pos PlocY9_11: 0Pobj1pos PlocZ_11: 31
+
+----endPobj11-----
+---beginPobj12-----
+Pobj1pos PlocX_12: -36Pobj1pos PlocY1_12: 21Pobj1pos PlocZ_12: 3
+Pobj1pos PlocX_12: -36Pobj1pos PlocY1_12: 21Pobj1pos PlocZ_12: 3
+Pobj1pos PlocX_12: -36Pobj1pos PlocY1_12: 21Pobj1pos PlocZ_12: 3
+Pobj1pos PlocX_12: -36Pobj1pos PlocY1_12: 21Pobj1pos PlocZ_12: 3
+----endPobj12-----
+---beginPobj13-----
+Pobj1pos PlocX_13: 99Pobj1pos PlocY1_13: 21Pobj1pos PlocZ_13: 13
+Pobj1pos PlocX_13: 99Pobj1pos PlocY1_13: 21Pobj1pos PlocZ_13: 13
+Pobj1pos PlocX_13: 99Pobj1pos PlocY1_13: 21Pobj1pos PlocZ_13: 13
+Pobj1pos PlocX_13: 99Pobj1pos PlocY1_13: 21Pobj1pos PlocZ_13: 13
+----endPobj13-----
+---beginPobj14-----
+Pobj1pos PlocX_14: 19Pobj1pos PlocY1_14: 173Pobj1pos PlocZ_14: 3
+Pobj1pos PlocX_14: 19Pobj1pos PlocY1_14: 173Pobj1pos PlocZ_14: 3
+Pobj1pos PlocX_14: 19Pobj1pos PlocY1_14: 173Pobj1pos PlocZ_14: 3
+Pobj1pos PlocX_14: 19Pobj1pos PlocY1_14: 173Pobj1pos PlocZ_14: 3
+----endPobj14-----
+---beginPobj15-----
+Pobj1pos PlocX_15: -36Pobj1pos PlocY1_15: 21Pobj1pos PlocZ_15: 133
+Pobj1pos PlocX_15: -36Pobj1pos PlocY1_15: 21Pobj1pos PlocZ_15: 133
+Pobj1pos PlocX_15: -36Pobj1pos PlocY1_15: 21Pobj1pos PlocZ_15: 133
+Pobj1pos PlocX_15: -36Pobj1pos PlocY1_15: 21Pobj1pos PlocZ_15: 133
+----endPobj15-----

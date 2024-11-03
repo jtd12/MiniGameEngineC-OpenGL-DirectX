@@ -1,0 +1,71 @@
+---beginObj1-----
+----endObj1-----
+---beginObj2-----
+----endObj2-----
+---beginObj3-----
+Obj1pos locX_3: 11.8287Obj1pos locY1_3: 12.0272Obj1pos locY2_3: 1.25Obj1pos locY_3: 1.25Obj1pos locY3_3: 1.25Obj1pos locY5_3: 0Obj1pos locY4_3: 0Obj1pos locY6_2: 0Obj1pos locY7_3: 0.5Obj1pos locY8_3: 0.8Obj1pos locY9_3: 0.8Obj1pos locZ_3: 17.2537
+----endObj3-----
+---beginObj4-----
+----endObj4-----
+---beginVehicule-----
+----endVehicule-----
+---beginCharacter-----
+Obj1pos locX_6: 64.2047Obj1pos locY1_6: 13.7856Obj1pos locY2_6: 1Obj1pos locY_6: 1Obj1pos locY3_6: 1Obj1pos locY5_6: 0Obj1pos locY4_6: 0Obj1pos locY6_6: 0Obj1pos locZ_6: -3.53451
+Obj1pos locX_6: 67.4926Obj1pos locY1_6: 13.8804Obj1pos locY2_6: 1Obj1pos locY_6: 1Obj1pos locY3_6: 1Obj1pos locY5_6: 0Obj1pos locY4_6: 0Obj1pos locY6_6: 0Obj1pos locZ_6: 39.4397
+Obj1pos locX_6: 116.786Obj1pos locY1_6: 13.8804Obj1pos locY2_6: 1Obj1pos locY_6: 1Obj1pos locY3_6: 1Obj1pos locY5_6: 0Obj1pos locY4_6: 0Obj1pos locY6_6: 0Obj1pos locZ_6: 88.6763
+Obj1pos locX_6: 109.244Obj1pos locY1_6: 13.8804Obj1pos locY2_6: 1Obj1pos locY_6: 1Obj1pos locY3_6: 1Obj1pos locY5_6: 0Obj1pos locY4_6: 0Obj1pos locY6_6: 0Obj1pos locZ_6: -12.2287
+Obj1pos locX_6: -3.13936Obj1pos locY1_6: 13.8804Obj1pos locY2_6: 1Obj1pos locY_6: 1Obj1pos locY3_6: 1Obj1pos locY5_6: 0Obj1pos locY4_6: 0Obj1pos locY6_6: 0Obj1pos locZ_6: -1.9014
+Obj1pos locX_6: 1.64971Obj1pos locY1_6: 13.8804Obj1pos locY2_6: 1Obj1pos locY_6: 1Obj1pos locY3_6: 1Obj1pos locY5_6: 0Obj1pos locY4_6: 0Obj1pos locY6_6: 0Obj1pos locZ_6: 96.6626
+Obj1pos locX_6: -77.6647Obj1pos locY1_6: 13.8804Obj1pos locY2_6: 1Obj1pos locY_6: 1Obj1pos locY3_6: 1Obj1pos locY5_6: 0Obj1pos locY4_6: 0Obj1pos locY6_6: 0Obj1pos locZ_6: 74.3821
+Obj1pos locX_6: -77.9053Obj1pos locY1_6: 13.8804Obj1pos locY2_6: 1Obj1pos locY_6: 1Obj1pos locY3_6: 1Obj1pos locY5_6: 0Obj1pos locY4_6: 0Obj1pos locY6_6: 0Obj1pos locZ_6: -0.988025
+----endCharacter-----
+---beginObj5-----
+Obj1pos locX_7: 12Obj1pos locY1_7: 5Obj1pos locY2_7: 11Obj1pos locY_7: 706Obj1pos locY3_7: 756Obj1pos locY5_7: 0Obj1pos locY4_7: 0Obj1pos locY6_7: 0Obj1pos locZ_7: 28
+----endObj5-----
+---beginPobj1-----
+----endPobj1-----
+---beginPobj2-----
+----endPobj2-----
+---beginPobj3-----
+----endPobj3-----
+---beginPobj4-----
+----endPobj4-----
+---beginPobj5-----
+----endPobj5-----
+---beginPobj6-----
+----endPobj6-----
+---beginPobj7-----
+----endPobj7-----
+---beginPobj8-----
+----endPobj8-----
+---beginPobj9-----
+----endPobj9-----
+---beginPobj10-----
+----endPobj10-----
+---beginPobj11-----
+Pobj1pos PlocX_11: 12Pobj1pos PlocY1_11: 5Pobj1pos PlocY2_11: 3Pobj1pos PlocY_11: 3Pobj1pos PlocY3_11: 3Pobj1pos PlocY5_11: 0Pobj1pos PlocY4_11: 0Pobj1pos PlocY6_11: 0Pobj1pos PlocY7_11: 0Pobj1pos PlocY8_11: 0Pobj1pos PlocY9_11: 0Pobj1pos PlocZ_11: 31
+----endPobj11-----
+---beginPobj12-----
+Pobj1pos PlocX_12: -111.845Pobj1pos PlocY1_12: 21.5764Pobj1pos PlocZ_12: -27.8092
+Pobj1pos PlocX_12: -111.845Pobj1pos PlocY1_12: 21.5764Pobj1pos PlocZ_12: -27.8092
+Pobj1pos PlocX_12: -111.845Pobj1pos PlocY1_12: 21.5764Pobj1pos PlocZ_12: -27.8092
+Pobj1pos PlocX_12: -111.845Pobj1pos PlocY1_12: 21.5764Pobj1pos PlocZ_12: -27.8092
+----endPobj12-----
+---beginPobj13-----
+Pobj1pos PlocX_13: 159.7Pobj1pos PlocY1_13: 21.534Pobj1pos PlocZ_13: 13.1636
+Pobj1pos PlocX_13: 159.7Pobj1pos PlocY1_13: 21.534Pobj1pos PlocZ_13: 13.1636
+Pobj1pos PlocX_13: 159.7Pobj1pos PlocY1_13: 21.534Pobj1pos PlocZ_13: 13.1636
+Pobj1pos PlocX_13: 159.7Pobj1pos PlocY1_13: 21.534Pobj1pos PlocZ_13: 13.1636
+----endPobj13-----
+---beginPobj14-----
+Pobj1pos PlocX_14: 19.4831Pobj1pos PlocY1_14: 173.158Pobj1pos PlocZ_14: 3.9
+Pobj1pos PlocX_14: 19.4831Pobj1pos PlocY1_14: 173.158Pobj1pos PlocZ_14: 3.9
+Pobj1pos PlocX_14: 19.4831Pobj1pos PlocY1_14: 173.158Pobj1pos PlocZ_14: 3.9
+Pobj1pos PlocX_14: 19.4831Pobj1pos PlocY1_14: 173.158Pobj1pos PlocZ_14: 3.9
+----endPobj14-----
+---beginPobj15-----
+Pobj1pos PlocX_15: -111.845Pobj1pos PlocY1_15: 21.5764Pobj1pos PlocZ_15: 133.4
+Pobj1pos PlocX_15: -111.845Pobj1pos PlocY1_15: 21.5764Pobj1pos PlocZ_15: 133.4
+Pobj1pos PlocX_15: -111.845Pobj1pos PlocY1_15: 21.5764Pobj1pos PlocZ_15: 133.4
+Pobj1pos PlocX_15: -111.845Pobj1pos PlocY1_15: 21.5764Pobj1pos PlocZ_15: 133.4
+----endPobj15-----
