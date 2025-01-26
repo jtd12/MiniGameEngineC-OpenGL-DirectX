@@ -1,0 +1,54 @@
+Draw Object
+---beginObj1-----
+Obj1pos locX: 35Obj1pos locY1: 2Obj1pos locY2: 5Obj1pos locY: 5Obj1pos locY3: 5Obj1pos locY5: 0Obj1pos locY4: 0Obj1pos locY6: 0Obj1pos locY7: 0.5Obj1pos locY8: 0.8Obj1pos locY9: 0.8obj1pos locZ: 7
+Obj1pos locX: 19Obj1pos locY1: -2Obj1pos locY2: -1Obj1pos locY: 71Obj1pos locY3: 79Obj1pos locY5: 0Obj1pos locY4: 0Obj1pos locY6: 0Obj1pos locY7: 0.5Obj1pos locY8: 1Obj1pos locY9: 0.8obj1pos locZ: 31
+Obj1pos locX: 1.00476Obj1pos locY1: 0Obj1pos locY2: 5Obj1pos locY: 5Obj1pos locY3: 5Obj1pos locY5: 0Obj1pos locY4: 0Obj1pos locY6: 0Obj1pos locY7: 0.5Obj1pos locY8: 0.8Obj1pos locY9: 0.8obj1pos locZ: 1.37792
+Obj1pos locX: -2.04394Obj1pos locY1: 0Obj1pos locY2: 5Obj1pos locY: 5Obj1pos locY3: 5Obj1pos locY5: 0Obj1pos locY4: 0Obj1pos locY6: 0Obj1pos locY7: 0.5Obj1pos locY8: 0.8Obj1pos locY9: 0.8obj1pos locZ: -6.85552
+----endObj1-----
+---beginObj2-----
+Obj1pos locX_2: 17Obj1pos locY1_2: 0Obj1pos locY2_2: 5Obj1pos locY_2: 5Obj1pos locY3_2: 5Obj1pos locY5_2: 0Obj1pos locY4_2: 0Obj1pos locY6_2: 0Obj1pos locY7_2: 0.5Obj1pos locY8_2: 0.8Obj1pos locY9_2: 0.8Obj1pos locZ_2: 11
+----endObj2-----
+---beginObj3-----
+Obj1pos locX_3: 5Obj1pos locY1_3: 1Obj1pos locY2_3: 5Obj1pos locY_3: 5Obj1pos locY3_3: 5Obj1pos locY5_3: 0Obj1pos locY4_3: 0Obj1pos locY6_2: 0Obj1pos locY7_3: 0.5Obj1pos locY8_3: 0.8Obj1pos locY9_3: 0.8Obj1pos locZ_3: 34
+----endObj3-----
+---beginObj4-----
+Obj1pos locX_4: 0Obj1pos locY1_4: 1Obj1pos locY2_4: 5Obj1pos locY_4: 5Obj1pos locY3_4: 5Obj1pos locY5_4: 0Obj1pos locY4_4: 0Obj1pos locY6_4: 0Obj1pos locY7_4: 0.5Obj1pos locY8_4: 0.8Obj1pos locY9_4: 0.8Obj1pos locZ_4: 50
+----endObj4-----
+---beginVehicule-----
+----endVehicule-----
+---beginCharacter-----
+----endCharacter-----
+---beginObj5-----
+----endObj5-----
+---beginPobj1-----
+----endPobj1-----
+---beginPobj2-----
+----endPobj2-----
+---beginPobj3-----
+----endPobj3-----
+---beginPobj4-----
+----endPobj4-----
+---beginPobj5-----
+----endPobj5-----
+---beginPobj6-----
+----endPobj6-----
+---beginPobj7-----
+----endPobj7-----
+---beginPobj8-----
+----endPobj8-----
+---beginPobj9-----
+----endPobj9-----
+---beginPobj10-----
+----endPobj10-----
+---beginPobj12-----
+----endPobj12-----
+---beginPobj13-----
+----endPobj13-----
+---beginPobj14-----
+----endPobj14-----
+---beginPobj15-----
+----endPobj15-----
+---beginColorScreen-----
+Pobj1pos PlocX_16: 0.2Pobj1pos PlocY1_16: 0.5Pobj1pos PlocZ_16: 0.5
+----endColorScreen-----
+End Object

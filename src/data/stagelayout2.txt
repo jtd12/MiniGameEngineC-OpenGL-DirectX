@@ -1,0 +1,46 @@
+---beginObj1-----
+----endObj1-----
+---beginObj2-----
+----endObj2-----
+---beginObj3-----
+Obj1pos locX_3: 1Obj1pos locY1_3: 9Obj1pos locY2_3: 1Obj1pos locY_3: 1Obj1pos locY3_3: 1Obj1pos locY5_3: 0Obj1pos locY4_3: 0Obj1pos locY6_2: 0Obj1pos locY7_3: 0.5Obj1pos locY8_3: 0.8Obj1pos locY9_3: 0.8Obj1pos locZ_3: -3
+----endObj3-----
+---beginObj4-----
+----endObj4-----
+---beginVehicule-----
+----endVehicule-----
+---beginCharacter-----
+Obj1pos locX_6: -13Obj1pos locY1_6: 10Obj1pos locY2_6: 1Obj1pos locY_6: 1Obj1pos locY3_6: 1Obj1pos locY5_6: 0Obj1pos locY4_6: 0Obj1pos locY6_6: 0Obj1pos locZ_6: 18
+----endCharacter-----
+---beginObj5-----
+Obj1pos locX_7: 0Obj1pos locY1_7: 0bj1pos locY2_7: 5Obj1pos locY_7: 250Obj1pos locY3_7: 250Obj1pos locY5_7: 0Obj1pos locY4_7: 0Obj1pos locY6_7: 0Obj1pos locZ_7: 0
+----endObj5-----
+---beginPobj1-----
+----endPobj1-----
+---beginPobj2-----
+----endPobj2-----
+---beginPobj3-----
+----endPobj3-----
+---beginPobj4-----
+----endPobj4-----
+---beginPobj5-----
+----endPobj5-----
+---beginPobj6-----
+----endPobj6-----
+---beginPobj7-----
+----endPobj7-----
+---beginPobj8-----
+----endPobj8-----
+---beginPobj9-----
+----endPobj9-----
+---beginPobj10-----
+----endPobj10-----
+---beginPobj11-----
+Pobj1pos PlocX_12: 0Pobj1pos PlocY1_12: 0Pobj1pos PlocY2_12: 3Pobj1pos PlocY_12: 3Pobj1pos PlocY3_12: 3Pobj1pos PlocY5_12: 0Pobj1pos PlocY4_12: 0Pobj1pos PlocY6_12: 0Pobj1pos PlocY7_12: 0Pobj1pos PlocY8_12: 0Pobj1pos PlocY9_12: 0Pobj1pos PlocZ_12: 0
+----endPobj11-----
+---beginCursor-----
+Pobj1pos PlocX_11: -1.72771Pobj1pos PlocY1_11: 9Pobj1pos PlocZ_11: 37.7512
+Pobj1pos PlocX_11: 1Pobj1pos PlocY1_11: 9Pobj1pos PlocZ_11: 39
+Pobj1pos PlocX_11: 1Pobj1pos PlocY1_11: 9Pobj1pos PlocZ_11: 39
+Pobj1pos PlocX_11: 1Pobj1pos PlocY1_11: 9Pobj1pos PlocZ_11: 39
+----endCursor-----

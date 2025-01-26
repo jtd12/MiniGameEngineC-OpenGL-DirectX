@@ -1,0 +1,135 @@
+# Project: Projet1
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+RES      = Projet1_private.res
+OBJ      = main.o OpenGL/API_OPENGL.o OpenGL/entities/boundingbox.o OpenGL/entities/camera.o OpenGL/entities/grid.o OpenGL/entities/object.o OpenGL/entities/pointer.o OpenGL/entities/porte.o OpenGL/entities/prefab.o OpenGL/entities/prefabAnim.o OpenGL/entities/proceduralObject.o OpenGL/entities/roue.o OpenGL/entities/skybox.o OpenGL/loader/objloader.o OpenGL/mathsutils/collision.o OpenGL/mathsutils/collisionplane.o OpenGL/mathsutils/collisionsphere.o OpenGL/mathsutils/functions.o OpenGL/mathsutils/vector.o OpenGL/menu/hud.o OpenGL/menu/menu.o DirectX/API_DIRECTX.o DirectX/entities/cameraX.o DirectX/entities/object_directX.o DirectX/entities/pointerX.o common/switchAPI.o MenuContext/windows.o OpenGL/transformations/transformations.o OpenGL/lighting/light.o OpenGL/skybox/skyboxGeneration.o OpenGL/projections/projections.o OpenGL/effects/effect.o OpenGL/GUI/gui.o OpenGL/Data/datas.o OpenGL/GameMode/gameMode.o $(RES)
+LINKOBJ  = main.o OpenGL/API_OPENGL.o OpenGL/entities/boundingbox.o OpenGL/entities/camera.o OpenGL/entities/grid.o OpenGL/entities/object.o OpenGL/entities/pointer.o OpenGL/entities/porte.o OpenGL/entities/prefab.o OpenGL/entities/prefabAnim.o OpenGL/entities/proceduralObject.o OpenGL/entities/roue.o OpenGL/entities/skybox.o OpenGL/loader/objloader.o OpenGL/mathsutils/collision.o OpenGL/mathsutils/collisionplane.o OpenGL/mathsutils/collisionsphere.o OpenGL/mathsutils/functions.o OpenGL/mathsutils/vector.o OpenGL/menu/hud.o OpenGL/menu/menu.o DirectX/API_DIRECTX.o DirectX/entities/cameraX.o DirectX/entities/object_directX.o DirectX/entities/pointerX.o common/switchAPI.o MenuContext/windows.o OpenGL/transformations/transformations.o OpenGL/lighting/light.o OpenGL/skybox/skyboxGeneration.o OpenGL/projections/projections.o OpenGL/effects/effect.o OpenGL/GUI/gui.o OpenGL/Data/datas.o OpenGL/GameMode/gameMode.o $(RES)
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib32" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib32" -static-libgcc -lopengl32 -lglu32 C:/library/freeglut/lib/freeglut.lib "C:/library/Microsoft DirectX SDK (June 2010)/Lib/x86/d2d1.lib" "C:/library/Microsoft DirectX SDK (June 2010)/Lib/x86/d3d9.lib" "C:/library/Microsoft DirectX SDK (June 2010)/Lib/x86/d3d10.lib" "C:/library/Microsoft DirectX SDK (June 2010)/Lib/x86/d3d10_1.lib" "C:/library/Microsoft DirectX SDK (June 2010)/Lib/x86/d3d11.lib" "C:/library/Microsoft DirectX SDK (June 2010)/Lib/x86/d3dcompiler.lib" "C:/library/Microsoft DirectX SDK (June 2010)/Lib/x86/D3DCSX.lib" "C:/library/Microsoft DirectX SDK (June 2010)/Lib/x86/D3DCSXd.lib" "C:/library/Microsoft DirectX SDK (June 2010)/Lib/x86/d3dx9.lib" "C:/library/Microsoft DirectX SDK (June 2010)/Lib/x86/d3dx9d.lib" "C:/library/Microsoft DirectX SDK (June 2010)/Lib/x86/d3dx10.lib" "C:/library/Microsoft DirectX SDK (June 2010)/Lib/x86/d3dx10d.lib" "C:/library/Microsoft DirectX SDK (June 2010)/Lib/x86/d3dx11.lib" "C:/library/Microsoft DirectX SDK (June 2010)/Lib/x86/d3dx11d.lib" "C:/library/Microsoft DirectX SDK (June 2010)/Lib/x86/d3dxof.lib" "C:/library/Microsoft DirectX SDK (June 2010)/Lib/x86/dinput8.lib" "C:/library/Microsoft DirectX SDK (June 2010)/Lib/x86/dsetup.lib" "C:/library/Microsoft DirectX SDK (June 2010)/Lib/x86/dsound.lib" "C:/library/Microsoft DirectX SDK (June 2010)/Lib/x86/dwrite.lib" "C:/library/Microsoft DirectX SDK (June 2010)/Lib/x86/DxErr.lib" "C:/library/Microsoft DirectX SDK (June 2010)/Lib/x86/dxgi.lib" "C:/library/Microsoft DirectX SDK (June 2010)/Lib/x86/dxguid.lib" "C:/library/Microsoft DirectX SDK (June 2010)/Lib/x86/X3DAudio.lib" "C:/library/Microsoft DirectX SDK (June 2010)/Lib/x86/xapobase.lib" "C:/library/Microsoft DirectX SDK (June 2010)/Lib/x86/xapobased.lib" "C:/library/Microsoft DirectX SDK (June 2010)/Lib/x86/XAPOFX.lib" "C:/library/Microsoft DirectX SDK (June 2010)/Lib/x86/XInput.lib" -m32
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = Projet1.exe
+CXXFLAGS = $(CXXINCS) -m32
+CFLAGS   = $(INCS) -m32
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+main.o: main.cpp
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+
+OpenGL/API_OPENGL.o: OpenGL/API_OPENGL.cpp
+	$(CPP) -c OpenGL/API_OPENGL.cpp -o OpenGL/API_OPENGL.o $(CXXFLAGS)
+
+OpenGL/entities/boundingbox.o: OpenGL/entities/boundingbox.cpp
+	$(CPP) -c OpenGL/entities/boundingbox.cpp -o OpenGL/entities/boundingbox.o $(CXXFLAGS)
+
+OpenGL/entities/camera.o: OpenGL/entities/camera.cpp
+	$(CPP) -c OpenGL/entities/camera.cpp -o OpenGL/entities/camera.o $(CXXFLAGS)
+
+OpenGL/entities/grid.o: OpenGL/entities/grid.cpp
+	$(CPP) -c OpenGL/entities/grid.cpp -o OpenGL/entities/grid.o $(CXXFLAGS)
+
+OpenGL/entities/object.o: OpenGL/entities/object.cpp
+	$(CPP) -c OpenGL/entities/object.cpp -o OpenGL/entities/object.o $(CXXFLAGS)
+
+OpenGL/entities/pointer.o: OpenGL/entities/pointer.cpp
+	$(CPP) -c OpenGL/entities/pointer.cpp -o OpenGL/entities/pointer.o $(CXXFLAGS)
+
+OpenGL/entities/porte.o: OpenGL/entities/porte.cpp
+	$(CPP) -c OpenGL/entities/porte.cpp -o OpenGL/entities/porte.o $(CXXFLAGS)
+
+OpenGL/entities/prefab.o: OpenGL/entities/prefab.cpp
+	$(CPP) -c OpenGL/entities/prefab.cpp -o OpenGL/entities/prefab.o $(CXXFLAGS)
+
+OpenGL/entities/prefabAnim.o: OpenGL/entities/prefabAnim.cpp
+	$(CPP) -c OpenGL/entities/prefabAnim.cpp -o OpenGL/entities/prefabAnim.o $(CXXFLAGS)
+
+OpenGL/entities/proceduralObject.o: OpenGL/entities/proceduralObject.cpp
+	$(CPP) -c OpenGL/entities/proceduralObject.cpp -o OpenGL/entities/proceduralObject.o $(CXXFLAGS)
+
+OpenGL/entities/roue.o: OpenGL/entities/roue.cpp
+	$(CPP) -c OpenGL/entities/roue.cpp -o OpenGL/entities/roue.o $(CXXFLAGS)
+
+OpenGL/entities/skybox.o: OpenGL/entities/skybox.cpp
+	$(CPP) -c OpenGL/entities/skybox.cpp -o OpenGL/entities/skybox.o $(CXXFLAGS)
+
+OpenGL/loader/objloader.o: OpenGL/loader/objloader.cpp
+	$(CPP) -c OpenGL/loader/objloader.cpp -o OpenGL/loader/objloader.o $(CXXFLAGS)
+
+OpenGL/mathsutils/collision.o: OpenGL/mathsutils/collision.cpp
+	$(CPP) -c OpenGL/mathsutils/collision.cpp -o OpenGL/mathsutils/collision.o $(CXXFLAGS)
+
+OpenGL/mathsutils/collisionplane.o: OpenGL/mathsutils/collisionplane.cpp
+	$(CPP) -c OpenGL/mathsutils/collisionplane.cpp -o OpenGL/mathsutils/collisionplane.o $(CXXFLAGS)
+
+OpenGL/mathsutils/collisionsphere.o: OpenGL/mathsutils/collisionsphere.cpp
+	$(CPP) -c OpenGL/mathsutils/collisionsphere.cpp -o OpenGL/mathsutils/collisionsphere.o $(CXXFLAGS)
+
+OpenGL/mathsutils/functions.o: OpenGL/mathsutils/functions.cpp
+	$(CPP) -c OpenGL/mathsutils/functions.cpp -o OpenGL/mathsutils/functions.o $(CXXFLAGS)
+
+OpenGL/mathsutils/vector.o: OpenGL/mathsutils/vector.cpp
+	$(CPP) -c OpenGL/mathsutils/vector.cpp -o OpenGL/mathsutils/vector.o $(CXXFLAGS)
+
+OpenGL/menu/hud.o: OpenGL/menu/hud.cpp
+	$(CPP) -c OpenGL/menu/hud.cpp -o OpenGL/menu/hud.o $(CXXFLAGS)
+
+OpenGL/menu/menu.o: OpenGL/menu/menu.cpp
+	$(CPP) -c OpenGL/menu/menu.cpp -o OpenGL/menu/menu.o $(CXXFLAGS)
+
+DirectX/API_DIRECTX.o: DirectX/API_DIRECTX.cpp
+	$(CPP) -c DirectX/API_DIRECTX.cpp -o DirectX/API_DIRECTX.o $(CXXFLAGS)
+
+DirectX/entities/cameraX.o: DirectX/entities/cameraX.cpp
+	$(CPP) -c DirectX/entities/cameraX.cpp -o DirectX/entities/cameraX.o $(CXXFLAGS)
+
+DirectX/entities/object_directX.o: DirectX/entities/object_directX.cpp
+	$(CPP) -c DirectX/entities/object_directX.cpp -o DirectX/entities/object_directX.o $(CXXFLAGS)
+
+DirectX/entities/pointerX.o: DirectX/entities/pointerX.cpp
+	$(CPP) -c DirectX/entities/pointerX.cpp -o DirectX/entities/pointerX.o $(CXXFLAGS)
+
+common/switchAPI.o: common/switchAPI.cpp
+	$(CPP) -c common/switchAPI.cpp -o common/switchAPI.o $(CXXFLAGS)
+
+MenuContext/windows.o: MenuContext/windows.cpp
+	$(CPP) -c MenuContext/windows.cpp -o MenuContext/windows.o $(CXXFLAGS)
+
+OpenGL/transformations/transformations.o: OpenGL/transformations/transformations.cpp
+	$(CPP) -c OpenGL/transformations/transformations.cpp -o OpenGL/transformations/transformations.o $(CXXFLAGS)
+
+OpenGL/lighting/light.o: OpenGL/lighting/light.cpp
+	$(CPP) -c OpenGL/lighting/light.cpp -o OpenGL/lighting/light.o $(CXXFLAGS)
+
+OpenGL/skybox/skyboxGeneration.o: OpenGL/skybox/skyboxGeneration.cpp
+	$(CPP) -c OpenGL/skybox/skyboxGeneration.cpp -o OpenGL/skybox/skyboxGeneration.o $(CXXFLAGS)
+
+OpenGL/projections/projections.o: OpenGL/projections/projections.cpp
+	$(CPP) -c OpenGL/projections/projections.cpp -o OpenGL/projections/projections.o $(CXXFLAGS)
+
+OpenGL/effects/effect.o: OpenGL/effects/effect.cpp
+	$(CPP) -c OpenGL/effects/effect.cpp -o OpenGL/effects/effect.o $(CXXFLAGS)
+
+OpenGL/GUI/gui.o: OpenGL/GUI/gui.cpp
+	$(CPP) -c OpenGL/GUI/gui.cpp -o OpenGL/GUI/gui.o $(CXXFLAGS)
+
+OpenGL/Data/datas.o: OpenGL/Data/datas.cpp
+	$(CPP) -c OpenGL/Data/datas.cpp -o OpenGL/Data/datas.o $(CXXFLAGS)
+
+OpenGL/GameMode/gameMode.o: OpenGL/GameMode/gameMode.cpp
+	$(CPP) -c OpenGL/GameMode/gameMode.cpp -o OpenGL/GameMode/gameMode.o $(CXXFLAGS)
+
+Projet1_private.res: Projet1_private.rc icone.rc
+	$(WINDRES) -i Projet1_private.rc -F pe-i386 --input-format=rc -o Projet1_private.res -O coff 
+
