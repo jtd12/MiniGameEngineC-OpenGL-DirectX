@@ -20,11 +20,12 @@
 #include"../entities/prefabAnim.h"
 #include"../entities/proceduralObject.h"
 
-class transform
+class transformation
 {
 	public:
-	transform(pointer* pp);
-	~transform();
+	transformation();
+	transformation(pointer* pp);
+	~transformation();
 	void scaleObject(std::vector<object*> obj_);
 	void scaleObject(std::vector<Pobject*> obj_);
 	void scaleObject(std::vector<prefab*> obj_);

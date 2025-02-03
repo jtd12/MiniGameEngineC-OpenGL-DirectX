@@ -27,9 +27,9 @@ class generateSkybox
 		void colorSky();
 		vector3d getCol();
 		void setCol(vector3d color);
+		std::vector<skybox*> skyb;
 		
 	private:
-		std::vector<skybox*> sky;
 		vector3d col;
 		
 		

@@ -5,8 +5,8 @@ CPP      = g++.exe
 CC       = gcc.exe
 WINDRES  = windres.exe
 RES      = Projet1_private.res
-OBJ      = main.o OpenGL/API_OPENGL.o OpenGL/entities/boundingbox.o OpenGL/entities/camera.o OpenGL/entities/grid.o OpenGL/entities/object.o OpenGL/entities/pointer.o OpenGL/entities/porte.o OpenGL/entities/prefab.o OpenGL/entities/prefabAnim.o OpenGL/entities/proceduralObject.o OpenGL/entities/roue.o OpenGL/entities/skybox.o OpenGL/loader/objloader.o OpenGL/mathsutils/collision.o OpenGL/mathsutils/collisionplane.o OpenGL/mathsutils/collisionsphere.o OpenGL/mathsutils/functions.o OpenGL/mathsutils/vector.o OpenGL/menu/hud.o OpenGL/menu/menu.o DirectX/API_DIRECTX.o DirectX/entities/cameraX.o DirectX/entities/object_directX.o DirectX/entities/pointerX.o common/switchAPI.o MenuContext/windows.o OpenGL/transformations/transformations.o OpenGL/lighting/light.o OpenGL/skybox/skyboxGeneration.o OpenGL/projections/projections.o OpenGL/effects/effect.o OpenGL/GUI/gui.o OpenGL/Data/datas.o OpenGL/GameMode/gameMode.o $(RES)
-LINKOBJ  = main.o OpenGL/API_OPENGL.o OpenGL/entities/boundingbox.o OpenGL/entities/camera.o OpenGL/entities/grid.o OpenGL/entities/object.o OpenGL/entities/pointer.o OpenGL/entities/porte.o OpenGL/entities/prefab.o OpenGL/entities/prefabAnim.o OpenGL/entities/proceduralObject.o OpenGL/entities/roue.o OpenGL/entities/skybox.o OpenGL/loader/objloader.o OpenGL/mathsutils/collision.o OpenGL/mathsutils/collisionplane.o OpenGL/mathsutils/collisionsphere.o OpenGL/mathsutils/functions.o OpenGL/mathsutils/vector.o OpenGL/menu/hud.o OpenGL/menu/menu.o DirectX/API_DIRECTX.o DirectX/entities/cameraX.o DirectX/entities/object_directX.o DirectX/entities/pointerX.o common/switchAPI.o MenuContext/windows.o OpenGL/transformations/transformations.o OpenGL/lighting/light.o OpenGL/skybox/skyboxGeneration.o OpenGL/projections/projections.o OpenGL/effects/effect.o OpenGL/GUI/gui.o OpenGL/Data/datas.o OpenGL/GameMode/gameMode.o $(RES)
+OBJ      = OpenGL/entities/boundingbox.o OpenGL/entities/camera.o OpenGL/entities/grid.o OpenGL/entities/object.o OpenGL/entities/pointer.o OpenGL/entities/porte.o OpenGL/entities/prefab.o OpenGL/entities/prefabAnim.o OpenGL/entities/proceduralObject.o OpenGL/entities/roue.o OpenGL/entities/skybox.o OpenGL/loader/objloader.o OpenGL/mathsutils/collision.o OpenGL/mathsutils/collisionplane.o OpenGL/mathsutils/collisionsphere.o OpenGL/mathsutils/functions.o OpenGL/mathsutils/vector.o OpenGL/menu/hud.o OpenGL/menu/menu.o DirectX/API_DIRECTX.o DirectX/entities/cameraX.o DirectX/entities/object_directX.o DirectX/entities/pointerX.o common/switchAPI.o MenuContext/windows.o OpenGL/lighting/light.o OpenGL/skybox/skyboxGeneration.o OpenGL/projections/projections.o OpenGL/effects/effect.o OpenGL/GUI/gui.o OpenGL/Data/datas.o OpenGL/GameMode/gameMode.o OpenGL/gameManager/API_OPENGL.o bouclePrincipale/main.o OpenGL/transformations/supressions/supressions.o OpenGL/transformations/transformations.o OpenGL/transformations/ajouts/ajout.o $(RES)
+LINKOBJ  = OpenGL/entities/boundingbox.o OpenGL/entities/camera.o OpenGL/entities/grid.o OpenGL/entities/object.o OpenGL/entities/pointer.o OpenGL/entities/porte.o OpenGL/entities/prefab.o OpenGL/entities/prefabAnim.o OpenGL/entities/proceduralObject.o OpenGL/entities/roue.o OpenGL/entities/skybox.o OpenGL/loader/objloader.o OpenGL/mathsutils/collision.o OpenGL/mathsutils/collisionplane.o OpenGL/mathsutils/collisionsphere.o OpenGL/mathsutils/functions.o OpenGL/mathsutils/vector.o OpenGL/menu/hud.o OpenGL/menu/menu.o DirectX/API_DIRECTX.o DirectX/entities/cameraX.o DirectX/entities/object_directX.o DirectX/entities/pointerX.o common/switchAPI.o MenuContext/windows.o OpenGL/lighting/light.o OpenGL/skybox/skyboxGeneration.o OpenGL/projections/projections.o OpenGL/effects/effect.o OpenGL/GUI/gui.o OpenGL/Data/datas.o OpenGL/GameMode/gameMode.o OpenGL/gameManager/API_OPENGL.o bouclePrincipale/main.o OpenGL/transformations/supressions/supressions.o OpenGL/transformations/transformations.o OpenGL/transformations/ajouts/ajout.o $(RES)
 LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib32" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib32" -static-libgcc -lopengl32 -lglu32 C:/library/freeglut/lib/freeglut.lib "C:/library/Microsoft DirectX SDK (June 2010)/Lib/x86/d2d1.lib" "C:/library/Microsoft DirectX SDK (June 2010)/Lib/x86/d3d9.lib" "C:/library/Microsoft DirectX SDK (June 2010)/Lib/x86/d3d10.lib" "C:/library/Microsoft DirectX SDK (June 2010)/Lib/x86/d3d10_1.lib" "C:/library/Microsoft DirectX SDK (June 2010)/Lib/x86/d3d11.lib" "C:/library/Microsoft DirectX SDK (June 2010)/Lib/x86/d3dcompiler.lib" "C:/library/Microsoft DirectX SDK (June 2010)/Lib/x86/D3DCSX.lib" "C:/library/Microsoft DirectX SDK (June 2010)/Lib/x86/D3DCSXd.lib" "C:/library/Microsoft DirectX SDK (June 2010)/Lib/x86/d3dx9.lib" "C:/library/Microsoft DirectX SDK (June 2010)/Lib/x86/d3dx9d.lib" "C:/library/Microsoft DirectX SDK (June 2010)/Lib/x86/d3dx10.lib" "C:/library/Microsoft DirectX SDK (June 2010)/Lib/x86/d3dx10d.lib" "C:/library/Microsoft DirectX SDK (June 2010)/Lib/x86/d3dx11.lib" "C:/library/Microsoft DirectX SDK (June 2010)/Lib/x86/d3dx11d.lib" "C:/library/Microsoft DirectX SDK (June 2010)/Lib/x86/d3dxof.lib" "C:/library/Microsoft DirectX SDK (June 2010)/Lib/x86/dinput8.lib" "C:/library/Microsoft DirectX SDK (June 2010)/Lib/x86/dsetup.lib" "C:/library/Microsoft DirectX SDK (June 2010)/Lib/x86/dsound.lib" "C:/library/Microsoft DirectX SDK (June 2010)/Lib/x86/dwrite.lib" "C:/library/Microsoft DirectX SDK (June 2010)/Lib/x86/DxErr.lib" "C:/library/Microsoft DirectX SDK (June 2010)/Lib/x86/dxgi.lib" "C:/library/Microsoft DirectX SDK (June 2010)/Lib/x86/dxguid.lib" "C:/library/Microsoft DirectX SDK (June 2010)/Lib/x86/X3DAudio.lib" "C:/library/Microsoft DirectX SDK (June 2010)/Lib/x86/xapobase.lib" "C:/library/Microsoft DirectX SDK (June 2010)/Lib/x86/xapobased.lib" "C:/library/Microsoft DirectX SDK (June 2010)/Lib/x86/XAPOFX.lib" "C:/library/Microsoft DirectX SDK (June 2010)/Lib/x86/XInput.lib" -m32
 INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
 CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
@@ -24,12 +24,6 @@ clean: clean-custom
 
 $(BIN): $(OBJ)
 	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
-
-main.o: main.cpp
-	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
-
-OpenGL/API_OPENGL.o: OpenGL/API_OPENGL.cpp
-	$(CPP) -c OpenGL/API_OPENGL.cpp -o OpenGL/API_OPENGL.o $(CXXFLAGS)
 
 OpenGL/entities/boundingbox.o: OpenGL/entities/boundingbox.cpp
 	$(CPP) -c OpenGL/entities/boundingbox.cpp -o OpenGL/entities/boundingbox.o $(CXXFLAGS)
@@ -106,9 +100,6 @@ common/switchAPI.o: common/switchAPI.cpp
 MenuContext/windows.o: MenuContext/windows.cpp
 	$(CPP) -c MenuContext/windows.cpp -o MenuContext/windows.o $(CXXFLAGS)
 
-OpenGL/transformations/transformations.o: OpenGL/transformations/transformations.cpp
-	$(CPP) -c OpenGL/transformations/transformations.cpp -o OpenGL/transformations/transformations.o $(CXXFLAGS)
-
 OpenGL/lighting/light.o: OpenGL/lighting/light.cpp
 	$(CPP) -c OpenGL/lighting/light.cpp -o OpenGL/lighting/light.o $(CXXFLAGS)
 
@@ -129,6 +120,21 @@ OpenGL/Data/datas.o: OpenGL/Data/datas.cpp
 
 OpenGL/GameMode/gameMode.o: OpenGL/GameMode/gameMode.cpp
 	$(CPP) -c OpenGL/GameMode/gameMode.cpp -o OpenGL/GameMode/gameMode.o $(CXXFLAGS)
+
+OpenGL/gameManager/API_OPENGL.o: OpenGL/gameManager/API_OPENGL.cpp
+	$(CPP) -c OpenGL/gameManager/API_OPENGL.cpp -o OpenGL/gameManager/API_OPENGL.o $(CXXFLAGS)
+
+bouclePrincipale/main.o: bouclePrincipale/main.cpp
+	$(CPP) -c bouclePrincipale/main.cpp -o bouclePrincipale/main.o $(CXXFLAGS)
+
+OpenGL/transformations/supressions/supressions.o: OpenGL/transformations/supressions/supressions.cpp
+	$(CPP) -c OpenGL/transformations/supressions/supressions.cpp -o OpenGL/transformations/supressions/supressions.o $(CXXFLAGS)
+
+OpenGL/transformations/transformations.o: OpenGL/transformations/transformations.cpp
+	$(CPP) -c OpenGL/transformations/transformations.cpp -o OpenGL/transformations/transformations.o $(CXXFLAGS)
+
+OpenGL/transformations/ajouts/ajout.o: OpenGL/transformations/ajouts/ajout.cpp
+	$(CPP) -c OpenGL/transformations/ajouts/ajout.cpp -o OpenGL/transformations/ajouts/ajout.o $(CXXFLAGS)
 
 Projet1_private.res: Projet1_private.rc icone.rc
 	$(WINDRES) -i Projet1_private.rc -F pe-i386 --input-format=rc -o Projet1_private.res -O coff 

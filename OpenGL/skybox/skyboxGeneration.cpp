@@ -6,8 +6,8 @@ generateSkybox::generateSkybox()
 }
 generateSkybox::~generateSkybox()
 {
-		for(int i=0;i<sky.size();i++)
-	delete sky[i];
+		for(int i=0;i<skyb.size();i++)
+	delete skyb[i];
 }
 
 vector3d generateSkybox::getCol()
@@ -42,8 +42,8 @@ if(value==140)
 
 }
 
-	for(int i=0;i<sky.size();i++)
-sky[i]->drawSkybox(500);
+	for(int i=0;i<skyb.size();i++)
+skyb[i]->drawSkybox(500);
 
 }
 

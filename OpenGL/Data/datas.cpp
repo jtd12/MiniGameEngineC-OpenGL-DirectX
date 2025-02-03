@@ -16,106 +16,211 @@ datas::~datas()
 	delete sky;
 }
 
-std::vector<object*> datas::equalObj()
+std::vector<object*> datas::ReadequalObj()
 {
 	return obj;
 }
 
-std::vector<object*> datas::equalObj2()
+std::vector<object*> datas::ReadequalObj2()
 {
 	return obj2;
 }
 
-std::vector<object*> datas::equalObj3()
+std::vector<object*> datas::ReadequalObj3()
 {
 	return obj3;
 }
 
 
-std::vector<object*> datas::equalObj4()
+std::vector<object*> datas::ReadequalObj4()
 {
 	return obj4;
 }
 
-std::vector<object*> datas::equalObj5()
+std::vector<object*> datas::ReadequalObj5()
 {
 	return obj5;
 }
 
-std::vector<Pobject*> datas::equalPobj()
+std::vector<Pobject*> datas::ReadequalPobj()
 {
 	return Pobj;
 }
 
-std::vector<Pobject*> datas::equalPobj2()
+std::vector<Pobject*> datas::ReadequalPobj2()
 {
 	return Pobj2;
 }
 
-std::vector<Pobject*> datas::equalPobj3()
+std::vector<Pobject*> datas::ReadequalPobj3()
 {
 	return Pobj3;
 }
 
-std::vector<Pobject*> datas::equalPobj4()
+std::vector<Pobject*> datas::ReadequalPobj4()
 {
 	return Pobj4;
 }
 
-std::vector<Pobject*> datas::equalPobj5()
+std::vector<Pobject*> datas::ReadequalPobj5()
 {
 	return Pobj5;
 }
 
-std::vector<Pobject*> datas::equalPobj6()
+std::vector<Pobject*> datas::ReadequalPobj6()
 {
 	return Pobj6;
 }
 
-std::vector<Pobject*> datas::equalPobj7()
+std::vector<Pobject*> datas::ReadequalPobj7()
 {
 	return Pobj7;
 }
 
-std::vector<Pobject*> datas::equalPobj8()
+std::vector<Pobject*> datas::ReadequalPobj8()
 {
 	return Pobj8;
 }
 
-std::vector<Pobject*> datas::equalPobj9()
+std::vector<Pobject*> datas::ReadequalPobj9()
 {
 	return Pobj9;
 }
 
-std::vector<Pobject*> datas::equalPobj10()
+std::vector<Pobject*> datas::ReadequalPobj10()
 {
 	return Pobj8;
 }
 
-std::vector<prefab*> datas::equalPref()
+std::vector<prefab*> datas::ReadequalPref()
 {
 	return pref;
 }
 
-std::vector<prefabAnim*> datas::equalPrefAnim()
+std::vector<prefabAnim*> datas::ReadequalPrefAnim()
 {
 	return prefAnim;
 }
 
 
-std::vector<camera*> datas::equalCam()
+std::vector<camera*> datas::ReadequalCam()
 {
 	return cam;
 }
 
-generateSkybox* datas::equalSky()
+camera* datas::ReadequalCam2()
+{
+	return cam[1];
+}
+
+camera* datas::ReadequalCam3()
+{
+	return cam[2];
+}
+
+camera* datas::ReadequalCam4()
+{
+	return cam[3];
+}
+
+generateSkybox* datas::ReadequalSky()
 {
 	return sky;
 }
 
 
-
-
+	void datas::WriteequalObj(std::vector<object*> obj)
+	{
+		obj_=obj;
+	}
+	 void datas::WriteequalObj2(std::vector<object*> obj)
+	 {
+	 	obj2_=obj;
+	 }
+	 void datas::WriteequalObj3(std::vector<object*> obj)
+	 {
+	 	obj3_=obj;
+	 }
+	 void datas::WriteequalObj4(std::vector<object*> obj)
+	 {
+	 	obj4_=obj;
+	 }
+	 void datas::WriteequalObj5(std::vector<object*> obj)
+	 {
+	 	obj5_=obj;
+	 }
+	 void datas::WriteequalPObj(std::vector<Pobject*> obj)
+	 {
+	 	Pobj_=obj;
+	 }
+	 void datas::WriteequalPObj2(std::vector<Pobject*> obj)
+	 {
+	 	Pobj2_=obj;
+	 }
+	 void datas::WriteequalPObj3(std::vector<Pobject*> obj)
+	 {
+	 	Pobj3_=obj;
+	 }
+	 void datas::WriteequalPObj4(std::vector<Pobject*> obj)
+	 {
+	 	Pobj4_=obj;
+	 }
+	 void datas::WriteequalPObj5(std::vector<Pobject*> obj)
+	 {
+	 	Pobj5_=obj;
+	 }
+	 void datas::WriteequalPObj6(std::vector<Pobject*> obj)
+	 {
+	 	Pobj6_=obj;
+	 }
+	 void datas:: WriteequalPObj7(std::vector<Pobject*> obj)
+	 {
+	 	Pobj7_=obj;
+	 }
+	 void datas::  WriteequalPObj8(std::vector<Pobject*> obj)
+	 {
+	 	Pobj8_=obj;
+	 }
+	 void datas::  WriteequalPObj9(std::vector<Pobject*> obj)
+	 {
+	 	Pobj9_=obj;
+	 }
+	 void datas:: WriteequalPObj10(std::vector<Pobject*> obj)
+	 {
+	 	Pobj10_=obj;
+	 }
+	 void datas:: WriteequalPrefab(std::vector<prefab*> obj)
+	 {
+	 	pref_=obj;
+	 }
+	 void datas:: WriteequalPrefabAnim(std::vector<prefabAnim*> obj)
+	 {
+	 	prefAnim_=obj;
+	 }
+	 void datas:: WriteequalCam(camera* obj)
+	 {
+	 	cam_[0]=obj;
+	 }
+	 
+	  void datas:: WriteequalCam2(std::vector<camera*> obj)
+	 {
+	 	cam_[1]=obj[1];
+	 }
+	 
+	  void datas:: WriteequalCam3(std::vector<camera*> obj)
+	 {
+	 	cam_[2]=obj[2];
+	 }
+	 
+	  void datas:: WriteequalCam4(std::vector<camera*> obj)
+	 {
+	 	cam_[3]=obj[3];
+	 }
+	 
+	 void datas:: WriteequalSky(generateSkybox* obj)
+	 {
+	 	sky_=obj;
+	 }
 
 
 	 
@@ -123,54 +228,54 @@ void datas::saveToFile()
 {
       
       	std::ofstream loadedFile;
-      	loadedFile.open("data/stagelayout.txt");
+      	loadedFile.open("data/stagelayoutObjects.txt");
          loadedFile<<"Draw Object"<<std::endl;
       	loadedFile<<"---beginObj1-----"<<std::endl;
-      	for(int i=0;i<obj111.size();i++)
+      	for(int i=0;i<obj_.size();i++)
       	
 		  {
 		  
-      	loadedFile<<"Obj1pos locX: "<<obj111[i]->getLocation().x<<"Obj1pos locY1: "<<obj111[i]->getLocation().y<<"Obj1pos locY2: "<<obj111[i]->getScale().y<<"Obj1pos locY: "<<obj111[i]->getScale().x<<"Obj1pos locY3: "<<obj111[i]->getScale().z<<"Obj1pos locY5: "<<obj111[i]->getRotation().y<<"Obj1pos locY4: "<<obj111[i]->getRotation().x<<"Obj1pos locY6: "<<obj111[i]->getRotation().z<<"Obj1pos locY7: "<<obj111[i]->getCouleur().x<<"Obj1pos locY8: "<<obj111[i]->getCouleur().y<<"Obj1pos locY9: "<<obj111[i]->getCouleur().z<<"obj1pos locZ: "<<obj111[i]->getLocation().z<<std::endl; 
+      	loadedFile<<"Obj1pos locX: "<<obj_[i]->getLocation().x<<"Obj1pos locY1: "<<obj_[i]->getLocation().y<<"Obj1pos locY2: "<<obj_[i]->getScale().y<<"Obj1pos locY: "<<obj_[i]->getScale().x<<"Obj1pos locY3: "<<obj_[i]->getScale().z<<"Obj1pos locY5: "<<obj_[i]->getRotation().y<<"Obj1pos locY4: "<<obj_[i]->getRotation().x<<"Obj1pos locY6: "<<obj_[i]->getRotation().z<<"Obj1pos locY7: "<<obj_[i]->getCouleur().x<<"Obj1pos locY8: "<<obj_[i]->getCouleur().y<<"Obj1pos locY9: "<<obj_[i]->getCouleur().z<<"obj1pos locZ: "<<obj_[i]->getLocation().z<<std::endl; 
     
 }
 	  	loadedFile<<"----endObj1-----"<<std::endl;
       		loadedFile<<"---beginObj2-----"<<std::endl;
-      	for(int i=0;i<obj2.size();i++)
+      	for(int i=0;i<obj2_.size();i++)
       	{
 		  
-      loadedFile<<"Obj1pos locX_2: "<<obj2[i]->getLocation().x<<"Obj1pos locY1_2: "<<obj2[i]->getLocation().y<<"Obj1pos locY2_2: "<<obj2[i]->getScale().y<<"Obj1pos locY_2: "<<obj2[i]->getScale().x<<"Obj1pos locY3_2: "<<obj2[i]->getScale().z<<"Obj1pos locY5_2: "<<obj2[i]->getRotation().y<<"Obj1pos locY4_2: "<<obj2[i]->getRotation().x<<"Obj1pos locY6_2: "<<obj2[i]->getRotation().z<<"Obj1pos locY7_2: "<<obj2[i]->getCouleur().x<<"Obj1pos locY8_2: "<<obj2[i]->getCouleur().y<<"Obj1pos locY9_2: "<<obj2[i]->getCouleur().z<<"Obj1pos locZ_2: "<<obj2[i]->getLocation().z<<std::endl; 
+      loadedFile<<"Obj1pos locX_2: "<<obj2_[i]->getLocation().x<<"Obj1pos locY1_2: "<<obj2_[i]->getLocation().y<<"Obj1pos locY2_2: "<<obj2_[i]->getScale().y<<"Obj1pos locY_2: "<<obj2_[i]->getScale().x<<"Obj1pos locY3_2: "<<obj2_[i]->getScale().z<<"Obj1pos locY5_2: "<<obj2_[i]->getRotation().y<<"Obj1pos locY4_2: "<<obj2_[i]->getRotation().x<<"Obj1pos locY6_2: "<<obj2_[i]->getRotation().z<<"Obj1pos locY7_2: "<<obj2_[i]->getCouleur().x<<"Obj1pos locY8_2: "<<obj2_[i]->getCouleur().y<<"Obj1pos locY9_2: "<<obj2_[i]->getCouleur().z<<"Obj1pos locZ_2: "<<obj2_[i]->getLocation().z<<std::endl; 
     
   }
 	  	loadedFile<<"----endObj2-----"<<std::endl;
       		loadedFile<<"---beginObj3-----"<<std::endl;
-      	for(int i=0;i<obj3.size();i++)
+      	for(int i=0;i<obj3_.size();i++)
       	{
-	 loadedFile<<"Obj1pos locX_3: "<<obj3[i]->getLocation().x<<"Obj1pos locY1_3: "<<obj3[i]->getLocation().y<<"Obj1pos locY2_3: "<<obj3[i]->getScale().y<<"Obj1pos locY_3: "<<obj3[i]->getScale().x<<"Obj1pos locY3_3: "<<obj3[i]->getScale().z<<"Obj1pos locY5_3: "<<obj3[i]->getRotation().y<<"Obj1pos locY4_3: "<<obj3[i]->getRotation().x<<"Obj1pos locY6_2: "<<obj3[i]->getRotation().z<<"Obj1pos locY7_3: "<<obj3[i]->getCouleur().x<<"Obj1pos locY8_3: "<<obj3[i]->getCouleur().y<<"Obj1pos locY9_3: "<<obj3[i]->getCouleur().z<<"Obj1pos locZ_3: "<<obj3[i]->getLocation().z<<std::endl; 
+	 loadedFile<<"Obj1pos locX_3: "<<obj3_[i]->getLocation().x<<"Obj1pos locY1_3: "<<obj3_[i]->getLocation().y<<"Obj1pos locY2_3: "<<obj3_[i]->getScale().y<<"Obj1pos locY_3: "<<obj3_[i]->getScale().x<<"Obj1pos locY3_3: "<<obj3_[i]->getScale().z<<"Obj1pos locY5_3: "<<obj3_[i]->getRotation().y<<"Obj1pos locY4_3: "<<obj3_[i]->getRotation().x<<"Obj1pos locY6_2: "<<obj3_[i]->getRotation().z<<"Obj1pos locY7_3: "<<obj3_[i]->getCouleur().x<<"Obj1pos locY8_3: "<<obj3_[i]->getCouleur().y<<"Obj1pos locY9_3: "<<obj3_[i]->getCouleur().z<<"Obj1pos locZ_3: "<<obj3_[i]->getLocation().z<<std::endl; 
 	  }   loadedFile<<"----endObj3-----"<<std::endl;
       
       		loadedFile<<"---beginObj4-----"<<std::endl;
-      	for(int i=0;i<obj4.size();i++)
+      	for(int i=0;i<obj4_.size();i++)
       	{
 		  
-     loadedFile<<"Obj1pos locX_4: "<<obj4[i]->getLocation().x<<"Obj1pos locY1_4: "<<obj4[i]->getLocation().y<<"Obj1pos locY2_4: "<<obj4[i]->getScale().y<<"Obj1pos locY_4: "<<obj4[i]->getScale().x<<"Obj1pos locY3_4: "<<obj4[i]->getScale().z<<"Obj1pos locY5_4: "<<obj4[i]->getRotation().y<<"Obj1pos locY4_4: "<<obj4[i]->getRotation().x<<"Obj1pos locY6_4: "<<obj4[i]->getRotation().z<<"Obj1pos locY7_4: "<<obj4[i]->getCouleur().x<<"Obj1pos locY8_4: "<<obj4[i]->getCouleur().y<<"Obj1pos locY9_4: "<<obj4[i]->getCouleur().z<<"Obj1pos locZ_4: "<<obj4[i]->getLocation().z<<std::endl; 
+     loadedFile<<"Obj1pos locX_4: "<<obj4_[i]->getLocation().x<<"Obj1pos locY1_4: "<<obj4_[i]->getLocation().y<<"Obj1pos locY2_4: "<<obj4_[i]->getScale().y<<"Obj1pos locY_4: "<<obj4_[i]->getScale().x<<"Obj1pos locY3_4: "<<obj4_[i]->getScale().z<<"Obj1pos locY5_4: "<<obj4_[i]->getRotation().y<<"Obj1pos locY4_4: "<<obj4_[i]->getRotation().x<<"Obj1pos locY6_4: "<<obj4_[i]->getRotation().z<<"Obj1pos locY7_4: "<<obj4_[i]->getCouleur().x<<"Obj1pos locY8_4: "<<obj4_[i]->getCouleur().y<<"Obj1pos locY9_4: "<<obj4_[i]->getCouleur().z<<"Obj1pos locZ_4: "<<obj4_[i]->getLocation().z<<std::endl; 
     
 	  }
 		  loadedFile<<"----endObj4-----"<<std::endl;
 		  
 		  	loadedFile<<"---beginVehicule-----"<<std::endl;
-      	for(int i=0;i<pref.size();i++)
+      	for(int i=0;i<pref_.size();i++)
       	{
 		  
-     loadedFile<<"Obj1pos locX_5: "<<pref[i]->getLocation().x<<"Obj1pos locY1_5: "<<pref[i]->getLocation().y<<"Obj1pos locY2_5: "<<pref[i]->getScale().y<<"Obj1pos locY_5: "<<pref[i]->getScale().x<<"Obj1pos locY3_5: "<<pref[i]->getScale().z<<"Obj1pos locY5_5: "<<pref[i]->getRotation().y<<"Obj1pos locY4_5: "<<pref[i]->getRotation().x<<"Obj1pos locY6_5: "<<pref[i]->getRotation().z<<"Obj1pos locZ_5: "<<pref[i]->getLocation().z<<std::endl; 
+     loadedFile<<"Obj1pos locX_5: "<<pref_[i]->getLocation().x<<"Obj1pos locY1_5: "<<pref_[i]->getLocation().y<<"Obj1pos locY2_5: "<<pref_[i]->getScale().y<<"Obj1pos locY_5: "<<pref_[i]->getScale().x<<"Obj1pos locY3_5: "<<pref_[i]->getScale().z<<"Obj1pos locY5_5: "<<pref_[i]->getRotation().y<<"Obj1pos locY4_5: "<<pref_[i]->getRotation().x<<"Obj1pos locY6_5: "<<pref_[i]->getRotation().z<<"Obj1pos locZ_5: "<<pref_[i]->getLocation().z<<std::endl; 
 
       }
 		  loadedFile<<"----endVehicule-----"<<std::endl;
 		  
 		 loadedFile<<"---beginCharacter-----"<<std::endl;
-      	for(int i=0;i<prefAnim.size();i++)
+      	for(int i=0;i<prefAnim_.size();i++)
       	{
 		  
-     loadedFile<<"Obj1pos locX_6: "<<prefAnim[i]->getLocation().x<<"Obj1pos locY1_6: "<<prefAnim[i]->getLocation().y<<"Obj1pos locY2_6: "<<prefAnim[i]->getScale().y<<"Obj1pos locY_6: "<<prefAnim[i]->getScale().x<<"Obj1pos locY3_6: "<<prefAnim[i]->getScale().z<<"Obj1pos locY5_6: "<<prefAnim[i]->getRotation().y<<"Obj1pos locY4_6: "<<prefAnim[i]->getRotation().x<<"Obj1pos locY6_6: "<<prefAnim[i]->getRotation().z<<"Obj1pos locZ_6: "<<prefAnim[i]->getLocation().z<<std::endl; 
+     loadedFile<<"Obj1pos locX_6: "<<prefAnim_[i]->getLocation().x<<"Obj1pos locY1_6: "<<prefAnim_[i]->getLocation().y<<"Obj1pos locY2_6: "<<prefAnim_[i]->getScale().y<<"Obj1pos locY_6: "<<prefAnim_[i]->getScale().x<<"Obj1pos locY3_6: "<<prefAnim_[i]->getScale().z<<"Obj1pos locY5_6: "<<prefAnim_[i]->getRotation().y<<"Obj1pos locY4_6: "<<prefAnim_[i]->getRotation().x<<"Obj1pos locY6_6: "<<prefAnim_[i]->getRotation().z<<"Obj1pos locZ_6: "<<prefAnim_[i]->getLocation().z<<std::endl; 
 
       }
 		  loadedFile<<"----endCharacter-----"<<std::endl; 
@@ -180,10 +285,10 @@ void datas::saveToFile()
 	  	
 			   
 			   loadedFile<<"---beginObj5-----"<<std::endl;
-      	for(int i=0;i<obj5.size();i++)
+      	for(int i=0;i<obj5_.size();i++)
       	{
 		  
-     loadedFile<<"Obj1pos locX_7: "<<obj5[i]->getLocation().x<<"Obj1pos locY1_7: "<<obj5[i]->getLocation().y<<"Obj1pos locY2_7: "<<obj5[i]->getScale().y<<"Obj1pos locY_7: "<<obj5[i]->getScale().x<<"Obj1pos locY3_7: "<<obj5[i]->getScale().z<<"Obj1pos locY5_7: "<<obj5[i]->getRotation().y<<"Obj1pos locY4_7: "<<obj5[i]->getRotation().x<<"Obj1pos locY6_7: "<<obj5[i]->getRotation().z<<"Obj1pos locZ_7: "<<obj5[i]->getLocation().z<<std::endl; 
+     loadedFile<<"Obj1pos locX_7: "<<obj5_[i]->getLocation().x<<"Obj1pos locY1_7: "<<obj5_[i]->getLocation().y<<"Obj1pos locY2_7: "<<obj5_[i]->getScale().y<<"Obj1pos locY_7: "<<obj5_[i]->getScale().x<<"Obj1pos locY3_7: "<<obj5_[i]->getScale().z<<"Obj1pos locY5_7: "<<obj5_[i]->getRotation().y<<"Obj1pos locY4_7: "<<obj5_[i]->getRotation().x<<"Obj1pos locY6_7: "<<obj5_[i]->getRotation().z<<"Obj1pos locZ_7: "<<obj5_[i]->getLocation().z<<std::endl; 
 
       }
 		  loadedFile<<"----endObj5-----"<<std::endl;
@@ -192,129 +297,96 @@ void datas::saveToFile()
 		  
 		  
       	loadedFile<<"---beginPobj1-----"<<std::endl;
-      	for(int i=0;i<Pobj.size();i++)
+      	for(int i=0;i<Pobj_.size();i++)
       	
 		  {
 		  
-      	loadedFile<<"Pobj1pos PlocX: "<<Pobj[i]->getLocation().x<<"Pobj1pos PlocY1: "<<Pobj[i]->getLocation().y<<"Pobj1pos PlocY2: "<<Pobj[i]->getScale().y<<"Pobj1pos PlocY: "<<Pobj[i]->getScale().x<<"Pobj1pos PlocY3: "<<Pobj[i]->getScale().z<<"Pobj1pos PlocY5: "<<Pobj[i]->getRotation().y<<"Pobj1pos PlocY4: "<<Pobj[i]->getRotation().x<<"Pobj1pos PlocY6: "<<Pobj[i]->getRotation().z<<"Pobj1pos PlocY7: "<<Pobj[i]->getCouleur().x<<"Pobj1pos PlocY8: "<<Pobj[i]->getCouleur().y<<"Pobj1pos PlocY9: "<<Pobj[i]->getCouleur().z<<"Pobj1pos PlocZ: "<<Pobj[i]->getLocation().z<<"Pobj1pos filename_21: "<<fileName[10]<<std::endl; 
+      	loadedFile<<"Pobj1pos PlocX: "<<Pobj_[i]->getLocation().x<<"Pobj1pos PlocY1: "<<Pobj_[i]->getLocation().y<<"Pobj1pos PlocY2: "<<Pobj_[i]->getScale().y<<"Pobj1pos PlocY: "<<Pobj_[i]->getScale().x<<"Pobj1pos PlocY3: "<<Pobj_[i]->getScale().z<<"Pobj1pos PlocY5: "<<Pobj_[i]->getRotation().y<<"Pobj1pos PlocY4: "<<Pobj_[i]->getRotation().x<<"Pobj1pos PlocY6: "<<Pobj_[i]->getRotation().z<<"Pobj1pos PlocY7: "<<Pobj_[i]->getCouleur().x<<"Pobj1pos PlocY8: "<<Pobj_[i]->getCouleur().y<<"Pobj1pos PlocY9: "<<Pobj_[i]->getCouleur().z<<"Pobj1pos PlocZ: "<<Pobj_[i]->getLocation().z<<"Pobj1pos filename_21: "<<fileName[10]<<std::endl; 
     
 }
 	  	loadedFile<<"----endPobj1-----"<<std::endl;
       		loadedFile<<"---beginPobj2-----"<<std::endl;
-      	for(int i=0;i<Pobj2.size();i++)
+      	for(int i=0;i<Pobj2_.size();i++)
       	{
 		  
-      loadedFile<<"Pobj1pos PlocX_2: "<<Pobj2[i]->getLocation().x<<"Pobj1pos PlocY1_2: "<<Pobj2[i]->getLocation().y<<"Pobj1pos PlocY2_2: "<<Pobj2[i]->getScale().y<<"Pobj1pos PlocY_2: "<<Pobj2[i]->getScale().x<<"Pobj1pos PlocY3_2: "<<Pobj2[i]->getScale().z<<"Pobj1pos PlocY5_2: "<<Pobj2[i]->getRotation().y<<"Pobj1pos PlocY4_2: "<<Pobj2[i]->getRotation().x<<"Pobj1pos PlocY6_2: "<<Pobj2[i]->getRotation().z<<"Pobj1pos PlocY7_2: "<<Pobj2[i]->getCouleur().x<<"Pobj1pos PlocY8_2: "<<Pobj2[i]->getCouleur().y<<"Pobj1pos PlocY9_2: "<<Pobj2[i]->getCouleur().z<<"Pobj1pos PlocZ_2: "<<Pobj2[i]->getLocation().z<<"Pobj1pos filename_20: "<<fileName[9]<<std::endl; 
+      loadedFile<<"Pobj1pos PlocX_2: "<<Pobj2_[i]->getLocation().x<<"Pobj1pos PlocY1_2: "<<Pobj2_[i]->getLocation().y<<"Pobj1pos PlocY2_2: "<<Pobj2_[i]->getScale().y<<"Pobj1pos PlocY_2: "<<Pobj2_[i]->getScale().x<<"Pobj1pos PlocY3_2: "<<Pobj2_[i]->getScale().z<<"Pobj1pos PlocY5_2: "<<Pobj2_[i]->getRotation().y<<"Pobj1pos PlocY4_2: "<<Pobj2_[i]->getRotation().x<<"Pobj1pos PlocY6_2: "<<Pobj2_[i]->getRotation().z<<"Pobj1pos PlocY7_2: "<<Pobj2_[i]->getCouleur().x<<"Pobj1pos PlocY8_2: "<<Pobj2_[i]->getCouleur().y<<"Pobj1pos PlocY9_2: "<<Pobj2_[i]->getCouleur().z<<"Pobj1pos PlocZ_2: "<<Pobj2_[i]->getLocation().z<<"Pobj1pos filename_20: "<<fileName[9]<<std::endl; 
     
   }
 	  	loadedFile<<"----endPobj2-----"<<std::endl;
       		loadedFile<<"---beginPobj3-----"<<std::endl;
-      	for(int i=0;i<Pobj3.size();i++)
+      	for(int i=0;i<Pobj3_.size();i++)
       	{
-	 loadedFile<<"Pobj1pos PlocX_3: "<<Pobj3[i]->getLocation().x<<"Pobj1pos PlocY1_3: "<<Pobj3[i]->getLocation().y<<"Pobj1pos PlocY2_3: "<<Pobj3[i]->getScale().y<<"Pobj1pos PlocY_3: "<<Pobj3[i]->getScale().x<<"Pobj1pos PlocY3_3: "<<Pobj3[i]->getScale().z<<"Pobj1pos PlocY5_3: "<<Pobj3[i]->getRotation().y<<"Pobj1pos PlocY4_3: "<<Pobj3[i]->getRotation().x<<"Pobj1pos PlocY6_2: "<<Pobj3[i]->getRotation().z<<"Pobj1pos PlocY7_3: "<<Pobj3[i]->getCouleur().x<<"Pobj1pos PlocY8_3: "<<Pobj3[i]->getCouleur().y<<"Pobj1pos PlocY9_3: "<<Pobj3[i]->getCouleur().z<<"Pobj1pos PlocZ_3: "<<Pobj3[i]->getLocation().z<<"Pobj1pos filename_19: "<<fileName[8]<<std::endl; 
+	 loadedFile<<"Pobj1pos PlocX_3: "<<Pobj3_[i]->getLocation().x<<"Pobj1pos PlocY1_3: "<<Pobj3_[i]->getLocation().y<<"Pobj1pos PlocY2_3: "<<Pobj3_[i]->getScale().y<<"Pobj1pos PlocY_3: "<<Pobj3_[i]->getScale().x<<"Pobj1pos PlocY3_3: "<<Pobj3_[i]->getScale().z<<"Pobj1pos PlocY5_3: "<<Pobj3_[i]->getRotation().y<<"Pobj1pos PlocY4_3: "<<Pobj3_[i]->getRotation().x<<"Pobj1pos PlocY6_2: "<<Pobj3_[i]->getRotation().z<<"Pobj1pos PlocY7_3: "<<Pobj3_[i]->getCouleur().x<<"Pobj1pos PlocY8_3: "<<Pobj3_[i]->getCouleur().y<<"Pobj1pos PlocY9_3: "<<Pobj3_[i]->getCouleur().z<<"Pobj1pos PlocZ_3: "<<Pobj3_[i]->getLocation().z<<"Pobj1pos filename_19: "<<fileName[8]<<std::endl; 
 	  }   loadedFile<<"----endPobj3-----"<<std::endl;
       
       		loadedFile<<"---beginPobj4-----"<<std::endl;
-      	for(int i=0;i<Pobj4.size();i++)
+      	for(int i=0;i<Pobj4_.size();i++)
       	{
 		  
-     loadedFile<<"Pobj1pos PlocX_4: "<<Pobj4[i]->getLocation().x<<"Pobj1pos PlocY1_4: "<<Pobj4[i]->getLocation().y<<"Pobj1pos PlocY2_4: "<<Pobj4[i]->getScale().y<<"Pobj1pos PlocY_4: "<<Pobj4[i]->getScale().x<<"Pobj1pos PlocY3_4: "<<Pobj4[i]->getScale().z<<"Pobj1pos PlocY5_4: "<<Pobj4[i]->getRotation().y<<"Pobj1pos PlocY4_4: "<<Pobj4[i]->getRotation().x<<"Pobj1pos PlocY6_4: "<<Pobj4[i]->getRotation().z<<"Pobj1pos PlocY7_4: "<<Pobj4[i]->getCouleur().x<<"Pobj1pos PlocY8_4: "<<Pobj4[i]->getCouleur().y<<"Pobj1pos PlocY9_4: "<<Pobj4[i]->getCouleur().z<<"Pobj1pos PlocZ_4: "<<Pobj4[i]->getLocation().z<<"Pobj1pos filename_18: "<<fileName[7]<<std::endl; 
+     loadedFile<<"Pobj1pos PlocX_4: "<<Pobj4_[i]->getLocation().x<<"Pobj1pos PlocY1_4: "<<Pobj4_[i]->getLocation().y<<"Pobj1pos PlocY2_4: "<<Pobj4_[i]->getScale().y<<"Pobj1pos PlocY_4: "<<Pobj4_[i]->getScale().x<<"Pobj1pos PlocY3_4: "<<Pobj4_[i]->getScale().z<<"Pobj1pos PlocY5_4: "<<Pobj4_[i]->getRotation().y<<"Pobj1pos PlocY4_4: "<<Pobj4_[i]->getRotation().x<<"Pobj1pos PlocY6_4: "<<Pobj4_[i]->getRotation().z<<"Pobj1pos PlocY7_4: "<<Pobj4_[i]->getCouleur().x<<"Pobj1pos PlocY8_4: "<<Pobj4_[i]->getCouleur().y<<"Pobj1pos PlocY9_4: "<<Pobj4_[i]->getCouleur().z<<"Pobj1pos PlocZ_4: "<<Pobj4_[i]->getLocation().z<<"Pobj1pos filename_18: "<<fileName[7]<<std::endl; 
     
 	  }
 		  loadedFile<<"----endPobj4-----"<<std::endl;
 		  
 		 	loadedFile<<"---beginPobj5-----"<<std::endl;
-      	for(int i=0;i<Pobj5.size();i++)
+      	for(int i=0;i<Pobj5_.size();i++)
       	{
 		  
-     loadedFile<<"Pobj1pos PlocX_5: "<<Pobj5[i]->getLocation().x<<"Pobj1pos PlocY1_5: "<<Pobj5[i]->getLocation().y<<"Pobj1pos PlocY2_5: "<<Pobj5[i]->getScale().y<<"Pobj1pos PlocY_5: "<<Pobj5[i]->getScale().x<<"Pobj1pos PlocY3_5: "<<Pobj5[i]->getScale().z<<"Pobj1pos PlocY5_5: "<<Pobj5[i]->getRotation().y<<"Pobj1pos PlocY4_5: "<<Pobj5[i]->getRotation().x<<"Pobj1pos PlocY6_5: "<<Pobj5[i]->getRotation().z<<"Pobj1pos PlocY7_5: "<<Pobj5[i]->getCouleur().x<<"Pobj1pos PlocY8_5: "<<Pobj5[i]->getCouleur().y<<"Pobj1pos PlocY9_5: "<<Pobj5[i]->getCouleur().z<<"Pobj1pos PlocZ_5: "<<Pobj5[i]->getLocation().z<<"Pobj1pos filename_17: "<<fileName[6]<<std::endl; 
+     loadedFile<<"Pobj1pos PlocX_5: "<<Pobj5_[i]->getLocation().x<<"Pobj1pos PlocY1_5: "<<Pobj5_[i]->getLocation().y<<"Pobj1pos PlocY2_5: "<<Pobj5_[i]->getScale().y<<"Pobj1pos PlocY_5: "<<Pobj5_[i]->getScale().x<<"Pobj1pos PlocY3_5: "<<Pobj5_[i]->getScale().z<<"Pobj1pos PlocY5_5: "<<Pobj5_[i]->getRotation().y<<"Pobj1pos PlocY4_5: "<<Pobj5_[i]->getRotation().x<<"Pobj1pos PlocY6_5: "<<Pobj5_[i]->getRotation().z<<"Pobj1pos PlocY7_5: "<<Pobj5_[i]->getCouleur().x<<"Pobj1pos PlocY8_5: "<<Pobj5_[i]->getCouleur().y<<"Pobj1pos PlocY9_5: "<<Pobj5_[i]->getCouleur().z<<"Pobj1pos PlocZ_5: "<<Pobj5_[i]->getLocation().z<<"Pobj1pos filename_17: "<<fileName[6]<<std::endl; 
     
 	  }
 		  loadedFile<<"----endPobj5-----"<<std::endl;
 		   
 		   	 	loadedFile<<"---beginPobj6-----"<<std::endl;
-      	for(int i=0;i<Pobj6.size();i++)
+      	for(int i=0;i<Pobj6_.size();i++)
       	{
 		  
-     loadedFile<<"Pobj1pos PlocX_6: "<<Pobj6[i]->getLocation().x<<"Pobj1pos PlocY1_6: "<<Pobj6[i]->getLocation().y<<"Pobj1pos PlocY2_6: "<<Pobj6[i]->getScale().y<<"Pobj1pos PlocY_6: "<<Pobj6[i]->getScale().x<<"Pobj1pos PlocY3_6: "<<Pobj6[i]->getScale().z<<"Pobj1pos PlocY5_6: "<<Pobj6[i]->getRotation().y<<"Pobj1pos PlocY4_6: "<<Pobj6[i]->getRotation().x<<"Pobj1pos PlocY6_6: "<<Pobj6[i]->getRotation().z<<"Pobj1pos PlocY7_6: "<<Pobj6[i]->getCouleur().x<<"Pobj1pos PlocY8_6: "<<Pobj6[i]->getCouleur().y<<"Pobj1pos PlocY9_6: "<<Pobj6[i]->getCouleur().z<<"Pobj1pos PlocZ_6: "<<Pobj6[i]->getLocation().z<<"Pobj1pos filename_16: "<<fileName[5]<<std::endl; 
+     loadedFile<<"Pobj1pos PlocX_6: "<<Pobj6_[i]->getLocation().x<<"Pobj1pos PlocY1_6: "<<Pobj6_[i]->getLocation().y<<"Pobj1pos PlocY2_6: "<<Pobj6_[i]->getScale().y<<"Pobj1pos PlocY_6: "<<Pobj6_[i]->getScale().x<<"Pobj1pos PlocY3_6: "<<Pobj6_[i]->getScale().z<<"Pobj1pos PlocY5_6: "<<Pobj6_[i]->getRotation().y<<"Pobj1pos PlocY4_6: "<<Pobj6_[i]->getRotation().x<<"Pobj1pos PlocY6_6: "<<Pobj6_[i]->getRotation().z<<"Pobj1pos PlocY7_6: "<<Pobj6_[i]->getCouleur().x<<"Pobj1pos PlocY8_6: "<<Pobj6_[i]->getCouleur().y<<"Pobj1pos PlocY9_6: "<<Pobj6_[i]->getCouleur().z<<"Pobj1pos PlocZ_6: "<<Pobj6_[i]->getLocation().z<<"Pobj1pos filename_16: "<<fileName[5]<<std::endl; 
     
 	  }
 		  loadedFile<<"----endPobj6-----"<<std::endl;
 		     
 			 	loadedFile<<"---beginPobj7-----"<<std::endl;
-      	for(int i=0;i<Pobj7.size();i++)
+      	for(int i=0;i<Pobj7_.size();i++)
       	{
 		  
-     loadedFile<<"Pobj1pos PlocX_7: "<<Pobj7[i]->getLocation().x<<"Pobj1pos PlocY1_7: "<<Pobj7[i]->getLocation().y<<"Pobj1pos PlocY2_7: "<<Pobj7[i]->getScale().y<<"Pobj1pos PlocY_7: "<<Pobj7[i]->getScale().x<<"Pobj1pos PlocY3_7: "<<Pobj7[i]->getScale().z<<"Pobj1pos PlocY5_7: "<<Pobj7[i]->getRotation().y<<"Pobj1pos PlocY4_7: "<<Pobj7[i]->getRotation().x<<"Pobj1pos PlocY6_7: "<<Pobj7[i]->getRotation().z<<"Pobj1pos PlocY7_7: "<<Pobj7[i]->getCouleur().x<<"Pobj1pos PlocY8_7: "<<Pobj7[i]->getCouleur().y<<"Pobj1pos PlocY9_7: "<<Pobj7[i]->getCouleur().z<<"Pobj1pos PlocZ_7: "<<Pobj7[i]->getLocation().z<<"Pobj1pos filename_15: "<<fileName[4]<<std::endl; 
+     loadedFile<<"Pobj1pos PlocX_7: "<<Pobj7_[i]->getLocation().x<<"Pobj1pos PlocY1_7: "<<Pobj7_[i]->getLocation().y<<"Pobj1pos PlocY2_7: "<<Pobj7_[i]->getScale().y<<"Pobj1pos PlocY_7: "<<Pobj7_[i]->getScale().x<<"Pobj1pos PlocY3_7: "<<Pobj7_[i]->getScale().z<<"Pobj1pos PlocY5_7: "<<Pobj7_[i]->getRotation().y<<"Pobj1pos PlocY4_7: "<<Pobj7_[i]->getRotation().x<<"Pobj1pos PlocY6_7: "<<Pobj7_[i]->getRotation().z<<"Pobj1pos PlocY7_7: "<<Pobj7_[i]->getCouleur().x<<"Pobj1pos PlocY8_7: "<<Pobj7_[i]->getCouleur().y<<"Pobj1pos PlocY9_7: "<<Pobj7_[i]->getCouleur().z<<"Pobj1pos PlocZ_7: "<<Pobj7_[i]->getLocation().z<<"Pobj1pos filename_15: "<<fileName[4]<<std::endl; 
     
 	  }
 		  loadedFile<<"----endPobj7-----"<<std::endl;
 		    
 		    	 	loadedFile<<"---beginPobj8-----"<<std::endl;
-      	for(int i=0;i<Pobj8.size();i++)
+      	for(int i=0;i<Pobj8_.size();i++)
       	{
 		  
-     loadedFile<<"Pobj1pos PlocX_8: "<<Pobj8[i]->getLocation().x<<"Pobj1pos PlocY1_8: "<<Pobj8[i]->getLocation().y<<"Pobj1pos PlocY2_8: "<<Pobj8[i]->getScale().y<<"Pobj1pos PlocY_8: "<<Pobj8[i]->getScale().x<<"Pobj1pos PlocY3_8: "<<Pobj8[i]->getScale().z<<"Pobj1pos PlocY5_8: "<<Pobj8[i]->getRotation().y<<"Pobj1pos PlocY4_8: "<<Pobj8[i]->getRotation().x<<"Pobj1pos PlocY6_8: "<<Pobj8[i]->getRotation().z<<"Pobj1pos PlocY7_8: "<<Pobj8[i]->getCouleur().x<<"Pobj1pos PlocY8_8: "<<Pobj8[i]->getCouleur().y<<"Pobj1pos PlocY9_8: "<<Pobj8[i]->getCouleur().z<<"Pobj1pos PlocZ_8: "<<Pobj8[i]->getLocation().z<<"Pobj1pos filename_14: "<<fileName[3]<<std::endl; 
+     loadedFile<<"Pobj1pos PlocX_8: "<<Pobj8_[i]->getLocation().x<<"Pobj1pos PlocY1_8: "<<Pobj8_[i]->getLocation().y<<"Pobj1pos PlocY2_8: "<<Pobj8_[i]->getScale().y<<"Pobj1pos PlocY_8: "<<Pobj8_[i]->getScale().x<<"Pobj1pos PlocY3_8: "<<Pobj8_[i]->getScale().z<<"Pobj1pos PlocY5_8: "<<Pobj8_[i]->getRotation().y<<"Pobj1pos PlocY4_8: "<<Pobj8_[i]->getRotation().x<<"Pobj1pos PlocY6_8: "<<Pobj8_[i]->getRotation().z<<"Pobj1pos PlocY7_8: "<<Pobj8_[i]->getCouleur().x<<"Pobj1pos PlocY8_8: "<<Pobj8_[i]->getCouleur().y<<"Pobj1pos PlocY9_8: "<<Pobj8_[i]->getCouleur().z<<"Pobj1pos PlocZ_8: "<<Pobj8_[i]->getLocation().z<<"Pobj1pos filename_14: "<<fileName[3]<<std::endl; 
     
 	  }
 		  loadedFile<<"----endPobj8-----"<<std::endl;
 		    
 		    	 	loadedFile<<"---beginPobj9-----"<<std::endl;
-      	for(int i=0;i<Pobj9.size();i++)
+      	for(int i=0;i<Pobj9_.size();i++)
       	{
 		  
-     loadedFile<<"Pobj1pos PlocX_9: "<<Pobj9[i]->getLocation().x<<"Pobj1pos PlocY1_9: "<<Pobj9[i]->getLocation().y<<"Pobj1pos PlocY2_9: "<<Pobj9[i]->getScale().y<<"Pobj1pos PlocY_9: "<<Pobj9[i]->getScale().x<<"Pobj1pos PlocY3_9: "<<Pobj9[i]->getScale().z<<"Pobj1pos PlocY5_9: "<<Pobj9[i]->getRotation().y<<"Pobj1pos PlocY4_9: "<<Pobj9[i]->getRotation().x<<"Pobj1pos PlocY6_9: "<<Pobj9[i]->getRotation().z<<"Pobj1pos PlocY7_9: "<<Pobj9[i]->getCouleur().x<<"Pobj1pos PlocY8_9: "<<Pobj9[i]->getCouleur().y<<"Pobj1pos PlocY9_9: "<<Pobj9[i]->getCouleur().z<<"Pobj1pos PlocZ_9: "<<Pobj9[i]->getLocation().z<<"Pobj1pos filename_13: "<<fileName[2]<<std::endl; 
+     loadedFile<<"Pobj1pos PlocX_9: "<<Pobj9_[i]->getLocation().x<<"Pobj1pos PlocY1_9: "<<Pobj9_[i]->getLocation().y<<"Pobj1pos PlocY2_9: "<<Pobj9_[i]->getScale().y<<"Pobj1pos PlocY_9: "<<Pobj9_[i]->getScale().x<<"Pobj1pos PlocY3_9: "<<Pobj9_[i]->getScale().z<<"Pobj1pos PlocY5_9: "<<Pobj9_[i]->getRotation().y<<"Pobj1pos PlocY4_9: "<<Pobj9_[i]->getRotation().x<<"Pobj1pos PlocY6_9: "<<Pobj9_[i]->getRotation().z<<"Pobj1pos PlocY7_9: "<<Pobj9_[i]->getCouleur().x<<"Pobj1pos PlocY8_9: "<<Pobj9_[i]->getCouleur().y<<"Pobj1pos PlocY9_9: "<<Pobj9_[i]->getCouleur().z<<"Pobj1pos PlocZ_9: "<<Pobj9_[i]->getLocation().z<<"Pobj1pos filename_13: "<<fileName[2]<<std::endl; 
     
 	  }
 		  loadedFile<<"----endPobj9-----"<<std::endl;
 		    
 		    	 	loadedFile<<"---beginPobj10-----"<<std::endl;
-      	for(int i=0;i<Pobj10.size();i++)
+      	for(int i=0;i<Pobj10_.size();i++)
       	{
 		  
-     loadedFile<<"Pobj1pos PlocX_10: "<<Pobj10[i]->getLocation().x<<"Pobj1pos PlocY1_10: "<<Pobj10[i]->getLocation().y<<"Pobj1pos PlocY2_10: "<<Pobj10[i]->getScale().y<<"Pobj1pos PlocY_10: "<<Pobj10[i]->getScale().x<<"Pobj1pos PlocY3_10: "<<Pobj10[i]->getScale().z<<"Pobj1pos PlocY5_10: "<<Pobj10[i]->getRotation().y<<"Pobj1pos PlocY4_10: "<<Pobj10[i]->getRotation().x<<"Pobj1pos PlocY6_10: "<<Pobj10[i]->getRotation().z<<"Pobj1pos PlocY7_10: "<<Pobj10[i]->getCouleur().x<<"Pobj1pos PlocY8_10: "<<Pobj10[i]->getCouleur().y<<"Pobj1pos PlocY9_10: "<<Pobj10[i]->getCouleur().z<<"Pobj1pos PlocZ_10: "<<Pobj10[i]->getLocation().z<<"Pobj1pos filename_12: "<<fileName[1]<<std::endl; 
+     loadedFile<<"Pobj1pos PlocX_10: "<<Pobj10_[i]->getLocation().x<<"Pobj1pos PlocY1_10: "<<Pobj10_[i]->getLocation().y<<"Pobj1pos PlocY2_10: "<<Pobj10_[i]->getScale().y<<"Pobj1pos PlocY_10: "<<Pobj10_[i]->getScale().x<<"Pobj1pos PlocY3_10: "<<Pobj10_[i]->getScale().z<<"Pobj1pos PlocY5_10: "<<Pobj10_[i]->getRotation().y<<"Pobj1pos PlocY4_10: "<<Pobj10_[i]->getRotation().x<<"Pobj1pos PlocY6_10: "<<Pobj10_[i]->getRotation().z<<"Pobj1pos PlocY7_10: "<<Pobj10_[i]->getCouleur().x<<"Pobj1pos PlocY8_10: "<<Pobj10_[i]->getCouleur().y<<"Pobj1pos PlocY9_10: "<<Pobj10_[i]->getCouleur().z<<"Pobj1pos PlocZ_10: "<<Pobj10_[i]->getLocation().z<<"Pobj1pos filename_12: "<<fileName[1]<<std::endl; 
     
 	  }
 		  loadedFile<<"----endPobj10-----"<<std::endl;
 		  
-	
-		  	    	 	loadedFile<<"---beginPobj12-----"<<std::endl;
-      for(int i=0;i<cam.size();i++)
-		  
-     loadedFile<<"Pobj1pos PlocX_12: "<<cam[0]->getLocation().x<<"Pobj1pos PlocY1_12: "<<cam[0]->getLocation().y<<"Pobj1pos PlocZ_12: "<<cam[0]->getLocation().z<<std::endl; 
-    
-	  
-		  loadedFile<<"----endPobj12-----"<<std::endl;
-		   
-		   	    	 	loadedFile<<"---beginPobj13-----"<<std::endl;
-      for(int i=0;i<cam.size();i++)
-		  
-     loadedFile<<"Pobj1pos PlocX_13: "<<cam[1]->getLocation().x<<"Pobj1pos PlocY1_13: "<<cam[1]->getLocation().y<<"Pobj1pos PlocZ_13: "<<cam[1]->getLocation().z<<std::endl; 
-    
-	  
-		  loadedFile<<"----endPobj13-----"<<std::endl;
-		      
-			  
-			  	    	 	loadedFile<<"---beginPobj14-----"<<std::endl;
-      for(int i=0;i<cam.size();i++)
-		  
-     loadedFile<<"Pobj1pos PlocX_14: "<<cam[2]->getLocation().x<<"Pobj1pos PlocY1_14: "<<cam[2]->getLocation().y<<"Pobj1pos PlocZ_14: "<<cam[2]->getLocation().z<<std::endl; 
-    
-	  
-		  loadedFile<<"----endPobj14-----"<<std::endl;
-		      
-			  	    	 	loadedFile<<"---beginPobj15-----"<<std::endl;
-      for(int i=0;i<cam.size();i++)
-		  
-     loadedFile<<"Pobj1pos PlocX_15: "<<cam[3]->getLocation().x<<"Pobj1pos PlocY1_15: "<<cam[3]->getLocation().y<<"Pobj1pos PlocZ_15: "<<cam[3]->getLocation().z<<std::endl; 
-    
-	  
-		  loadedFile<<"----endPobj15-----"<<std::endl;
 		  
 		   	loadedFile<<"---beginColorScreen-----"<<std::endl;
      
 		  
-     loadedFile<<"Pobj1pos PlocX_16: "<<sky->getCol().x<<"Pobj1pos PlocY1_16: "<<sky->getCol().y<<"Pobj1pos PlocZ_16: "<<sky->getCol().z<<std::endl; 
+     loadedFile<<"Pobj1pos PlocX_16: "<<sky_->getCol().x<<"Pobj1pos PlocY1_16: "<<sky_->getCol().y<<"Pobj1pos PlocZ_16: "<<sky_->getCol().z<<std::endl; 
     
 	  
 		  loadedFile<<"----endColorScreen-----"<<std::endl;
@@ -333,7 +405,7 @@ void datas::saveToFile()
 void datas::loadToFile(	)
 {
 	
-	std::ifstream loadedFile("data/stagelayout.txt");
+	std::ifstream loadedFile("data/stagelayoutObjects.txt");
 	std::string line;
 	enum ObjectType
 	{
@@ -418,22 +490,7 @@ void datas::loadToFile(	)
 		  		currentType=typeObj;
 			  }
 			 
-			  	if(line=="---beginPobj12-----")
-		  	{
-		  		currentType=typeObj;
-			  }
-			  	if(line=="---beginPobj13-----")
-		  	{
-		  		currentType=typeObj;
-			  }
-			  	if(line=="---beginPobj14-----")
-		  	{
-		  		currentType=typeObj;
-			  }
-			  	if(line=="---beginPobj15-----")
-		  	{
-		  		currentType=typeObj;
-			  }
+	
 			   	if(line=="---beginColorScreen-----")
 		  	{
 		  		currentType=typeObj;
@@ -504,22 +561,6 @@ void datas::loadToFile(	)
 			  	currentType=typeNone;
 			  }
 			 
-			    else if(line=="----endPobj12-----")
-			  {
-			  	currentType=typeNone;
-			  }
-			    else if(line=="----endPobj13-----")
-			  {
-			  	currentType=typeNone;
-			  }
-			    else if(line=="----endPobj14-----")
-			  {
-			  	currentType=typeNone;
-			  }
-			    else if(line=="----endPobj15-----")
-			  {
-			  	currentType=typeNone;
-			  }
 			   else if(line=="----endColorScreen-----")
 			  {
 			  	currentType=typeNone;
@@ -553,11 +594,7 @@ void datas::loadToFile(	)
 		  	vector3d tempPLocation8=vector3d(0,0,0);
 		  	vector3d tempPLocation9=vector3d(0,0,0);
 		  	vector3d tempPLocation10=vector3d(0,0,0);
-		  	vector3d tempPLocation12=vector3d(0,0,0);
-		  	vector3d tempPLocation13=vector3d(0,0,0);
-		    vector3d tempPLocation14=vector3d(0,0,0);
-		  	vector3d tempPLocation15=vector3d(0,0,0);
-		  	
+
 			vector3d tempRotation=vector3d(0,0,0);
 			vector3d tempRotation2=vector3d(0,0,0);
 			vector3d tempRotation3=vector3d(0,0,0);
@@ -825,38 +862,7 @@ void datas::loadToFile(	)
 		  		
 		  		}
 		  		
-		  					if(previousWord=="PlocX_12:")
-		  		{
-		  			tempPLocation12.x=atoi(word.c_str());
 		  		
-		  		
-		  					
-		  		
-		  		}
-		  						if(previousWord=="PlocX_13:")
-		  		{
-		  			tempPLocation13.x=atoi(word.c_str());
-		  		
-		  		
-		  					
-		  		
-		  		}
-		  						if(previousWord=="PlocX_14:")
-		  		{
-		  			tempPLocation14.x=atoi(word.c_str());
-		  		
-		  		
-		  					
-		  		
-		  		}
-		  						if(previousWord=="PlocX_15:")
-		  		{
-		  			tempPLocation15.x=atoi(word.c_str());
-		  		
-		  		
-		  					
-		  		
-		  		}
 		  			  	if(previousWord=="locY1:")
 		  		{
 		  			tempLocation.y=atoi(word.c_str());
@@ -996,49 +1002,7 @@ void datas::loadToFile(	)
 		  		
 		  		}
 		  		
-		  		
-		  					  	if(previousWord=="PlocY1_12:")
-		  		{
-		  			tempPLocation12.y=atoi(word.c_str());
-		  		
-		  		
-		  					
-		  		
-		  		}
-		  					  	if(previousWord=="PlocY1_13:")
-		  		{
-		  			tempPLocation13.y=atoi(word.c_str());
-		  		
-		  		
-		  					
-		  		
-		  		}
-		  					  	if(previousWord=="PlocY1_14:")
-		  		{
-		  			tempPLocation14.y=atoi(word.c_str());
-		  		
-		  		
-		  					
-		  		
-		  		}
-		  					  	if(previousWord=="PlocY1_15:")
-		  		{
-		  			tempPLocation15.y=atoi(word.c_str());
-		  		
-		  		
-		  					
-		  		
-		  		}
-		  		
-		  					  	if(previousWord=="PlocY1_12:")
-		  		{
-		  			tempPLocation12.y=atoi(word.c_str());
-		  		
-		  		
-		  					
-		  		
-		  		}
-		  				
+		  			
 		  	
 		  	
 		  			  	if(previousWord=="locY:")
@@ -2204,51 +2168,8 @@ void datas::loadToFile(	)
 		  		
 		  		
 		  		}
-		  			if(previousWord=="PlocZ_12:")
-		  		{
-		  			
-		  			tempPLocation12.z=atoi(word.c_str());
+		  	
 		  		
-		  		//Pobj11.push_back(new Pobject("map",map,vector3d(tempPLocation12.x,tempPLocation12.y,tempPLocation12.z),vector3d(tempCol.x,tempCol.y,tempCol.z),vector3d(tempPRotation12.x,tempPRotation12.y,tempPRotation12.z),vector3d(tempPScale12.x,tempPScale12.y,tempPScale12.z)));	
-		  	for(int i=0;i<cam.size();i++)
-		  				cam[0]->setLocation(vector3d(tempPLocation12.x,tempPLocation12.y,tempPLocation12.z));
-		  		
-		  	}
-		  		
-		  		
-				  
-				  			if(previousWord=="PlocZ_13:")
-		  		{
-		  			tempPLocation13.z=atoi(word.c_str());
-		  			for(int i=0;i<cam.size();i++)
-		  				cam[1]->setLocation(vector3d(tempPLocation13.x,tempPLocation13.y,tempPLocation13.z));
-		  		//unsigned int map=objLoad.load("data/decor/map10.obj");	
-		  		//Pobj10.push_back(new Pobject("map",map,vector3d(tempPLocation10.x,tempPLocation10.y,tempPLocation10.z),vector3d(tempCol.x,tempCol.y,tempCol.z),vector3d(tempPRotation10.x,tempPRotation10.y,tempPRotation10.z),vector3d(tempPScale10.x,tempPScale10.y,tempPScale10.z)));	
-		  		
-		  		
-		  		}	 
-				  
-				  			if(previousWord=="PlocZ_14:")
-		  		{
-		  			tempPLocation14.z=atoi(word.c_str());
-		  			for(int i=0;i<cam.size();i++)
-		  				cam[2]->setLocation(vector3d(tempPLocation14.x,tempPLocation14.y,tempPLocation14.z));
-		  		//unsigned int map=objLoad.load("data/decor/map10.obj");	
-		  		//Pobj10.push_back(new Pobject("map",map,vector3d(tempPLocation10.x,tempPLocation10.y,tempPLocation10.z),vector3d(tempCol.x,tempCol.y,tempCol.z),vector3d(tempPRotation10.x,tempPRotation10.y,tempPRotation10.z),vector3d(tempPScale10.x,tempPScale10.y,tempPScale10.z)));	
-		  		
-		  		
-		  		}	 
-				  
-				  			if(previousWord=="PlocZ_15:")
-		  		{
-		  			tempPLocation15.z=atoi(word.c_str());
-		  			for(int i=0;i<cam.size();i++)
-		  				cam[3]->setLocation(vector3d(tempPLocation15.x,tempPLocation15.y,tempPLocation15.z));
-		  		//unsigned int map=objLoad.load("data/decor/map10.obj");	
-		  		//Pobj10.push_back(new Pobject("map",map,vector3d(tempPLocation10.x,tempPLocation10.y,tempPLocation10.z),vector3d(tempCol.x,tempCol.y,tempCol.z),vector3d(tempPRotation10.x,tempPRotation10.y,tempPRotation10.z),vector3d(tempPScale10.x,tempPScale10.y,tempPScale10.z)));	
-		  		
-		  		
-		  		}	 	 
 		  		
 		  		
 		  		if(previousWord=="PlocZ_16:")
@@ -2258,15 +2179,7 @@ void datas::loadToFile(	)
 		  			//col=vector3d(tempColScreen.x,tempColScreen.y,tempColScreen.z);
 		  		}
 		  		
-				
-				 
-		
-		  		
-		  	
-		  					
-		  		
-		  		
-			 	
+
 			
 				  previousWord=word;
 			  }

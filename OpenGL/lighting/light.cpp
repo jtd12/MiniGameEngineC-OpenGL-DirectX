@@ -12,6 +12,17 @@ light::~light()
 	delete p;
 }
 
+void light::ShowLight()
+{
+int LightPos[4] = {0,10,-50,1};
+GLfloat shininess = 10.0F ;
+int MatSpec [4] = {1,1,1,1};
+glMaterialiv(GL_FRONT_AND_BACK,GL_SPECULAR,MatSpec);//fonction d'affichage d'un materiau qui gere la specularite
+glMateriali(GL_FRONT_AND_BACK,GL_SHININESS,10);//fonction 
+glMaterialf(GL_FRONT,GL_SHININESS,shininess);
+ 
+}
+
 void light::lighting()
 {
 			GLfloat ambient[] = {amb.x,amb.y,amb.z};

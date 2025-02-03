@@ -2,7 +2,7 @@
 #define DEF_SWITCHAPI
 #include <iostream>
 #include<windows.h>
-#include"../OpenGL/API_OPENGL.h"
+#include"../OpenGL/gameManager/API_OPENGL.h"
 #include"../OpenGL/menu/menu.h"
 #include"../DirectX/API_DIRECTX.h"
 #include"../MenuContext/windows.h"

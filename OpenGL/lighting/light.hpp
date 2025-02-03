@@ -27,6 +27,7 @@ class light
 		void lightDiffuse();
 		void lightAmb();
 		void lighting();
+		void ShowLight();
 		bool selectObject(vector3d objectReference,vector3d objectPointer,vector3d color,float dist);
 		
 	private:
