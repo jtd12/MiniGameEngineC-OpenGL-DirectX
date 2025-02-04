@@ -1,26 +1,26 @@
 Draw Object
 ---beginPobj12-----
-Pobj1pos PlocX_12: 29.4162Pobj1pos PlocY1_12: 2.444Pobj1pos PlocZ_12: 4.20703
-Pobj1pos PlocX_12: 29.4162Pobj1pos PlocY1_12: 2.444Pobj1pos PlocZ_12: 4.20703
-Pobj1pos PlocX_12: 29.4162Pobj1pos PlocY1_12: 2.444Pobj1pos PlocZ_12: 4.20703
-Pobj1pos PlocX_12: 29.4162Pobj1pos PlocY1_12: 2.444Pobj1pos PlocZ_12: 4.20703
+Pobj1pos PlocX_12: 38.108Pobj1pos PlocY1_12: 4Pobj1pos PlocZ_12: -2.39109
+Pobj1pos PlocX_12: 38.108Pobj1pos PlocY1_12: 4Pobj1pos PlocZ_12: -2.39109
+Pobj1pos PlocX_12: 38.108Pobj1pos PlocY1_12: 4Pobj1pos PlocZ_12: -2.39109
+Pobj1pos PlocX_12: 38.108Pobj1pos PlocY1_12: 4Pobj1pos PlocZ_12: -2.39109
 ----endPobj12-----
 ---beginPobj13-----
-Pobj1pos PlocX_13: 18Pobj1pos PlocY1_13: 5Pobj1pos PlocZ_13: 1
-Pobj1pos PlocX_13: 18Pobj1pos PlocY1_13: 5Pobj1pos PlocZ_13: 1
-Pobj1pos PlocX_13: 18Pobj1pos PlocY1_13: 5Pobj1pos PlocZ_13: 1
-Pobj1pos PlocX_13: 18Pobj1pos PlocY1_13: 5Pobj1pos PlocZ_13: 1
+Pobj1pos PlocX_13: 80Pobj1pos PlocY1_13: 4Pobj1pos PlocZ_13: 13
+Pobj1pos PlocX_13: 80Pobj1pos PlocY1_13: 4Pobj1pos PlocZ_13: 13
+Pobj1pos PlocX_13: 80Pobj1pos PlocY1_13: 4Pobj1pos PlocZ_13: 13
+Pobj1pos PlocX_13: 80Pobj1pos PlocY1_13: 4Pobj1pos PlocZ_13: 13
 ----endPobj13-----
 ---beginPobj14-----
-Pobj1pos PlocX_14: 4Pobj1pos PlocY1_14: 14Pobj1pos PlocZ_14: 9
-Pobj1pos PlocX_14: 4Pobj1pos PlocY1_14: 14Pobj1pos PlocZ_14: 9
-Pobj1pos PlocX_14: 4Pobj1pos PlocY1_14: 14Pobj1pos PlocZ_14: 9
-Pobj1pos PlocX_14: 4Pobj1pos PlocY1_14: 14Pobj1pos PlocZ_14: 9
+Pobj1pos PlocX_14: 20Pobj1pos PlocY1_14: 65Pobj1pos PlocZ_14: -5
+Pobj1pos PlocX_14: 20Pobj1pos PlocY1_14: 65Pobj1pos PlocZ_14: -5
+Pobj1pos PlocX_14: 20Pobj1pos PlocY1_14: 65Pobj1pos PlocZ_14: -5
+Pobj1pos PlocX_14: 20Pobj1pos PlocY1_14: 65Pobj1pos PlocZ_14: -5
 ----endPobj14-----
 ---beginPobj15-----
-Pobj1pos PlocX_15: 0Pobj1pos PlocY1_15: 0Pobj1pos PlocZ_15: 8
-Pobj1pos PlocX_15: 0Pobj1pos PlocY1_15: 0Pobj1pos PlocZ_15: 8
-Pobj1pos PlocX_15: 0Pobj1pos PlocY1_15: 0Pobj1pos PlocZ_15: 8
-Pobj1pos PlocX_15: 0Pobj1pos PlocY1_15: 0Pobj1pos PlocZ_15: 8
+Pobj1pos PlocX_15: 8Pobj1pos PlocY1_15: 0Pobj1pos PlocZ_15: 10
+Pobj1pos PlocX_15: 8Pobj1pos PlocY1_15: 0Pobj1pos PlocZ_15: 10
+Pobj1pos PlocX_15: 8Pobj1pos PlocY1_15: 0Pobj1pos PlocZ_15: 10
+Pobj1pos PlocX_15: 8Pobj1pos PlocY1_15: 0Pobj1pos PlocZ_15: 10
 ----endPobj15-----
 End Object

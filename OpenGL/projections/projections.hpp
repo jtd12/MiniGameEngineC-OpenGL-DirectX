@@ -27,6 +27,7 @@ class view
 		void reshape(int width,int height);
 		void reshapeOrtho(int width,int height);
 		void focal();
+		generateSkybox* sky;
 		
 	private:
 		 float angle;
@@ -34,7 +35,7 @@ class view
 		 float farPlane;
 		 int width_;
 		 int height_;
-		 generateSkybox* sky;	
+		 	
 };
 
 #endif

@@ -33,6 +33,8 @@
 #include"../lighting/light.hpp"
 #include"../transformations/supressions/supressions.hpp"
 #include"../transformations/transformations.hpp"
+#include"../transformations/ajouts/ajout.hpp"
+#include"../lighting/light.hpp"
 using namespace std;
 
 class APIOPENGL
@@ -76,7 +78,6 @@ void saveToFile();
 void loadToFile();
 void saveToFile2();
 void loadToFile2();
-bool selectObject(vector3d objectReference,vector3d objectPointer,vector3d color,float dist_);
 
 private:
 
@@ -117,16 +118,15 @@ std::vector<prefab*> pref;
 std::vector<prefabAnim*> prefAnim;
 std::vector<hud*> hud_;
 objloader objLoad;
-objloader obj_;
 std::vector<unsigned int>anim;
 view* view_;
 datas* data_;
 vector3d col;
-generateSkybox* sky;
 gameMode* gameMode_;
 light* light_;
 supression* supp;
 transformation* trans;
+ajout* add;
 
 };
 

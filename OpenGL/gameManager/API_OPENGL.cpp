@@ -24,13 +24,14 @@ void APIOPENGL::initGL()
 	keyright=false;
 	keyleft=false;
 	view_=new view();	
-	sky=new generateSkybox();
 	light_=new light(p);
-	data_=new datas(sky);
+	data_=new datas(view_->sky);
 	gameMode_=new gameMode();
 	loadToFile();
 	supp=new supression();
 	trans=new transformation(p);
+	add=new ajout();
+
 }
 
 APIOPENGL::~APIOPENGL()
@@ -41,6 +42,10 @@ APIOPENGL::~APIOPENGL()
 	delete prefAnim[i];
 	delete g;
 	delete p;
+	delete add;
+	delete trans;
+	delete supp;
+	delete light_;
 /*	for(int i=0;i<sky.size();i++)
 	delete sky[i];*/
 for(int i=0;i<cam.size();i++)
@@ -70,7 +75,7 @@ void APIOPENGL::loadToFile()
 	Pobj10=data_->ReadequalPobj10();
 	pref=data_->ReadequalPref();
 	prefAnim=data_->ReadequalPrefAnim();
-	sky=data_->ReadequalSky();
+	view_->sky=data_->ReadequalSky();
 	
 }
 
@@ -344,7 +349,7 @@ void APIOPENGL::saveToFile()
       	data_->WriteequalPObj(Pobj10);
 	    data_->WriteequalPrefab(pref);
 	    data_->WriteequalPrefabAnim(prefAnim);
-	    data_->WriteequalSky(sky);
+	    data_->WriteequalSky(view_->sky);
    		data_->saveToFile();
    		saveToFile2();
 }
@@ -358,6 +363,7 @@ void APIOPENGL::update()
 gameMode_->update();
 
 }
+
 void APIOPENGL::show()
 {
 //clavierActif(); 
@@ -370,17 +376,16 @@ glMatrixMode(GL_MODELVIEW);// choix du mode d'affichage en modelview
 glLoadIdentity();// initialisation de la matrice
 gluLookAt(1,1,10,1,0,0,0,1,0);
 //gluLookAt(camX,8,camZ,r.avancerX,3,r.avancerZ,0,1,0);// afichage de la camera à lecran qui suit le robot
-		p->setLocation(cam[0]->getLocation());
+p->setLocation(cam[0]->getLocation());
 cam[3]->update();
 	//fog();
 
-  glDisable(GL_FOG);
 
 
 g->show();
 p->show(); 
 
-  glEnable(GL_FOG);
+
 /* 
   if(fog_)
   glEnable(GL_FOG);
@@ -435,8 +440,8 @@ Pobj9[i]->drawObject();
 for(int i=0;i<Pobj10.size();i++)
 Pobj10[i]->drawObject();
 
-//colorSky();
- //lighting();
+view_->sky->colorSky();
+light_->lighting();
 //mode2D();
 //clavier();
 
@@ -463,12 +468,11 @@ gluLookAt(12,18,1,12,0,0,0,1,0);
 cam[2]->update();
 //	fog();
 
-  glDisable(GL_FOG);
 
 g->show();
 p->show(); 
 
-  glEnable(GL_FOG);
+
 /*
   if(fog_)
   glEnable(GL_FOG);
@@ -519,10 +523,10 @@ Pobj9[i]->drawObject();
 for(int i=0;i<Pobj10.size();i++)
 Pobj10[i]->drawObject();
 
-//colorSky();
+view_->sky->colorSky();
 
 //mode2D();
- //lighting();
+  light_->lighting();
 //clavier();
 
 
@@ -549,11 +553,10 @@ cam[1]->update();
 
 //	fog();
 
-  glDisable(GL_FOG);
 
 g->show();
 p->show(); 
-  glEnable(GL_FOG);
+
 /*
   if(fog_)
   glEnable(GL_FOG);
@@ -606,9 +609,9 @@ Pobj10[i]->drawObject();
 
 
 
-//colorSky();
+view_->sky->colorSky();
 
- //lighting();
+  light_->lighting();
 //mode2D();
 //clavier();
 
@@ -621,7 +624,9 @@ glutSwapBuffers();// echange de tampons pour ahever laffichage glut glutPostRedi
 void APIOPENGL::show4()
 {
 update();
-//clavierActif(); 
+
+//clavierActif();
+ 
 light_->ShowLight();
 
 glClear(GL_COLOR_BUFFER_BIT|GL_DEPTH_BUFFER_BIT);// effacement de la fenetre et vidage des tampons 
@@ -665,13 +670,9 @@ if(gameMode_->getLook2() && gameMode_->getLook()==false && prefAnim[i]->getWalk(
 }
 
 
-  glDisable(GL_FOG);
-
 g->show();
 p->show(); 
-if(gameMode_->getTime()<25)
-hud_[0]->show();
-  glEnable(GL_FOG);
+
 
  /* 
   if(fog_)
@@ -732,9 +733,9 @@ prefAnim[i]->show();
 //selectCam();
 
 
-//colorSky();
+view_->sky->colorSky();
 
- //lighting();
+light_->lighting();
 
 
 //mode2D();
@@ -748,21 +749,6 @@ glFlush();
 glutPostRedisplay();// reafraichissement automatique de la scene à chaque image calculées
 glutSwapBuffers();// echange de tampons pour ahever laffichage glut glutPostRedisplay();// rafraichissement de la scene en continue
 }
-
-
-bool APIOPENGL::selectObject(vector3d objectReference,vector3d objectPointer,vector3d color,float dist_)
-{
-	float dist=(sqrt(((objectPointer.x-objectReference.x)*(objectPointer.x-objectReference.x))+((objectPointer.y-objectReference.y)*(objectPointer.y-objectReference.y))+
-	((objectPointer.z-objectReference.z)*(objectPointer.z-objectReference.z))));
-	if(dist<dist_)
-	{
-		
-		return true;
-	}
-	return false;
-}
-
-
 
 
 
@@ -784,19 +770,14 @@ switch (key)
 	{
 		case 32:
 	
-	if(value==1)
-{
-
-obj2.push_back(new object(vector3d(p->getLocation()),vector3d(0.5,0.8,0.8),vector3d(0,0,0),vector3d(5,5,5)));
-
-}
 		 if(gameMode_->getLanchGame()==false )
 		 {
-		 //	moveLight();
+		    light_->moveLight();
 		//focal();
-		//	 lightAmb();
-	//	 lightDiffuse();
-		// reshape(glutGet(GLUT_WINDOW_WIDTH), glutGet(GLUT_WINDOW_HEIGHT));
+		    light_->lightAmb();
+	        light_->lightDiffuse();
+	        
+		reshape(glutGet(GLUT_WINDOW_WIDTH), glutGet(GLUT_WINDOW_HEIGHT));
 	/*	if(value==280)
 		fog_=true;
 			if(value==290)
@@ -830,73 +811,73 @@ obj2.push_back(new object(vector3d(p->getLocation()),vector3d(0.5,0.8,0.8),vecto
 		end_density=50.0f;
 		*/
 		 
-	/*	scaleObject(obj);
-		scaleObject(obj2);
-		scaleObject(obj3);
-		scaleObject(obj4);
-		scaleObject(obj5);
+		trans->scaleObject(obj);
+		trans->scaleObject(obj2);
+		trans->scaleObject(obj3);
+		trans->scaleObject(obj4);
+		trans->scaleObject(obj5);
 		
-		scaleObject(Pobj);
-		scaleObject(Pobj2);
-		scaleObject(Pobj3);
-		scaleObject(Pobj4);
-		scaleObject(Pobj5);
-		scaleObject(Pobj6);
-		scaleObject(Pobj7);
-		scaleObject(Pobj8);
-		scaleObject(Pobj9);
-		scaleObject(Pobj10);
-		scaleObject(pref);
-		scaleObject(prefAnim);
+		trans->scaleObject(Pobj);
+		trans->scaleObject(Pobj2);
+		trans->scaleObject(Pobj3);
+		trans->scaleObject(Pobj4);
+		trans->scaleObject(Pobj5);
+		trans->scaleObject(Pobj6);
+		trans->scaleObject(Pobj7);
+		trans->scaleObject(Pobj8);
+		trans->scaleObject(Pobj9);
+		trans->scaleObject(Pobj10);
+		trans->scaleObject(pref);
+		trans->scaleObject(prefAnim);
 	
-		rotateObject(obj);
-		rotateObject(obj2);
-		rotateObject(obj3);
-		rotateObject(obj4);
-		rotateObject(obj5);
+		trans->rotateObject(obj);
+		trans->rotateObject(obj2);
+		trans->rotateObject(obj3);
+		trans->rotateObject(obj4);
+		trans->rotateObject(obj5);
 		
 		
-		rotateObject(Pobj);
-		rotateObject(Pobj2);
-		rotateObject(Pobj3);
-		rotateObject(Pobj4);
-		rotateObject(Pobj5);
-		rotateObject(Pobj6);
-		rotateObject(Pobj7);
-		rotateObject(Pobj8);
-		rotateObject(Pobj9);
-		rotateObject(Pobj10);
-		rotateObject(pref);
-		rotateObject(prefAnim);
+		trans->rotateObject(Pobj);
+		trans->rotateObject(Pobj2);
+		trans->rotateObject(Pobj3);
+		trans->rotateObject(Pobj4);
+		trans->rotateObject(Pobj5);
+		trans->rotateObject(Pobj6);
+		trans->rotateObject(Pobj7);
+		trans->rotateObject(Pobj8);
+		trans->rotateObject(Pobj9);
+		trans->rotateObject(Pobj10);
+		trans->rotateObject(pref);
+		trans->rotateObject(prefAnim);
 		
 		
 		
-		translateObject(obj);
-		translateObject(obj2);
-		translateObject(obj3);
-		translateObject(obj4);
-		translateObject(obj5);
+		trans->translateObject(obj);
+		trans->translateObject(obj2);
+		trans->translateObject(obj3);
+		trans->translateObject(obj4);
+		trans->translateObject(obj5);
 		
-		translateObject(Pobj);
-		translateObject(Pobj2);
-		translateObject(Pobj3);
-		translateObject(Pobj4);
-		translateObject(Pobj5);
-		translateObject(Pobj6);
-		translateObject(Pobj7);
-		translateObject(Pobj8);
-		translateObject(Pobj9);
-		translateObject(Pobj10);
+		trans->translateObject(Pobj);
+		trans->translateObject(Pobj2);
+		trans->translateObject(Pobj3);
+		trans->translateObject(Pobj4);
+		trans->translateObject(Pobj5);
+		trans->translateObject(Pobj6);
+		trans->translateObject(Pobj7);
+		trans->translateObject(Pobj8);
+		trans->translateObject(Pobj9);
+		trans->translateObject(Pobj10);
 
-		translateObject(pref);
-		translateObject(prefAnim);
+		trans->translateObject(pref);
+		trans->translateObject(prefAnim);
 		
-	 	colorObject(obj);
-	 	colorObject(obj2);
-	 	colorObject(obj3);
-	 	colorObject(obj4);
-	 	colorObject(obj5);
-	 	*/
+	 	trans->colorObject(obj);
+	 	trans->colorObject(obj2);
+	 	trans->colorObject(obj3);
+	 	trans->colorObject(obj4);
+	 	trans->colorObject(obj5);
+	 	
 	 	
 		if(value==2100)
 		data_->loadToFile();
@@ -1096,97 +1077,8 @@ if(value==1900)
 	for(int i=0;i<cam.size();i++)
 	cam[i]->setMouseVel(-0.1f);
 }
-if(value==1)
-{
 
-obj2.push_back(new object(vector3d(p->getLocation()),vector3d(0.5,0.8,0.8),vector3d(0,0,0),vector3d(5,5,5)));
-
-}
-
-if(value==2)
-obj.push_back(new object(vector3d(p->getLocation()),vector3d(0.5,0.8,0.8),vector3d(0,0,0),vector3d(5,5,5)));
-if(value==3)
-obj3.push_back(new object(vector3d(p->getLocation()),vector3d(0.5,0.8,0.8),vector3d(0,0,0),vector3d(5,5,5)));
-if(value==4)
-obj4.push_back(new object(vector3d(p->getLocation()),vector3d(0.5,0.8,0.8),vector3d(0,0,0),vector3d(5,5,5)));
-if(value==10)
-obj5.push_back(new object(vector3d(p->getLocation()),vector3d(0.5,0.8,0.8),vector3d(0,0,0),vector3d(5,5,5)));
-if(value==11)
-{
-fileName[10]="data/decor/map.obj";
-unsigned int map=objLoad.load(fileName[10]);		
-Pobj.push_back(new Pobject("decor",map,vector3d(p->getLocation()),vector3d(0.5,0.8,0.8),vector3d(0,0,0),vector3d(5,5,5)));
-}
-if(value==12)
-{
-fileName[9]="data/decor/map2.obj";
-unsigned int map=objLoad.load(fileName[9]);		
-Pobj2.push_back(new Pobject("decor",map,vector3d(p->getLocation()),vector3d(0.5,0.8,0.8),vector3d(0,0,0),vector3d(5,5,5)));
-}
-if(value==13)
-{
-fileName[8]="data/decor/map3.obj";
-unsigned int map=objLoad.load(fileName[8]);		
-Pobj3.push_back(new Pobject("decor",map,vector3d(p->getLocation()),vector3d(0.5,0.8,0.8),vector3d(0,0,0),vector3d(5,5,5)));
-}
-if(value==14)
-{
-fileName[7]="data/decor/map4.obj";
-unsigned int map=objLoad.load(fileName[7]);		
-Pobj4.push_back(new Pobject("decor",map,vector3d(p->getLocation()),vector3d(0.5,0.8,0.8),vector3d(0,0,0),vector3d(5,5,5)));
-}
-if(value==15)
-{
-fileName[6]="data/decor/map5.obj";
-unsigned int map=objLoad.load(fileName[6]);		
-Pobj5.push_back(new Pobject("decor",map,vector3d(p->getLocation()),vector3d(0.5,0.8,0.8),vector3d(0,0,0),vector3d(5,5,5)));
-}
-if(value==16)
-{
-fileName[5]="data/decor/map6.obj";
-unsigned int map=objLoad.load(fileName[5]);	
-Pobj6.push_back(new Pobject("decor",map,vector3d(p->getLocation()),vector3d(0.5,0.8,0.8),vector3d(0,0,0),vector3d(5,5,5)));
-}
-if(value==17)
-{
-fileName[4]="data/decor/map7.obj";
-unsigned int map=objLoad.load(fileName[4]);	
-Pobj7.push_back(new Pobject("decor",map,vector3d(p->getLocation()),vector3d(0.5,0.8,0.8),vector3d(0,0,0),vector3d(5,5,5)));
-}
-if(value==18)
-{
-fileName[3]="data/decor/map8.obj";
-unsigned int map=objLoad.load(fileName[3]);		
-Pobj8.push_back(new Pobject("decor",map,vector3d(p->getLocation()),vector3d(0.5,0.8,0.8),vector3d(0,0,0),vector3d(5,5,5)));
-}
-if(value==19)
-{
-fileName[2]="data/decor/map9.obj";
-unsigned int map=objLoad.load(fileName[2]);		
-Pobj9.push_back(new Pobject("decor",map,vector3d(p->getLocation()),vector3d(0.5,0.8,0.8),vector3d(0,0,0),vector3d(5,5,5)));
-}
-if(value==20)
-{
-fileName[1]="data/decor/map10.obj";
-unsigned int map=objLoad.load(fileName[1]);		
-Pobj10.push_back(new Pobject("decor",map,vector3d(p->getLocation()),vector3d(0.5,0.8,0.8),vector3d(0,0,0),vector3d(5,5,5)));
-}
-if(value==5)
-{
-
-pref.push_back(new prefab("vehicule","data/vehicule.obj",p->getLocation(),vector3d(0,0,0),vector3d(1,1,1)));
-
-}
-if(value==6)
-{
-
-
-
-prefAnim.push_back(new prefabAnim("character",p->getLocation(),vector3d(0,0,0),vector3d(1,1,1)));
-
-
-}
-
+add->update(p,obj,obj2,obj3,obj4,obj5,Pobj,Pobj2,Pobj3,Pobj4,Pobj5,Pobj6,Pobj7,Pobj8,Pobj9,Pobj10,pref,prefAnim,fileName,objLoad);
    
 
 	//	 if(value==145)
@@ -1199,265 +1091,7 @@ prefAnim.push_back(new prefabAnim("character",p->getLocation(),vector3d(0,0,0),v
 			break;
 			case 'f':
 			cam[0]->setLocation(vector3d(0,0,0));
-			if(obj.size()>0)
-			{
-					int count=0;
-					for(std::vector<object*>::iterator i = obj.begin(); i != obj.end();++i)
-					{
-						if(count==obj.size())
-						{
-							delete (*i);
-						}
-						count++;
-					}
-		
-			 obj.pop_back();
-		}
-		
-		
-					
-			if(obj2.size()>0)
-			{
-					int count=0;
-					for(std::vector<object*>::iterator i = obj2.begin(); i != obj2.end();++i)
-					{
-						if(count==obj2.size())
-						{
-							delete (*i);
-						}
-						count++;
-					}
-		
-			 obj2.pop_back();
-		}
-			 
-					
-			if(obj3.size()>0)
-			{
-					int count=0;
-					for(std::vector<object*>::iterator i = obj3.begin(); i != obj3.end();++i)
-					{
-						if(count==obj3.size())
-						{
-							delete (*i);
-						}
-						count++;
-					}
-		
-			 obj3.pop_back();
-		}
-		
-		
-					
-			if(obj4.size()>0)
-			{
-					int count=0;
-					for(std::vector<object*>::iterator i = obj4.begin(); i != obj4.end();++i)
-					{
-						if(count==obj4.size())
-						{
-							delete (*i);
-						}
-						count++;
-					}
-		
-			 obj4.pop_back();
-		}
-		
-					
-			if(obj5.size()>0)
-			{
-					int count=0;
-					for(std::vector<object*>::iterator i = obj5.begin(); i != obj5.end();++i)
-					{
-						if(count==obj5.size())
-						{
-							delete (*i);
-						}
-						count++;
-					}
-		
-			 obj5.pop_back();
-		}
-		
-					
-			if(pref.size()>0)
-			{
-					int count=0;
-					for(std::vector<prefab*>::iterator i = pref.begin(); i != pref.end();++i)
-					{
-						if(count==pref.size())
-						{
-							delete (*i);
-						}
-						count++;
-					}
-		
-			 pref.pop_back();
-		}
-		
-					
-			if(prefAnim.size()>0)
-			{
-					int count=0;
-					for(std::vector<prefabAnim*>::iterator i = prefAnim.begin(); i != prefAnim.end();++i)
-					{
-						if(count==prefAnim.size())
-						{
-							delete (*i);
-						}
-						count++;
-					}
-		
-			 prefAnim.pop_back();
-		}
-		
-					
-			if(Pobj.size()>0)
-			{
-					int count=0;
-					for(std::vector<Pobject*>::iterator i = Pobj.begin(); i != Pobj.end();++i)
-					{
-						if(count==Pobj.size())
-						{
-							delete (*i);
-						}
-						count++;
-					}
-		
-			 Pobj.pop_back();
-		}
-				if(Pobj2.size()>0)
-			{
-					int count=0;
-					for(std::vector<Pobject*>::iterator i = Pobj2.begin(); i != Pobj2.end();++i)
-					{
-						if(count==Pobj2.size())
-						{
-							delete (*i);
-						}
-						count++;
-					}
-		
-			 Pobj2.pop_back();
-		}
-				if(Pobj3.size()>0)
-			{
-					int count=0;
-					for(std::vector<Pobject*>::iterator i = Pobj3.begin(); i != Pobj3.end();++i)
-					{
-						if(count==Pobj3.size())
-						{
-							delete (*i);
-						}
-						count++;
-					}
-		
-			 Pobj3.pop_back();
-		}
-		
-				if(Pobj4.size()>0)
-			{
-					int count=0;
-					for(std::vector<Pobject*>::iterator i = Pobj4.begin(); i != Pobj4.end();++i)
-					{
-						if(count==Pobj4.size())
-						{
-							delete (*i);
-						}
-						count++;
-					}
-		
-			 Pobj4.pop_back();
-		}
-				if(Pobj5.size()>0)
-			{
-					int count=0;
-					for(std::vector<Pobject*>::iterator i = Pobj5.begin(); i != Pobj5.end();++i)
-					{
-						if(count==Pobj5.size())
-						{
-							delete (*i);
-						}
-						count++;
-					}
-		
-			 Pobj5.pop_back();
-		}
-		
-				if(Pobj6.size()>0)
-			{
-					int count=0;
-					for(std::vector<Pobject*>::iterator i = Pobj6.begin(); i != Pobj6.end();++i)
-					{
-						if(count==Pobj6.size())
-						{
-							delete (*i);
-						}
-						count++;
-					}
-		
-			 Pobj6.pop_back();
-		}
-				if(Pobj7.size()>0)
-			{
-					int count=0;
-					for(std::vector<Pobject*>::iterator i = Pobj7.begin(); i != Pobj7.end();++i)
-					{
-						if(count==Pobj7.size())
-						{
-							delete (*i);
-						}
-						count++;
-					}
-		
-			 Pobj7.pop_back();
-		}
-		
-				if(Pobj8.size()>0)
-			{
-					int count=0;
-					for(std::vector<Pobject*>::iterator i = Pobj8.begin(); i != Pobj8.end();++i)
-					{
-						if(count==Pobj8.size())
-						{
-							delete (*i);
-						}
-						count++;
-					}
-		
-			 Pobj8.pop_back();
-		}
-		
-				if(Pobj9.size()>0)
-			{
-					int count=0;
-					for(std::vector<Pobject*>::iterator i = Pobj9.begin(); i != Pobj9.end();++i)
-					{
-						if(count==Pobj9.size())
-						{
-							delete (*i);
-						}
-						count++;
-					}
-		
-			 Pobj9.pop_back();
-		}
-		
-				if(Pobj10.size()>0)
-			{
-					int count=0;
-					for(std::vector<Pobject*>::iterator i = Pobj10.begin(); i != Pobj10.end();++i)
-					{
-						if(count==Pobj10.size())
-						{
-							delete (*i);
-						}
-						count++;
-					}
-		
-			 Pobj10.pop_back();
-		}
+			supp->update(obj,obj2,obj3,obj4,obj5,Pobj,Pobj2,Pobj3,Pobj4,Pobj5,Pobj6,Pobj7,Pobj8,Pobj9,Pobj10,pref,prefAnim);
 			 break;
 			case 'm':
 
@@ -1470,7 +1104,7 @@ prefAnim.push_back(new prefabAnim("character",p->getLocation(),vector3d(0,0,0),v
 			case 'x':
 if(gameMode_->getLanchGame()==false)
 {
-supp->update(p,cam,obj,obj2,obj3,obj4,obj5,Pobj,Pobj2,Pobj3,Pobj4,Pobj5,Pobj6,Pobj7,Pobj8,Pobj9,Pobj10,pref,prefAnim,sky);
+supp->update(p,cam,obj,obj2,obj3,obj4,obj5,Pobj,Pobj2,Pobj3,Pobj4,Pobj5,Pobj6,Pobj7,Pobj8,Pobj9,Pobj10,pref,prefAnim,view_->sky);
 		 
 		 
 	}

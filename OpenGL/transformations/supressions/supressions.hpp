@@ -28,6 +28,26 @@ class supression
 		supression();
 		~supression();
 		
+		void update(
+		std::vector<object*>& obj,
+		std::vector<object*>& obj2,
+		std::vector<object*>& obj3, 
+		std::vector<object*>& obj4, 
+		std::vector<object*>& obj5, 
+		std::vector<Pobject*>& Pobj, 
+		std::vector<Pobject*>& Pobj2,
+		std::vector<Pobject*>& Pobj3,
+		std::vector<Pobject*>& Pobj4,
+		std::vector<Pobject*>& Pobj5,
+		std::vector<Pobject*>& Pobj6,
+		std::vector<Pobject*>& Pobj7,
+		std::vector<Pobject*>& Pobj8,
+		std::vector<Pobject*>& Pobj9,
+		std::vector<Pobject*>& Pobj10,
+		std::vector<prefab*>& pref,
+		std::vector<prefabAnim*>& prefAnim
+		);
+		
 		void update(pointer* pp,	std::vector<camera*>& cam,
 		std::vector<object*>& obj,
 		std::vector<object*>& obj2,

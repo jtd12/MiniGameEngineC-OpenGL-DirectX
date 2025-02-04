@@ -11,6 +11,286 @@ supression::~supression()
 
 }
 
+void supression::update(
+		std::vector<object*>& obj,
+		std::vector<object*>& obj2,
+		std::vector<object*>& obj3, 
+		std::vector<object*>& obj4, 
+		std::vector<object*>& obj5, 
+		std::vector<Pobject*>& Pobj, 
+		std::vector<Pobject*>& Pobj2,
+		std::vector<Pobject*>& Pobj3,
+		std::vector<Pobject*>& Pobj4,
+		std::vector<Pobject*>& Pobj5,
+		std::vector<Pobject*>& Pobj6,
+		std::vector<Pobject*>& Pobj7,
+		std::vector<Pobject*>& Pobj8,
+		std::vector<Pobject*>& Pobj9,
+		std::vector<Pobject*>& Pobj10,
+		std::vector<prefab*>& pref,
+		std::vector<prefabAnim*>& prefAnim
+		)
+{
+		if(obj.size()>0)
+			{
+					int count=0;
+					for(std::vector<object*>::iterator i = obj.begin(); i != obj.end();++i)
+					{
+						if(count==obj.size())
+						{
+							delete (*i);
+						}
+						count++;
+					}
+		
+			 obj.pop_back();
+		}
+		
+		
+					
+			if(obj2.size()>0)
+			{
+					int count=0;
+					for(std::vector<object*>::iterator i = obj2.begin(); i != obj2.end();++i)
+					{
+						if(count==obj2.size())
+						{
+							delete (*i);
+						}
+						count++;
+					}
+		
+			 obj2.pop_back();
+		}
+			 
+					
+			if(obj3.size()>0)
+			{
+					int count=0;
+					for(std::vector<object*>::iterator i = obj3.begin(); i != obj3.end();++i)
+					{
+						if(count==obj3.size())
+						{
+							delete (*i);
+						}
+						count++;
+					}
+		
+			 obj3.pop_back();
+		}
+		
+		
+					
+			if(obj4.size()>0)
+			{
+					int count=0;
+					for(std::vector<object*>::iterator i = obj4.begin(); i != obj4.end();++i)
+					{
+						if(count==obj4.size())
+						{
+							delete (*i);
+						}
+						count++;
+					}
+		
+			 obj4.pop_back();
+		}
+		
+					
+			if(obj5.size()>0)
+			{
+					int count=0;
+					for(std::vector<object*>::iterator i = obj5.begin(); i != obj5.end();++i)
+					{
+						if(count==obj5.size())
+						{
+							delete (*i);
+						}
+						count++;
+					}
+		
+			 obj5.pop_back();
+		}
+		
+					
+			if(pref.size()>0)
+			{
+					int count=0;
+					for(std::vector<prefab*>::iterator i = pref.begin(); i != pref.end();++i)
+					{
+						if(count==pref.size())
+						{
+							delete (*i);
+						}
+						count++;
+					}
+		
+			 pref.pop_back();
+		}
+		
+					
+			if(prefAnim.size()>0)
+			{
+					int count=0;
+					for(std::vector<prefabAnim*>::iterator i = prefAnim.begin(); i != prefAnim.end();++i)
+					{
+						if(count==prefAnim.size())
+						{
+							delete (*i);
+						}
+						count++;
+					}
+		
+			 prefAnim.pop_back();
+		}
+		
+					
+			if(Pobj.size()>0)
+			{
+					int count=0;
+					for(std::vector<Pobject*>::iterator i = Pobj.begin(); i != Pobj.end();++i)
+					{
+						if(count==Pobj.size())
+						{
+							delete (*i);
+						}
+						count++;
+					}
+		
+			 Pobj.pop_back();
+		}
+				if(Pobj2.size()>0)
+			{
+					int count=0;
+					for(std::vector<Pobject*>::iterator i = Pobj2.begin(); i != Pobj2.end();++i)
+					{
+						if(count==Pobj2.size())
+						{
+							delete (*i);
+						}
+						count++;
+					}
+		
+			 Pobj2.pop_back();
+		}
+				if(Pobj3.size()>0)
+			{
+					int count=0;
+					for(std::vector<Pobject*>::iterator i = Pobj3.begin(); i != Pobj3.end();++i)
+					{
+						if(count==Pobj3.size())
+						{
+							delete (*i);
+						}
+						count++;
+					}
+		
+			 Pobj3.pop_back();
+		}
+		
+				if(Pobj4.size()>0)
+			{
+					int count=0;
+					for(std::vector<Pobject*>::iterator i = Pobj4.begin(); i != Pobj4.end();++i)
+					{
+						if(count==Pobj4.size())
+						{
+							delete (*i);
+						}
+						count++;
+					}
+		
+			 Pobj4.pop_back();
+		}
+				if(Pobj5.size()>0)
+			{
+					int count=0;
+					for(std::vector<Pobject*>::iterator i = Pobj5.begin(); i != Pobj5.end();++i)
+					{
+						if(count==Pobj5.size())
+						{
+							delete (*i);
+						}
+						count++;
+					}
+		
+			 Pobj5.pop_back();
+		}
+		
+				if(Pobj6.size()>0)
+			{
+					int count=0;
+					for(std::vector<Pobject*>::iterator i = Pobj6.begin(); i != Pobj6.end();++i)
+					{
+						if(count==Pobj6.size())
+						{
+							delete (*i);
+						}
+						count++;
+					}
+		
+			 Pobj6.pop_back();
+		}
+				if(Pobj7.size()>0)
+			{
+					int count=0;
+					for(std::vector<Pobject*>::iterator i = Pobj7.begin(); i != Pobj7.end();++i)
+					{
+						if(count==Pobj7.size())
+						{
+							delete (*i);
+						}
+						count++;
+					}
+		
+			 Pobj7.pop_back();
+		}
+		
+				if(Pobj8.size()>0)
+			{
+					int count=0;
+					for(std::vector<Pobject*>::iterator i = Pobj8.begin(); i != Pobj8.end();++i)
+					{
+						if(count==Pobj8.size())
+						{
+							delete (*i);
+						}
+						count++;
+					}
+		
+			 Pobj8.pop_back();
+		}
+		
+				if(Pobj9.size()>0)
+			{
+					int count=0;
+					for(std::vector<Pobject*>::iterator i = Pobj9.begin(); i != Pobj9.end();++i)
+					{
+						if(count==Pobj9.size())
+						{
+							delete (*i);
+						}
+						count++;
+					}
+		
+			 Pobj9.pop_back();
+		}
+		
+				if(Pobj10.size()>0)
+			{
+					int count=0;
+					for(std::vector<Pobject*>::iterator i = Pobj10.begin(); i != Pobj10.end();++i)
+					{
+						if(count==Pobj10.size())
+						{
+							delete (*i);
+						}
+						count++;
+					}
+		
+			 Pobj10.pop_back();
+		}
+}
 void supression::update(pointer* p,	std::vector<camera*>& cam_,
 		std::vector<object*>& obj_,
 		std::vector<object*>& obj2_,
