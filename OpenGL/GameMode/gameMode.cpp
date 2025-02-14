@@ -9,6 +9,12 @@ gameMode::gameMode()
 	lanchGame=false;
 	look=false;	
 	time=0.0f;
+	p=new pointer();
+}
+
+gameMode::gameMode(pointer* pp)
+{
+	p=pp;
 }
 
 float gameMode::getTime()
@@ -357,8 +363,6 @@ collision::sphereplane(posobj,vector3d(0,2.5,0),obj2_[j]->getP21(),obj2_[j]->get
 obj_[i]->setLocation(posobj);
 
 
-
-
 }
 }
 
@@ -366,6 +370,202 @@ obj_[i]->setLocation(posobj);
 }
 
 
-}	
+}
+
+void gameMode::applyDynamic()
+{
+
+		for(int i=0;i<obj.size();i++)
+if(value==1600 && selectObject(obj[i]->getLocation(),p->getLocation(),vector3d(0.2,0.5,0.5),5))
+{
+	obj[i]->setDynamic(true);
+}
+		for(int i=0;i<obj.size();i++)
+if(value==1700 && selectObject(obj[i]->getLocation(),p->getLocation(),vector3d(0.2,0.5,0.5),5))
+{
+	obj[i]->setDynamic(false);
+}
+
+
+		for(int i=0;i<obj2.size();i++)
+if(value==1600 && selectObject(obj2[i]->getLocation(),p->getLocation(),vector3d(0.2,0.5,0.5),5))
+{
+	obj2[i]->setDynamic(true);
+}
+		for(int i=0;i<obj2.size();i++)
+if(value==1700 && selectObject(obj2[i]->getLocation(),p->getLocation(),vector3d(0.2,0.5,0.5),5))
+{
+	obj2[i]->setDynamic(false);
+}
+
+		for(int i=0;i<obj3.size();i++)
+if(value==1600 && selectObject(obj3[i]->getLocation(),p->getLocation(),vector3d(0.2,0.5,0.5),5))
+{
+	obj3[i]->setDynamic(true);
+}
+		for(int i=0;i<obj3.size();i++)
+if(value==1700 && selectObject(obj3[i]->getLocation(),p->getLocation(),vector3d(0.2,0.5,0.5),5))
+{
+	obj3[i]->setDynamic(false);
+}
+
+
+		for(int i=0;i<obj4.size();i++)
+if(value==1600 && selectObject(obj4[i]->getLocation(),p->getLocation(),vector3d(0.2,0.5,0.5),5))
+{
+	obj4[i]->setDynamic(true);
+}
+		for(int i=0;i<obj4.size();i++)
+if(value==1700 && selectObject(obj4[i]->getLocation(),p->getLocation(),vector3d(0.2,0.5,0.5),5))
+{
+	obj4[i]->setDynamic(false);
+}
+		for(int i=0;i<pref.size();i++)
+if(value==1600 && selectObject(pref[i]->getLocation(),p->getLocation(),vector3d(0.2,0.5,0.5),5))
+{
+	pref[i]->setDynamic(true);
+}
+		for(int i=0;i<pref.size();i++)
+if(value==1700 && selectObject(pref[i]->getLocation(),p->getLocation(),vector3d(0.2,0.5,0.5),5))
+{
+	pref[i]->setDynamic(false);
+}
+
+		for(int i=0;i<prefAnim.size();i++)
+if(value==1600 && selectObject(prefAnim[i]->getLocation(),p->getLocation(),vector3d(0.2,0.5,0.5),5))
+{
+	prefAnim[i]->setDynamic(true);
+}
+		for(int i=0;i<prefAnim.size();i++)
+if(value==1700 && selectObject(prefAnim[i]->getLocation(),p->getLocation(),vector3d(0.2,0.5,0.5),5))
+{
+	prefAnim[i]->setDynamic(false);
+}
+
+	for(int i=0;i<obj.size();i++)
+if(value==1200 && selectObject(obj[i]->getLocation(),p->getLocation(),vector3d(0.2,0.5,0.5),5))
+{
+	obj[i]->setDrive(true);
+}
+	for(int i=0;i<obj2.size();i++)
+if(value==1200 && selectObject(obj2[i]->getLocation(),p->getLocation(),vector3d(0.2,0.5,0.5),5))
+{
+	obj2[i]->setDrive(true);
+}
+
+	for(int i=0;i<obj3.size();i++)
+if(value==1200 && selectObject(obj3[i]->getLocation(),p->getLocation(),vector3d(0.2,0.5,0.5),5))
+{
+	obj3[i]->setDrive(true);
+}
+	for(int i=0;i<obj4.size();i++)
+if(value==1200 && selectObject(obj4[i]->getLocation(),p->getLocation(),vector3d(0.2,0.5,0.5),5))
+{
+	obj4[i]->setDrive(true);
+}
+
+	for(int i=0;i<obj.size();i++)
+if(value==1230 && selectObject(obj[i]->getLocation(),p->getLocation(),vector3d(0.2,0.5,0.5),5))
+{
+	obj[i]->setDrive(false);
+}
+	for(int i=0;i<obj2.size();i++)
+if(value==1230 && selectObject(obj2[i]->getLocation(),p->getLocation(),vector3d(0.2,0.5,0.5),5))
+{
+	obj2[i]->setDrive(false);
+}
+
+	for(int i=0;i<obj3.size();i++)
+if(value==1230 && selectObject(obj3[i]->getLocation(),p->getLocation(),vector3d(0.2,0.5,0.5),5))
+{
+	obj3[i]->setDrive(false);
+}
+	for(int i=0;i<obj4.size();i++)
+if(value==1230 && selectObject(obj4[i]->getLocation(),p->getLocation(),vector3d(0.2,0.5,0.5),5))
+{
+	obj4[i]->setDrive(false);
+}
+
+
+	for(int i=0;i<obj.size();i++)
+if(value==1250 && selectObject(obj[i]->getLocation(),p->getLocation(),vector3d(0.2,0.5,0.5),5))
+{
+	obj[i]->setWalk(true);
+}
+	for(int i=0;i<obj2.size();i++)
+if(value==1250 && selectObject(obj2[i]->getLocation(),p->getLocation(),vector3d(0.2,0.5,0.5),5))
+{
+	obj2[i]->setWalk(true);
+}
+
+	for(int i=0;i<obj3.size();i++)
+if(value==1250 && selectObject(obj3[i]->getLocation(),p->getLocation(),vector3d(0.2,0.5,0.5),5))
+{
+	obj3[i]->setWalk(true);
+}
+	for(int i=0;i<obj4.size();i++)
+if(value==1250 && selectObject(obj4[i]->getLocation(),p->getLocation(),vector3d(0.2,0.5,0.5),5))
+{
+	obj4[i]->setWalk(true);
+}
+
+
+
+	for(int i=0;i<obj.size();i++)
+if(value==1280 && selectObject(obj[i]->getLocation(),p->getLocation(),vector3d(0.2,0.5,0.5),5))
+{
+	obj[i]->setWalk(false);
+}
+	for(int i=0;i<obj2.size();i++)
+if(value==1280 && selectObject(obj2[i]->getLocation(),p->getLocation(),vector3d(0.2,0.5,0.5),5))
+{
+	obj2[i]->setWalk(false);
+}
+
+	for(int i=0;i<obj3.size();i++)
+if(value==1280 && selectObject(obj3[i]->getLocation(),p->getLocation(),vector3d(0.2,0.5,0.5),5))
+{
+	obj3[i]->setWalk(false);
+}
+	for(int i=0;i<obj4.size();i++)
+if(value==1280 && selectObject(obj4[i]->getLocation(),p->getLocation(),vector3d(0.2,0.5,0.5),5))
+{
+	obj4[i]->setWalk(false);
+}
+
+	for(int i=0;i<pref.size();i++)
+if(value==1200 && selectObject(pref[i]->getLocation(),p->getLocation(),vector3d(0.2,0.5,0.5),5))
+{
+	pref[i]->setDrive(true);
+}
+	for(int i=0;i<pref.size();i++)
+if(value==1230 && pref[i]->getDrive() && selectObject(pref[i]->getLocation(),p->getLocation(),vector3d(0.2,0.5,0.5),5))
+{
+	pref[i]->setDrive(false);
+}
+	for(int i=0;i<prefAnim.size();i++)
+if(value==1250 && selectObject(prefAnim[i]->getLocation(),p->getLocation(),vector3d(0.2,0.5,0.5),5))
+{
+	prefAnim[i]->setWalk(true);
+}
+	for(int i=0;i<prefAnim.size();i++)
+if(value==1280 && prefAnim[i]->getWalk() && selectObject(prefAnim[i]->getLocation(),p->getLocation(),vector3d(0.2,0.5,0.5),5))
+{
+	prefAnim[i]->setWalk(false);
+}
+}
+
+
+bool gameMode::selectObject(vector3d objectReference,vector3d objectPointer,vector3d color,float dist_)
+{
+	float dist=(sqrt(((objectPointer.x-objectReference.x)*(objectPointer.x-objectReference.x))+((objectPointer.y-objectReference.y)*(objectPointer.y-objectReference.y))+
+	((objectPointer.z-objectReference.z)*(objectPointer.z-objectReference.z))));
+	if(dist<dist_)
+	{
+		
+		return true;
+	}
+	return false;
+}
  
 

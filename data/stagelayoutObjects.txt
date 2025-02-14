@@ -17,6 +17,8 @@ Obj1pos locX_3: 37Obj1pos locY1_3: 0Obj1pos locY2_3: 5Obj1pos locY_3: 5Obj1pos l
 ---beginObj4-----
 ----endObj4-----
 ---beginVehicule-----
+Obj1pos locX_5: 38Obj1pos locY1_5: 4Obj1pos locY2_5: 1Obj1pos locY_5: 1Obj1pos locY3_5: 1Obj1pos locY5_5: 0Obj1pos locY4_5: 0Obj1pos locY6_5: 0Obj1pos locZ_5: 0
+Obj1pos locX_5: 31Obj1pos locY1_5: 4Obj1pos locY2_5: 1Obj1pos locY_5: 1Obj1pos locY3_5: 1Obj1pos locY5_5: 0Obj1pos locY4_5: 0Obj1pos locY6_5: 0Obj1pos locZ_5: 10
 ----endVehicule-----
 ---beginCharacter-----
 ----endCharacter-----

@@ -28,6 +28,7 @@ class gameMode
 {
 	public:
 		gameMode();
+		gameMode(pointer* pp);
 		~gameMode();
 		void selectCam();
 		void reinitialiseGame(std::vector<object*> obj_,std::vector<prefab*> pref_,std::vector<prefabAnim*> prefAnim_);
@@ -40,6 +41,8 @@ class gameMode
 		bool getLook2();
 		bool getLook3();
 		bool getLanchGame();
+		bool selectObject(vector3d objectReference,vector3d objectPointer,vector3d color,float dist_);
+		void applyDynamic();
 		bool startG();
 		float getTime();
 		

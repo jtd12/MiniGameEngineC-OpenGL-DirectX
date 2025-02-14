@@ -501,3 +501,297 @@ void transformation::translateObject(std::vector<prefabAnim*> obj_)
 }
 
 
+void transformation::separateObjects(std::vector<object*>& objects, float minDistance, float separationFactor) {
+    for (size_t i = 0; i < objects.size(); i++) {
+        for (size_t j = i + 1; j < objects.size(); j++) {
+            float dx = objects[j]->getLocation().x - objects[i]->getLocation().x;
+            float dy = objects[j]->getLocation().y - objects[i]->getLocation().y;
+            float dz = objects[j]->getLocation().z - objects[i]->getLocation().z;
+            
+            float distance = std::sqrt(dx * dx + dy * dy + dz * dz);
+
+            if (distance < minDistance && distance > 0.0f) {
+                // Normalisation du vecteur de séparation
+                float invDist = 1.0f / distance;
+                dx *= invDist;
+                dy *= invDist;
+                dz *= invDist;
+
+                // Appliquer une petite séparation
+                float moveAmount = (minDistance - distance) * separationFactor;
+                objects[i]->setLocationIncrement2(vector3d(-dx*moveAmount,-dy*moveAmount,-dz*moveAmount));
+				objects[j]->setLocationIncrement2(vector3d(dx*moveAmount,dy*moveAmount,dz*moveAmount));
+             
+            }
+        }
+    }
+}
+
+void transformation::separateObjects(std::vector<Pobject*>& objects, float minDistance, float separationFactor) {
+    for (size_t i = 0; i < objects.size(); i++) {
+        for (size_t j = i + 1; j < objects.size(); j++) {
+            float dx = objects[j]->getLocation().x - objects[i]->getLocation().x;
+            float dy = objects[j]->getLocation().y - objects[i]->getLocation().y;
+            float dz = objects[j]->getLocation().z - objects[i]->getLocation().z;
+            
+            float distance = std::sqrt(dx * dx + dy * dy + dz * dz);
+
+            if (distance < minDistance && distance > 0.0f) {
+                // Normalisation du vecteur de séparation
+                float invDist = 1.0f / distance;
+                dx *= invDist;
+                dy *= invDist;
+                dz *= invDist;
+
+                // Appliquer une petite séparation
+                float moveAmount = (minDistance - distance) * separationFactor;
+                objects[i]->setLocationIncrement2(vector3d(-dx*moveAmount,-dy*moveAmount,-dz*moveAmount));
+				objects[j]->setLocationIncrement2(vector3d(dx*moveAmount,dy*moveAmount,dz*moveAmount));
+             
+            }
+        }
+    }
+}
+
+void transformation::separateObjects(std::vector<prefab*>& objects, float minDistance, float separationFactor) {
+    for (size_t i = 0; i < objects.size(); i++) {
+        for (size_t j = i + 1; j < objects.size(); j++) {
+            float dx = objects[j]->getLocation().x - objects[i]->getLocation().x;
+            float dy = objects[j]->getLocation().y - objects[i]->getLocation().y;
+            float dz = objects[j]->getLocation().z - objects[i]->getLocation().z;
+            
+            float distance = std::sqrt(dx * dx + dy * dy + dz * dz);
+
+            if (distance < minDistance && distance > 0.0f) {
+                // Normalisation du vecteur de séparation
+                float invDist = 1.0f / distance;
+                dx *= invDist;
+                dy *= invDist;
+                dz *= invDist;
+
+                // Appliquer une petite séparation
+                float moveAmount = (minDistance - distance) * separationFactor;
+                objects[i]->setLocationIncrement2(vector3d(-dx*moveAmount,-dy*moveAmount,-dz*moveAmount));
+				objects[j]->setLocationIncrement2(vector3d(dx*moveAmount,dy*moveAmount,dz*moveAmount));
+             
+            }
+        }
+    }
+}
+
+void transformation::separateObjects(std::vector<prefabAnim*>& objects, float minDistance, float separationFactor) {
+    for (size_t i = 0; i < objects.size(); i++) {
+        for (size_t j = i + 1; j < objects.size(); j++) {
+            float dx = objects[j]->getLocation().x - objects[i]->getLocation().x;
+            float dy = objects[j]->getLocation().y - objects[i]->getLocation().y;
+            float dz = objects[j]->getLocation().z - objects[i]->getLocation().z;
+            
+            float distance = std::sqrt(dx * dx + dy * dy + dz * dz);
+
+            if (distance < minDistance && distance > 0.0f) {
+                // Normalisation du vecteur de séparation
+                float invDist = 1.0f / distance;
+                dx *= invDist;
+                dy *= invDist;
+                dz *= invDist;
+
+                // Appliquer une petite séparation
+                float moveAmount = (minDistance - distance) * separationFactor;
+                objects[i]->setLocationIncrement2(vector3d(-dx*moveAmount,-dy*moveAmount,-dz*moveAmount));
+				objects[j]->setLocationIncrement2(vector3d(dx*moveAmount,dy*moveAmount,dz*moveAmount));
+             
+            }
+        }
+    }
+}
+
+void transformation::separateObjects(std::vector<object*>& objects,std::vector<object*>& objects2, float minDistance, float separationFactor)
+{
+	   for (size_t i = 0; i < objects.size(); i++) {
+        for (size_t j = 0; j < objects2.size(); j++) {
+            float dx = objects2[j]->getLocation().x - objects[i]->getLocation().x;
+            float dy = objects2[j]->getLocation().y - objects[i]->getLocation().y;
+            float dz = objects2[j]->getLocation().z - objects[i]->getLocation().z;
+            
+            float distance = std::sqrt(dx * dx + dy * dy + dz * dz);
+
+            if (distance < minDistance && distance > 0.0f) {
+                // Normalisation du vecteur de séparation
+                float invDist = 1.0f / distance;
+                dx *= invDist;
+                dy *= invDist;
+                dz *= invDist;
+
+                // Appliquer une petite séparation
+                float moveAmount = (minDistance - distance) * separationFactor;
+                objects[i]->setLocationIncrement2(vector3d(-dx*moveAmount,-dy*moveAmount,-dz*moveAmount));
+				objects2[j]->setLocationIncrement2(vector3d(dx*moveAmount,dy*moveAmount,dz*moveAmount));
+             
+            }
+        }
+    }
+}
+
+void transformation::separateObjects(std::vector<object*>& objects,std::vector<prefab*>& objects2, float minDistance, float separationFactor)
+{
+	   for (size_t i = 0; i < objects.size(); i++) {
+        for (size_t j = 0; j < objects2.size(); j++) {
+            float dx = objects2[j]->getLocation().x - objects[i]->getLocation().x;
+            float dy = objects2[j]->getLocation().y - objects[i]->getLocation().y;
+            float dz = objects2[j]->getLocation().z - objects[i]->getLocation().z;
+            
+            float distance = std::sqrt(dx * dx + dy * dy + dz * dz);
+
+            if (distance < minDistance && distance > 0.0f) {
+                // Normalisation du vecteur de séparation
+                float invDist = 1.0f / distance;
+                dx *= invDist;
+                dy *= invDist;
+                dz *= invDist;
+
+                // Appliquer une petite séparation
+                float moveAmount = (minDistance - distance) * separationFactor;
+                objects[i]->setLocationIncrement2(vector3d(-dx*moveAmount,-dy*moveAmount,-dz*moveAmount));
+				objects2[j]->setLocationIncrement2(vector3d(dx*moveAmount,dy*moveAmount,dz*moveAmount));
+             
+            }
+        }
+    }
+}
+
+void transformation::separateObjects(std::vector<object*>& objects,std::vector<prefabAnim*>& objects2, float minDistance, float separationFactor)
+{
+	   for (size_t i = 0; i < objects.size(); i++) {
+        for (size_t j = 0; j < objects2.size(); j++) {
+            float dx = objects2[j]->getLocation().x - objects[i]->getLocation().x;
+            float dy = objects2[j]->getLocation().y - objects[i]->getLocation().y;
+            float dz = objects2[j]->getLocation().z - objects[i]->getLocation().z;
+            
+            float distance = std::sqrt(dx * dx + dy * dy + dz * dz);
+
+            if (distance < minDistance && distance > 0.0f) {
+                // Normalisation du vecteur de séparation
+                float invDist = 1.0f / distance;
+                dx *= invDist;
+                dy *= invDist;
+                dz *= invDist;
+
+                // Appliquer une petite séparation
+                float moveAmount = (minDistance - distance) * separationFactor;
+                objects[i]->setLocationIncrement2(vector3d(-dx*moveAmount,-dy*moveAmount,-dz*moveAmount));
+				objects2[j]->setLocationIncrement2(vector3d(dx*moveAmount,dy*moveAmount,dz*moveAmount));
+             
+            }
+        }
+    }
+}
+
+void transformation::separateObjects(std::vector<object*>& objects,std::vector<Pobject*>& objects2, float minDistance, float separationFactor)
+{
+	   for (size_t i = 0; i < objects.size(); i++) {
+        for (size_t j = 0; j < objects2.size(); j++) {
+            float dx = objects2[j]->getLocation().x - objects[i]->getLocation().x;
+            float dy = objects2[j]->getLocation().y - objects[i]->getLocation().y;
+            float dz = objects2[j]->getLocation().z - objects[i]->getLocation().z;
+            
+            float distance = std::sqrt(dx * dx + dy * dy + dz * dz);
+
+            if (distance < minDistance && distance > 0.0f) {
+                // Normalisation du vecteur de séparation
+                float invDist = 1.0f / distance;
+                dx *= invDist;
+                dy *= invDist;
+                dz *= invDist;
+
+                // Appliquer une petite séparation
+                float moveAmount = (minDistance - distance) * separationFactor;
+                objects[i]->setLocationIncrement2(vector3d(-dx*moveAmount,-dy*moveAmount,-dz*moveAmount));
+				objects2[j]->setLocationIncrement2(vector3d(dx*moveAmount,dy*moveAmount,dz*moveAmount));
+             
+            }
+        }
+    }
+}
+
+void transformation::separateObjects(std::vector<prefab*>& objects,std::vector<Pobject*>& objects2, float minDistance, float separationFactor)
+{
+	   for (size_t i = 0; i < objects.size(); i++) {
+        for (size_t j = 0; j < objects2.size(); j++) {
+            float dx = objects2[j]->getLocation().x - objects[i]->getLocation().x;
+            float dy = objects2[j]->getLocation().y - objects[i]->getLocation().y;
+            float dz = objects2[j]->getLocation().z - objects[i]->getLocation().z;
+            
+            float distance = std::sqrt(dx * dx + dy * dy + dz * dz);
+
+            if (distance < minDistance && distance > 0.0f) {
+                // Normalisation du vecteur de séparation
+                float invDist = 1.0f / distance;
+                dx *= invDist;
+                dy *= invDist;
+                dz *= invDist;
+
+                // Appliquer une petite séparation
+                float moveAmount = (minDistance - distance) * separationFactor;
+                objects[i]->setLocationIncrement2(vector3d(-dx*moveAmount,-dy*moveAmount,-dz*moveAmount));
+				objects2[j]->setLocationIncrement2(vector3d(dx*moveAmount,dy*moveAmount,dz*moveAmount));
+             
+            }
+        }
+    }
+}
+
+void transformation::separateObjects(std::vector<prefabAnim*>& objects,std::vector<Pobject*>& objects2, float minDistance, float separationFactor)
+{
+	   for (size_t i = 0; i < objects.size(); i++) {
+        for (size_t j = 0; j < objects2.size(); j++) {
+            float dx = objects2[j]->getLocation().x - objects[i]->getLocation().x;
+            float dy = objects2[j]->getLocation().y - objects[i]->getLocation().y;
+            float dz = objects2[j]->getLocation().z - objects[i]->getLocation().z;
+            
+            float distance = std::sqrt(dx * dx + dy * dy + dz * dz);
+
+            if (distance < minDistance && distance > 0.0f) {
+                // Normalisation du vecteur de séparation
+                float invDist = 1.0f / distance;
+                dx *= invDist;
+                dy *= invDist;
+                dz *= invDist;
+
+                // Appliquer une petite séparation
+                float moveAmount = (minDistance - distance) * separationFactor;
+                objects[i]->setLocationIncrement2(vector3d(-dx*moveAmount,-dy*moveAmount,-dz*moveAmount));
+				objects2[j]->setLocationIncrement2(vector3d(dx*moveAmount,dy*moveAmount,dz*moveAmount));
+             
+            }
+        }
+    }
+}
+
+void transformation::separateObjects(std::vector<prefabAnim*>& objects,std::vector<prefab*>& objects2, float minDistance, float separationFactor)
+{
+	   for (size_t i = 0; i < objects.size(); i++) {
+        for (size_t j = 0; j < objects2.size(); j++) {
+            float dx = objects2[j]->getLocation().x - objects[i]->getLocation().x;
+            float dy = objects2[j]->getLocation().y - objects[i]->getLocation().y;
+            float dz = objects2[j]->getLocation().z - objects[i]->getLocation().z;
+            
+            float distance = std::sqrt(dx * dx + dy * dy + dz * dz);
+
+            if (distance < minDistance && distance > 0.0f) {
+                // Normalisation du vecteur de séparation
+                float invDist = 1.0f / distance;
+                dx *= invDist;
+                dy *= invDist;
+                dz *= invDist;
+
+                // Appliquer une petite séparation
+                float moveAmount = (minDistance - distance) * separationFactor;
+                objects[i]->setLocationIncrement2(vector3d(-dx*moveAmount,-dy*moveAmount,-dz*moveAmount));
+				objects2[j]->setLocationIncrement2(vector3d(dx*moveAmount,dy*moveAmount,dz*moveAmount));
+             
+            }
+        }
+    }
+}
+
+

@@ -259,4 +259,8 @@ bool Pobject::getCollision()
 	return collid;
 }
 
+ void Pobject::setLocationIncrement2(vector3d pos)
+{
+	loc+=pos;
+}
 

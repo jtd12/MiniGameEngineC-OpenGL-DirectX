@@ -139,3 +139,8 @@ bool prefabAnim::getDynamic()
 	return dynamic;
 }
 
+ void prefabAnim::setLocationIncrement2(vector3d pos)
+{
+	loc+=pos;
+}
+

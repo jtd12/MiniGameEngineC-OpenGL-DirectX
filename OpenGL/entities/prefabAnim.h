@@ -31,6 +31,7 @@ class prefabAnim
 		bool getWalk();
 		void setDynamic(bool b);
 		bool getDynamic();
+		void setLocationIncrement2(vector3d pos);
 	
 		
 		private:

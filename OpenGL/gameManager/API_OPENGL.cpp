@@ -31,6 +31,8 @@ void APIOPENGL::initGL()
 	supp=new supression();
 	trans=new transformation(p);
 	add=new ajout();
+	WIDTH=960;
+ 	HEIGHT=540;
 
 }
 
@@ -359,6 +361,144 @@ void APIOPENGL::saveToFile()
 void APIOPENGL::update()
 {
 	
+trans->separateObjects(obj, 20, 7);
+trans->separateObjects(obj2, 20, 7);
+trans->separateObjects(obj3, 20, 7);
+trans->separateObjects(obj4, 20, 7);
+trans->separateObjects(obj5, 20, 7);
+
+trans->separateObjects(Pobj, 10, 7);
+trans->separateObjects(Pobj2, 10, 7);
+trans->separateObjects(Pobj3, 10, 7);
+trans->separateObjects(Pobj4, 10, 7);
+trans->separateObjects(Pobj5, 10, 7);
+trans->separateObjects(Pobj6, 10, 7);
+trans->separateObjects(Pobj7, 10, 7);
+trans->separateObjects(Pobj8, 10, 7);
+trans->separateObjects(Pobj9, 10, 7);
+trans->separateObjects(Pobj10, 20, 7);
+
+trans->separateObjects(pref, 20, 7);
+trans->separateObjects(prefAnim, 20, 7);
+
+
+trans->separateObjects(obj, obj2, 20, 7);
+trans->separateObjects(obj, obj3, 20, 7);
+trans->separateObjects(obj, obj4, 20, 7);
+trans->separateObjects(obj, obj5, 20, 7);
+
+trans->separateObjects(obj2, obj, 20, 7);
+trans->separateObjects(obj2, obj3, 20, 7);
+trans->separateObjects(obj2, obj4, 20, 7);
+trans->separateObjects(obj2, obj5, 20, 7);
+
+trans->separateObjects(obj3, obj, 20, 7);
+trans->separateObjects(obj3, obj2, 20, 7);
+trans->separateObjects(obj3, obj4, 20, 7);
+trans->separateObjects(obj3, obj5, 20, 7);
+
+trans->separateObjects(obj4, obj, 20, 7);
+trans->separateObjects(obj4, obj2, 20, 7);
+trans->separateObjects(obj4, obj3, 20, 7);
+trans->separateObjects(obj4, obj5, 20, 7);
+
+trans->separateObjects(obj5, obj, 20, 7);
+trans->separateObjects(obj5, obj2, 20, 7);
+trans->separateObjects(obj5, obj3, 20, 7);
+trans->separateObjects(obj5, obj4, 20, 7);
+
+trans->separateObjects(obj, pref, 20, 7);
+trans->separateObjects(obj, prefAnim, 20, 7);
+trans->separateObjects(obj2, pref, 20, 7);
+trans->separateObjects(obj2, prefAnim, 20, 7);
+trans->separateObjects(obj3, pref, 20, 7);
+trans->separateObjects(obj3, prefAnim, 20, 7);
+trans->separateObjects(obj4, pref, 20, 7);
+trans->separateObjects(obj4, prefAnim, 20, 7);
+trans->separateObjects(obj5, pref, 20, 7);
+trans->separateObjects(obj5, prefAnim, 20, 7);
+
+
+trans->separateObjects(obj, Pobj, 10, 7);
+trans->separateObjects(obj, Pobj2, 10, 7);
+trans->separateObjects(obj, Pobj3, 10, 7);
+trans->separateObjects(obj, Pobj4, 10, 7);
+trans->separateObjects(obj, Pobj5, 10, 7);
+trans->separateObjects(obj, Pobj6, 10, 7);
+trans->separateObjects(obj, Pobj7, 10, 7);
+trans->separateObjects(obj, Pobj8, 10, 7);
+trans->separateObjects(obj, Pobj9, 10, 7);
+trans->separateObjects(obj, Pobj10, 10, 7);
+
+trans->separateObjects(obj2, Pobj, 10, 7);
+trans->separateObjects(obj2, Pobj2, 10, 7);
+trans->separateObjects(obj2, Pobj3, 10, 7);
+trans->separateObjects(obj2, Pobj4, 10, 7);
+trans->separateObjects(obj2, Pobj5, 10, 7);
+trans->separateObjects(obj2, Pobj6, 10, 7);
+trans->separateObjects(obj2, Pobj7, 10, 7);
+trans->separateObjects(obj2, Pobj8, 10, 7);
+trans->separateObjects(obj2, Pobj9, 10, 7);
+trans->separateObjects(obj2, Pobj10, 10, 7);
+
+trans->separateObjects(obj3, Pobj, 10, 7);
+trans->separateObjects(obj3, Pobj2, 10, 7);
+trans->separateObjects(obj3, Pobj3, 10, 7);
+trans->separateObjects(obj3, Pobj4, 10, 7);
+trans->separateObjects(obj3, Pobj5, 10, 7);
+trans->separateObjects(obj3, Pobj6, 10, 7);
+trans->separateObjects(obj3, Pobj7, 10, 7);
+trans->separateObjects(obj3, Pobj8, 10, 7);
+trans->separateObjects(obj3, Pobj9, 10, 7);
+trans->separateObjects(obj3, Pobj10, 10, 7);
+
+trans->separateObjects(obj4, Pobj, 10, 7);
+trans->separateObjects(obj4, Pobj2, 10, 7);
+trans->separateObjects(obj4, Pobj3, 10, 7);
+trans->separateObjects(obj4, Pobj4, 10, 7);
+trans->separateObjects(obj4, Pobj5, 10, 7);
+trans->separateObjects(obj4, Pobj6, 10, 7);
+trans->separateObjects(obj4, Pobj7, 10, 7);
+trans->separateObjects(obj4, Pobj8, 10, 7);
+trans->separateObjects(obj4, Pobj9, 10, 7);
+trans->separateObjects(obj4, Pobj10, 10, 7);
+
+trans->separateObjects(obj5, Pobj, 10, 7);
+trans->separateObjects(obj5, Pobj2, 10, 7);
+trans->separateObjects(obj5, Pobj3, 10, 7);
+trans->separateObjects(obj5, Pobj4, 10, 7);
+trans->separateObjects(obj5, Pobj5, 10, 7);
+trans->separateObjects(obj5, Pobj6, 10, 7);
+trans->separateObjects(obj5, Pobj7, 10, 7);
+trans->separateObjects(obj5, Pobj8, 10, 7);
+trans->separateObjects(obj5, Pobj9, 10, 7);
+trans->separateObjects(obj5, Pobj10, 10, 7);
+
+trans->separateObjects(pref, Pobj, 10, 7);
+trans->separateObjects(pref, Pobj2, 10, 7);
+trans->separateObjects(pref, Pobj3, 10, 7);
+trans->separateObjects(pref, Pobj4, 10, 7);
+trans->separateObjects(pref, Pobj5, 10, 7);
+trans->separateObjects(pref, Pobj6, 10, 7);
+trans->separateObjects(pref, Pobj7, 10, 7);
+trans->separateObjects(pref, Pobj8, 10, 7);
+trans->separateObjects(pref, Pobj9, 10, 7);
+trans->separateObjects(pref, Pobj10, 10, 7);
+
+trans->separateObjects(prefAnim, Pobj, 10, 7);
+trans->separateObjects(prefAnim, Pobj2, 10, 7);
+trans->separateObjects(prefAnim, Pobj3, 10, 7);
+trans->separateObjects(prefAnim, Pobj4, 10, 7);
+trans->separateObjects(prefAnim, Pobj5, 10, 7);
+trans->separateObjects(prefAnim, Pobj6, 10, 7);
+trans->separateObjects(prefAnim, Pobj7, 10, 7);
+trans->separateObjects(prefAnim, Pobj8, 10, 7);
+trans->separateObjects(prefAnim, Pobj9, 10, 7);
+trans->separateObjects(prefAnim, Pobj10, 10, 7);
+
+trans->separateObjects(prefAnim, pref, 20, 7);
+
+
 
 gameMode_->update();
 
@@ -754,13 +894,17 @@ glutSwapBuffers();// echange de tampons pour ahever laffichage glut glutPostRedi
 
 void APIOPENGL::reshape(int width,int height)
  {
- 	view_->reshape(width,height);
+ 	WIDTH=width;
+ 	HEIGHT=height;
+ 	view_->reshape(WIDTH,HEIGHT);
  }
  
  
 void APIOPENGL::reshapeOrtho(int width,int height)
  {
- 	view_->reshapeOrtho(width,height);
+ 	WIDTH=width;
+ 	HEIGHT=height;
+ 	view_->reshapeOrtho(WIDTH,HEIGHT);
  }
 
 void APIOPENGL::controlKeyboard(char key,int x, int y)
@@ -773,7 +917,7 @@ switch (key)
 		 if(gameMode_->getLanchGame()==false )
 		 {
 		    light_->moveLight();
-		//focal();
+			view_->focal();
 		    light_->lightAmb();
 	        light_->lightDiffuse();
 	        
@@ -879,194 +1023,16 @@ switch (key)
 	 	trans->colorObject(obj5);
 	 	
 	 	
-		if(value==2100)
+	if(value==2100)
 		data_->loadToFile();
-	/*
-		for(int i=0;i<obj.size();i++)
-if(value==1600 && selectObject(obj[i]->getLocation(),p->getLocation(),vector3d(0.2,0.5,0.5),5))
-{
-	obj[i]->setDynamic(true);
-}
-		for(int i=0;i<obj.size();i++)
-if(value==1700 && selectObject(obj[i]->getLocation(),p->getLocation(),vector3d(0.2,0.5,0.5),5))
-{
-	obj[i]->setDynamic(false);
-}
 
 
-		for(int i=0;i<obj2.size();i++)
-if(value==1600 && selectObject(obj2[i]->getLocation(),p->getLocation(),vector3d(0.2,0.5,0.5),5))
-{
-	obj2[i]->setDynamic(true);
-}
-		for(int i=0;i<obj2.size();i++)
-if(value==1700 && selectObject(obj2[i]->getLocation(),p->getLocation(),vector3d(0.2,0.5,0.5),5))
-{
-	obj2[i]->setDynamic(false);
-}
+	if(value==1400)
+	  reshapeOrtho(WIDTH,HEIGHT);
+	
+	if(value==1500)
+	  reshape(WIDTH,HEIGHT);
 
-		for(int i=0;i<obj3.size();i++)
-if(value==1600 && selectObject(obj3[i]->getLocation(),p->getLocation(),vector3d(0.2,0.5,0.5),5))
-{
-	obj3[i]->setDynamic(true);
-}
-		for(int i=0;i<obj3.size();i++)
-if(value==1700 && selectObject(obj3[i]->getLocation(),p->getLocation(),vector3d(0.2,0.5,0.5),5))
-{
-	obj3[i]->setDynamic(false);
-}
-
-
-		for(int i=0;i<obj4.size();i++)
-if(value==1600 && selectObject(obj4[i]->getLocation(),p->getLocation(),vector3d(0.2,0.5,0.5),5))
-{
-	obj4[i]->setDynamic(true);
-}
-		for(int i=0;i<obj4.size();i++)
-if(value==1700 && selectObject(obj4[i]->getLocation(),p->getLocation(),vector3d(0.2,0.5,0.5),5))
-{
-	obj4[i]->setDynamic(false);
-}
-		for(int i=0;i<pref.size();i++)
-if(value==1600 && selectObject(pref[i]->getLocation(),p->getLocation(),vector3d(0.2,0.5,0.5),5))
-{
-	pref[i]->setDynamic(true);
-}
-		for(int i=0;i<pref.size();i++)
-if(value==1700 && selectObject(pref[i]->getLocation(),p->getLocation(),vector3d(0.2,0.5,0.5),5))
-{
-	pref[i]->setDynamic(false);
-}
-
-		for(int i=0;i<prefAnim.size();i++)
-if(value==1600 && selectObject(prefAnim[i]->getLocation(),p->getLocation(),vector3d(0.2,0.5,0.5),5))
-{
-	prefAnim[i]->setDynamic(true);
-}
-		for(int i=0;i<prefAnim.size();i++)
-if(value==1700 && selectObject(prefAnim[i]->getLocation(),p->getLocation(),vector3d(0.2,0.5,0.5),5))
-{
-	prefAnim[i]->setDynamic(false);
-}
-
-	for(int i=0;i<obj.size();i++)
-if(value==1200 && selectObject(obj[i]->getLocation(),p->getLocation(),vector3d(0.2,0.5,0.5),5))
-{
-	obj[i]->setDrive(true);
-}
-	for(int i=0;i<obj2.size();i++)
-if(value==1200 && selectObject(obj2[i]->getLocation(),p->getLocation(),vector3d(0.2,0.5,0.5),5))
-{
-	obj2[i]->setDrive(true);
-}
-
-	for(int i=0;i<obj3.size();i++)
-if(value==1200 && selectObject(obj3[i]->getLocation(),p->getLocation(),vector3d(0.2,0.5,0.5),5))
-{
-	obj3[i]->setDrive(true);
-}
-	for(int i=0;i<obj4.size();i++)
-if(value==1200 && selectObject(obj4[i]->getLocation(),p->getLocation(),vector3d(0.2,0.5,0.5),5))
-{
-	obj4[i]->setDrive(true);
-}
-
-	for(int i=0;i<obj.size();i++)
-if(value==1230 && selectObject(obj[i]->getLocation(),p->getLocation(),vector3d(0.2,0.5,0.5),5))
-{
-	obj[i]->setDrive(false);
-}
-	for(int i=0;i<obj2.size();i++)
-if(value==1230 && selectObject(obj2[i]->getLocation(),p->getLocation(),vector3d(0.2,0.5,0.5),5))
-{
-	obj2[i]->setDrive(false);
-}
-
-	for(int i=0;i<obj3.size();i++)
-if(value==1230 && selectObject(obj3[i]->getLocation(),p->getLocation(),vector3d(0.2,0.5,0.5),5))
-{
-	obj3[i]->setDrive(false);
-}
-	for(int i=0;i<obj4.size();i++)
-if(value==1230 && selectObject(obj4[i]->getLocation(),p->getLocation(),vector3d(0.2,0.5,0.5),5))
-{
-	obj4[i]->setDrive(false);
-}
-
-
-	for(int i=0;i<obj.size();i++)
-if(value==1250 && selectObject(obj[i]->getLocation(),p->getLocation(),vector3d(0.2,0.5,0.5),5))
-{
-	obj[i]->setWalk(true);
-}
-	for(int i=0;i<obj2.size();i++)
-if(value==1250 && selectObject(obj2[i]->getLocation(),p->getLocation(),vector3d(0.2,0.5,0.5),5))
-{
-	obj2[i]->setWalk(true);
-}
-
-	for(int i=0;i<obj3.size();i++)
-if(value==1250 && selectObject(obj3[i]->getLocation(),p->getLocation(),vector3d(0.2,0.5,0.5),5))
-{
-	obj3[i]->setWalk(true);
-}
-	for(int i=0;i<obj4.size();i++)
-if(value==1250 && selectObject(obj4[i]->getLocation(),p->getLocation(),vector3d(0.2,0.5,0.5),5))
-{
-	obj4[i]->setWalk(true);
-}
-
-
-
-	for(int i=0;i<obj.size();i++)
-if(value==1280 && selectObject(obj[i]->getLocation(),p->getLocation(),vector3d(0.2,0.5,0.5),5))
-{
-	obj[i]->setWalk(false);
-}
-	for(int i=0;i<obj2.size();i++)
-if(value==1280 && selectObject(obj2[i]->getLocation(),p->getLocation(),vector3d(0.2,0.5,0.5),5))
-{
-	obj2[i]->setWalk(false);
-}
-
-	for(int i=0;i<obj3.size();i++)
-if(value==1280 && selectObject(obj3[i]->getLocation(),p->getLocation(),vector3d(0.2,0.5,0.5),5))
-{
-	obj3[i]->setWalk(false);
-}
-	for(int i=0;i<obj4.size();i++)
-if(value==1280 && selectObject(obj4[i]->getLocation(),p->getLocation(),vector3d(0.2,0.5,0.5),5))
-{
-	obj4[i]->setWalk(false);
-}
-
-	for(int i=0;i<pref.size();i++)
-if(value==1200 && selectObject(pref[i]->getLocation(),p->getLocation(),vector3d(0.2,0.5,0.5),5))
-{
-	pref[i]->setDrive(true);
-}
-	for(int i=0;i<pref.size();i++)
-if(value==1230 && pref[i]->getDrive() && selectObject(pref[i]->getLocation(),p->getLocation(),vector3d(0.2,0.5,0.5),5))
-{
-	pref[i]->setDrive(false);
-}
-	for(int i=0;i<prefAnim.size();i++)
-if(value==1250 && selectObject(prefAnim[i]->getLocation(),p->getLocation(),vector3d(0.2,0.5,0.5),5))
-{
-	prefAnim[i]->setWalk(true);
-}
-	for(int i=0;i<prefAnim.size();i++)
-if(value==1280 && prefAnim[i]->getWalk() && selectObject(prefAnim[i]->getLocation(),p->getLocation(),vector3d(0.2,0.5,0.5),5))
-{
-	prefAnim[i]->setWalk(false);
-}
-*/
-	/*	if(value==1400)
-	reshapeOrtho(width_,height_);
-if(value==1500)
-
-	reshape(width_,height_);
-*/
 if(value==1800)
 {
 	for(int i=0;i<cam.size();i++)
@@ -1081,8 +1047,8 @@ if(value==1900)
 add->update(p,obj,obj2,obj3,obj4,obj5,Pobj,Pobj2,Pobj3,Pobj4,Pobj5,Pobj6,Pobj7,Pobj8,Pobj9,Pobj10,pref,prefAnim,fileName,objLoad);
    
 
-	//	 if(value==145)
-	//sky.push_back(new skybox());
+if(value==145)
+	view_->sky->skyb.push_back(new skybox());
 }
 
 	break;

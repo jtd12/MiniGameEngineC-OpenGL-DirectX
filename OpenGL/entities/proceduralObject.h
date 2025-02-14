@@ -67,6 +67,7 @@ class Pobject
 		void setDynamic(bool b);
 		bool getDynamic();
 		void setLink(bool b);
+		void setLocationIncrement2(vector3d pos);
 		
 	private:
 		unsigned int mesh;

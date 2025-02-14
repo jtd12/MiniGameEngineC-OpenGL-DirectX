@@ -88,6 +88,8 @@ bool mi;
  float pitch;
  float xpos,ypos,zpos;
  int Nom;
+ int WIDTH;
+ int HEIGHT;
  int useStencil; 
  pointer *p;
  grid *g;

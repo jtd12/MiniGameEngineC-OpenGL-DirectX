@@ -232,3 +232,4 @@ void prefab::setLink(bool b)
 {
 	link=b;
 }
+

@@ -40,7 +40,17 @@ class transformation
 	void translateObject(std::vector<prefab*> obj_);
 	void translateObject(std::vector<prefabAnim*> obj_);
 	bool selectObject(vector3d objectReference,vector3d objectPointer,vector3d color,float dist);
-	
+	void separateObjects(std::vector<object*>& objects, float minDistance, float separationFactor);
+	void separateObjects(std::vector<object*>& objects,std::vector<object*>& objects2, float minDistance, float separationFactor);
+	void separateObjects(std::vector<object*>& objects,std::vector<prefab*>& objects2, float minDistance, float separationFactor);
+	void separateObjects(std::vector<object*>& objects,std::vector<prefabAnim*>& objects2, float minDistance, float separationFactor);
+	void separateObjects(std::vector<object*>& objects,std::vector<Pobject*>& objects2, float minDistance, float separationFactor);
+	void separateObjects(std::vector<prefab*>& objects,std::vector<Pobject*>& objects2, float minDistance, float separationFactor);
+	void separateObjects(std::vector<prefabAnim*>& objects,std::vector<Pobject*>& objects2, float minDistance, float separationFactor);
+	void separateObjects(std::vector<prefabAnim*>& objects,std::vector<prefab*>& objects2, float minDistance, float separationFactor);
+	void separateObjects(std::vector<Pobject*>& objects, float minDistance, float separationFactor);
+	void separateObjects(std::vector<prefab*>& objects, float minDistance, float separationFactor);
+	void separateObjects(std::vector<prefabAnim*>& objects, float minDistance, float separationFactor);
 	private:
 		pointer *p;
 };
