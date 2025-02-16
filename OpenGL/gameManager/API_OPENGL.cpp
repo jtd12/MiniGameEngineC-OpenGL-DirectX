@@ -29,6 +29,7 @@ void APIOPENGL::initGL()
 	gameMode_=new gameMode();
 	loadToFile();
 	supp=new supression();
+	gui_=new gui(obj, obj2, obj3, obj4, obj5, Pobj, Pobj2, Pobj3,Pobj4, Pobj5, Pobj6, Pobj7, Pobj8, Pobj9,Pobj10, pref,prefAnim, p,view_);
 	trans=new transformation(p);
 	add=new ajout();
 	WIDTH=960;
@@ -48,6 +49,7 @@ APIOPENGL::~APIOPENGL()
 	delete trans;
 	delete supp;
 	delete light_;
+	delete gui_;
 /*	for(int i=0;i<sky.size();i++)
 	delete sky[i];*/
 for(int i=0;i<cam.size();i++)
@@ -60,6 +62,16 @@ void APIOPENGL::loadToFile()
 {
 	data_->loadToFile();
 	loadToFile2();
+	fileName[10]=data_->ReadFileName();
+	fileName2[9]=data_->ReadFileName2();
+	fileName3[8]=data_->ReadFileName3();
+	fileName4[7]=data_->ReadFileName4();
+	fileName5[6]=data_->ReadFileName5();
+	fileName6[5]=data_->ReadFileName6();
+	fileName7[4]=data_->ReadFileName7();
+	fileName8[3]=data_->ReadFileName8();
+	fileName9[2]=data_->ReadFileName9();
+	fileName10[1]=data_->ReadFileName10();
 	obj=data_->ReadequalObj();
 	obj2=data_->ReadequalObj2();
 	obj3=data_->ReadequalObj3();
@@ -97,6 +109,8 @@ void APIOPENGL::loadToFile2()
 		while(loadedFile.good())
 		  {
 		  	std::getline(loadedFile,line);
+		  	
+		  	 
 		  	  	if(line=="---beginPobj12-----")
 		  	{
 		  		currentType=typeObj;
@@ -113,6 +127,7 @@ void APIOPENGL::loadToFile2()
 		  	{
 		  		currentType=typeObj;
 			  }
+			  
 			  
 			 else if(line=="----endPobj12-----")
 			  {
@@ -140,6 +155,8 @@ void APIOPENGL::loadToFile2()
 			  	vector3d tempPLocation13=vector3d(0,0,0);
 			  	vector3d tempPLocation14=vector3d(0,0,0);
 			  	vector3d tempPLocation15=vector3d(0,0,0);
+			  	vector3d tempCol=vector3d(0,0,0);
+		
 			  	
 			  	std::string previousWord="";
 			  	
@@ -217,6 +234,9 @@ void APIOPENGL::loadToFile2()
 		  					
 		  		
 		  		}
+		  		
+		  		
+		  		
 		  						if(previousWord=="PlocX_15:")
 		  		{
 		  			tempPLocation15.x=atoi(word.c_str());
@@ -225,6 +245,35 @@ void APIOPENGL::loadToFile2()
 		  					
 		  		
 		  		}
+		  		
+		  		
+		  		
+		  		if(previousWord=="locY7:")
+		  		{
+		  			tempCol.x=atof(word.c_str());
+		  		
+		  		
+		  					
+		  		
+		  		}
+		  				  	if(previousWord=="locY8:")
+		  		{
+		  			tempCol.y=atof(word.c_str());
+		  		
+		  		
+		  					
+		  		
+		  		}
+		  				  	if(previousWord=="locY9:")
+		  		{
+		  			tempCol.z=atof(word.c_str());
+		  		
+		  		
+		  					
+		  		
+		  		}	
+		  		
+		  		
 		  		
 		  				if(previousWord=="PlocZ_12:")
 		  		{
@@ -325,7 +374,8 @@ void APIOPENGL::loadToFile2()
 		  loadedFile<<"----endPobj15-----"<<std::endl;
 		  
 		  loadedFile<<"End Object"<<std::endl; 
-	 	 
+		  
+
       	loadedFile.close();
       	std::cout<<"level saved"<<std::endl;
 		   
@@ -339,16 +389,16 @@ void APIOPENGL::saveToFile()
       	data_->WriteequalObj3(obj3);
       	data_->WriteequalObj4(obj4);
       	data_->WriteequalObj5(obj5);
-      	data_->WriteequalPObj(Pobj);
-      	data_->WriteequalPObj(Pobj2);
-      	data_->WriteequalPObj(Pobj3);
-      	data_->WriteequalPObj(Pobj4);
-      	data_->WriteequalPObj(Pobj5);
-      	data_->WriteequalPObj(Pobj6);
-      	data_->WriteequalPObj(Pobj7);
-      	data_->WriteequalPObj(Pobj8);
-      	data_->WriteequalPObj(Pobj9);
-      	data_->WriteequalPObj(Pobj10);
+    	data_->WriteequalPObj(Pobj,fileName);
+		data_->WriteequalPObj2(Pobj2,fileName2);
+	   data_->WriteequalPObj3(Pobj3,fileName3);
+	   data_->WriteequalPObj4(Pobj4,fileName4);
+	   data_->WriteequalPObj5(Pobj5,fileName5);
+	   data_->WriteequalPObj6(Pobj6,fileName6);
+	   data_->WriteequalPObj7(Pobj7,fileName7);
+	   data_->WriteequalPObj8(Pobj8,fileName8);
+	   data_->WriteequalPObj9(Pobj9,fileName9);
+	   data_->WriteequalPObj10(Pobj10,fileName10);
 	    data_->WriteequalPrefab(pref);
 	    data_->WriteequalPrefabAnim(prefAnim);
 	    data_->WriteequalSky(view_->sky);
@@ -498,7 +548,7 @@ trans->separateObjects(prefAnim, Pobj10, 10, 7);
 
 trans->separateObjects(prefAnim, pref, 20, 7);
 
-
+gui_->updateTxt();
 
 gameMode_->update();
 
@@ -582,7 +632,7 @@ Pobj10[i]->drawObject();
 
 view_->sky->colorSky();
 light_->lighting();
-//mode2D();
+gui_->mode2D();
 //clavier();
 
 
@@ -665,7 +715,7 @@ Pobj10[i]->drawObject();
 
 view_->sky->colorSky();
 
-//mode2D();
+gui_->mode2D();
   light_->lighting();
 //clavier();
 
@@ -752,7 +802,7 @@ Pobj10[i]->drawObject();
 view_->sky->colorSky();
 
   light_->lighting();
-//mode2D();
+gui_->mode2D();
 //clavier();
 
 
@@ -878,7 +928,7 @@ view_->sky->colorSky();
 light_->lighting();
 
 
-//mode2D();
+gui_->mode2D();
 	
 
 
@@ -1044,7 +1094,8 @@ if(value==1900)
 	cam[i]->setMouseVel(-0.1f);
 }
 
-add->update(p,obj,obj2,obj3,obj4,obj5,Pobj,Pobj2,Pobj3,Pobj4,Pobj5,Pobj6,Pobj7,Pobj8,Pobj9,Pobj10,pref,prefAnim,fileName,objLoad);
+add->update(p,obj,obj2,obj3,obj4,obj5,Pobj,Pobj2,Pobj3,Pobj4,Pobj5,Pobj6,Pobj7,Pobj8,Pobj9,Pobj10,pref,prefAnim,fileName,fileName2,fileName3,
+fileName4,fileName5,fileName6,fileName7,fileName8,fileName9,fileName10,objLoad);
    
 
 if(value==145)

@@ -47,6 +47,7 @@ std::vector<Pobject*> datas::ReadequalPobj()
 	return Pobj;
 }
 
+
 std::vector<Pobject*> datas::ReadequalPobj2()
 {
 	return Pobj2;
@@ -89,7 +90,7 @@ std::vector<Pobject*> datas::ReadequalPobj9()
 
 std::vector<Pobject*> datas::ReadequalPobj10()
 {
-	return Pobj8;
+	return Pobj10;
 }
 
 std::vector<prefab*> datas::ReadequalPref()
@@ -128,6 +129,56 @@ generateSkybox* datas::ReadequalSky()
 	return sky;
 }
 
+std::string datas::ReadFileName()
+{
+return 	fileName[10];
+}
+
+std::string datas::ReadFileName2()
+{
+return 	fileName2[9];
+}
+
+std::string datas::ReadFileName3()
+{
+return 	fileName3[8];
+}
+
+
+std::string datas::ReadFileName4()
+{
+return 	fileName4[7];
+}
+
+std::string datas::ReadFileName5()
+{
+return 	fileName5[6];
+}
+
+std::string datas::ReadFileName6()
+{
+return 	fileName6[5];
+}
+
+std::string datas::ReadFileName7()
+{
+return 	fileName7[4];
+}
+
+std::string datas::ReadFileName8()
+{
+return 	fileName8[3];
+}
+
+std::string datas::ReadFileName9()
+{
+return 	fileName9[2];
+}
+std::string datas::ReadFileName10()
+{
+return 	fileName10[1];
+}
+
 
 	void datas::WriteequalObj(std::vector<object*> obj)
 	{
@@ -149,45 +200,55 @@ generateSkybox* datas::ReadequalSky()
 	 {
 	 	obj5_=obj;
 	 }
-	 void datas::WriteequalPObj(std::vector<Pobject*> obj)
+	 void datas::WriteequalPObj(std::vector<Pobject*> obj,std::string fileName_[15])
 	 {
 	 	Pobj_=obj;
+	 	fileName[10]=fileName_[10];
 	 }
-	 void datas::WriteequalPObj2(std::vector<Pobject*> obj)
+	 void datas::WriteequalPObj2(std::vector<Pobject*> obj,std::string fileName_[15])
 	 {
 	 	Pobj2_=obj;
+	 	fileName2[9]=fileName_[9];
 	 }
-	 void datas::WriteequalPObj3(std::vector<Pobject*> obj)
+	 void datas::WriteequalPObj3(std::vector<Pobject*> obj,std::string fileName_[15])
 	 {
 	 	Pobj3_=obj;
+	 	fileName3[8]=fileName_[8];
 	 }
-	 void datas::WriteequalPObj4(std::vector<Pobject*> obj)
+	 void datas::WriteequalPObj4(std::vector<Pobject*> obj,std::string fileName_[15])
 	 {
 	 	Pobj4_=obj;
+	 	fileName4[7]=fileName_[7];
 	 }
-	 void datas::WriteequalPObj5(std::vector<Pobject*> obj)
+	 void datas::WriteequalPObj5(std::vector<Pobject*> obj,std::string fileName_[15])
 	 {
 	 	Pobj5_=obj;
+	 	fileName5[6]=fileName_[6];
 	 }
-	 void datas::WriteequalPObj6(std::vector<Pobject*> obj)
+	 void datas::WriteequalPObj6(std::vector<Pobject*> obj,std::string fileName_[15])
 	 {
 	 	Pobj6_=obj;
+	 	fileName6[5]=fileName_[5];
 	 }
-	 void datas:: WriteequalPObj7(std::vector<Pobject*> obj)
+	 void datas:: WriteequalPObj7(std::vector<Pobject*> obj,std::string fileName_[15])
 	 {
 	 	Pobj7_=obj;
+	 	fileName7[4]=fileName_[4];
 	 }
-	 void datas::  WriteequalPObj8(std::vector<Pobject*> obj)
+	 void datas::  WriteequalPObj8(std::vector<Pobject*> obj,std::string fileName_[15])
 	 {
 	 	Pobj8_=obj;
+	 	fileName8[3]=fileName_[3];
 	 }
-	 void datas::  WriteequalPObj9(std::vector<Pobject*> obj)
+	 void datas::  WriteequalPObj9(std::vector<Pobject*> obj,std::string fileName_[15])
 	 {
 	 	Pobj9_=obj;
+	 	fileName9[2]=fileName_[2];
 	 }
-	 void datas:: WriteequalPObj10(std::vector<Pobject*> obj)
+	 void datas:: WriteequalPObj10(std::vector<Pobject*> obj,std::string fileName_[15])
 	 {
 	 	Pobj10_=obj;
+	 	fileName10[1]=fileName_[1];
 	 }
 	 void datas:: WriteequalPrefab(std::vector<prefab*> obj)
 	 {
@@ -309,21 +370,21 @@ void datas::saveToFile()
       	for(int i=0;i<Pobj2_.size();i++)
       	{
 		  
-      loadedFile<<"Pobj1pos PlocX_2: "<<Pobj2_[i]->getLocation().x<<"Pobj1pos PlocY1_2: "<<Pobj2_[i]->getLocation().y<<"Pobj1pos PlocY2_2: "<<Pobj2_[i]->getScale().y<<"Pobj1pos PlocY_2: "<<Pobj2_[i]->getScale().x<<"Pobj1pos PlocY3_2: "<<Pobj2_[i]->getScale().z<<"Pobj1pos PlocY5_2: "<<Pobj2_[i]->getRotation().y<<"Pobj1pos PlocY4_2: "<<Pobj2_[i]->getRotation().x<<"Pobj1pos PlocY6_2: "<<Pobj2_[i]->getRotation().z<<"Pobj1pos PlocY7_2: "<<Pobj2_[i]->getCouleur().x<<"Pobj1pos PlocY8_2: "<<Pobj2_[i]->getCouleur().y<<"Pobj1pos PlocY9_2: "<<Pobj2_[i]->getCouleur().z<<"Pobj1pos PlocZ_2: "<<Pobj2_[i]->getLocation().z<<"Pobj1pos filename_20: "<<fileName[9]<<std::endl; 
+      loadedFile<<"Pobj1pos PlocX_2: "<<Pobj2_[i]->getLocation().x<<"Pobj1pos PlocY1_2: "<<Pobj2_[i]->getLocation().y<<"Pobj1pos PlocY2_2: "<<Pobj2_[i]->getScale().y<<"Pobj1pos PlocY_2: "<<Pobj2_[i]->getScale().x<<"Pobj1pos PlocY3_2: "<<Pobj2_[i]->getScale().z<<"Pobj1pos PlocY5_2: "<<Pobj2_[i]->getRotation().y<<"Pobj1pos PlocY4_2: "<<Pobj2_[i]->getRotation().x<<"Pobj1pos PlocY6_2: "<<Pobj2_[i]->getRotation().z<<"Pobj1pos PlocY7_2: "<<Pobj2_[i]->getCouleur().x<<"Pobj1pos PlocY8_2: "<<Pobj2_[i]->getCouleur().y<<"Pobj1pos PlocY9_2: "<<Pobj2_[i]->getCouleur().z<<"Pobj1pos PlocZ_2: "<<Pobj2_[i]->getLocation().z<<"Pobj1pos filename_20: "<<fileName2[9]<<std::endl; 
     
   }
 	  	loadedFile<<"----endPobj2-----"<<std::endl;
       		loadedFile<<"---beginPobj3-----"<<std::endl;
       	for(int i=0;i<Pobj3_.size();i++)
       	{
-	 loadedFile<<"Pobj1pos PlocX_3: "<<Pobj3_[i]->getLocation().x<<"Pobj1pos PlocY1_3: "<<Pobj3_[i]->getLocation().y<<"Pobj1pos PlocY2_3: "<<Pobj3_[i]->getScale().y<<"Pobj1pos PlocY_3: "<<Pobj3_[i]->getScale().x<<"Pobj1pos PlocY3_3: "<<Pobj3_[i]->getScale().z<<"Pobj1pos PlocY5_3: "<<Pobj3_[i]->getRotation().y<<"Pobj1pos PlocY4_3: "<<Pobj3_[i]->getRotation().x<<"Pobj1pos PlocY6_2: "<<Pobj3_[i]->getRotation().z<<"Pobj1pos PlocY7_3: "<<Pobj3_[i]->getCouleur().x<<"Pobj1pos PlocY8_3: "<<Pobj3_[i]->getCouleur().y<<"Pobj1pos PlocY9_3: "<<Pobj3_[i]->getCouleur().z<<"Pobj1pos PlocZ_3: "<<Pobj3_[i]->getLocation().z<<"Pobj1pos filename_19: "<<fileName[8]<<std::endl; 
+	 loadedFile<<"Pobj1pos PlocX_3: "<<Pobj3_[i]->getLocation().x<<"Pobj1pos PlocY1_3: "<<Pobj3_[i]->getLocation().y<<"Pobj1pos PlocY2_3: "<<Pobj3_[i]->getScale().y<<"Pobj1pos PlocY_3: "<<Pobj3_[i]->getScale().x<<"Pobj1pos PlocY3_3: "<<Pobj3_[i]->getScale().z<<"Pobj1pos PlocY5_3: "<<Pobj3_[i]->getRotation().y<<"Pobj1pos PlocY4_3: "<<Pobj3_[i]->getRotation().x<<"Pobj1pos PlocY6_2: "<<Pobj3_[i]->getRotation().z<<"Pobj1pos PlocY7_3: "<<Pobj3_[i]->getCouleur().x<<"Pobj1pos PlocY8_3: "<<Pobj3_[i]->getCouleur().y<<"Pobj1pos PlocY9_3: "<<Pobj3_[i]->getCouleur().z<<"Pobj1pos PlocZ_3: "<<Pobj3_[i]->getLocation().z<<"Pobj1pos filename_19: "<<fileName3[8]<<std::endl; 
 	  }   loadedFile<<"----endPobj3-----"<<std::endl;
       
       		loadedFile<<"---beginPobj4-----"<<std::endl;
       	for(int i=0;i<Pobj4_.size();i++)
       	{
 		  
-     loadedFile<<"Pobj1pos PlocX_4: "<<Pobj4_[i]->getLocation().x<<"Pobj1pos PlocY1_4: "<<Pobj4_[i]->getLocation().y<<"Pobj1pos PlocY2_4: "<<Pobj4_[i]->getScale().y<<"Pobj1pos PlocY_4: "<<Pobj4_[i]->getScale().x<<"Pobj1pos PlocY3_4: "<<Pobj4_[i]->getScale().z<<"Pobj1pos PlocY5_4: "<<Pobj4_[i]->getRotation().y<<"Pobj1pos PlocY4_4: "<<Pobj4_[i]->getRotation().x<<"Pobj1pos PlocY6_4: "<<Pobj4_[i]->getRotation().z<<"Pobj1pos PlocY7_4: "<<Pobj4_[i]->getCouleur().x<<"Pobj1pos PlocY8_4: "<<Pobj4_[i]->getCouleur().y<<"Pobj1pos PlocY9_4: "<<Pobj4_[i]->getCouleur().z<<"Pobj1pos PlocZ_4: "<<Pobj4_[i]->getLocation().z<<"Pobj1pos filename_18: "<<fileName[7]<<std::endl; 
+     loadedFile<<"Pobj1pos PlocX_4: "<<Pobj4_[i]->getLocation().x<<"Pobj1pos PlocY1_4: "<<Pobj4_[i]->getLocation().y<<"Pobj1pos PlocY2_4: "<<Pobj4_[i]->getScale().y<<"Pobj1pos PlocY_4: "<<Pobj4_[i]->getScale().x<<"Pobj1pos PlocY3_4: "<<Pobj4_[i]->getScale().z<<"Pobj1pos PlocY5_4: "<<Pobj4_[i]->getRotation().y<<"Pobj1pos PlocY4_4: "<<Pobj4_[i]->getRotation().x<<"Pobj1pos PlocY6_4: "<<Pobj4_[i]->getRotation().z<<"Pobj1pos PlocY7_4: "<<Pobj4_[i]->getCouleur().x<<"Pobj1pos PlocY8_4: "<<Pobj4_[i]->getCouleur().y<<"Pobj1pos PlocY9_4: "<<Pobj4_[i]->getCouleur().z<<"Pobj1pos PlocZ_4: "<<Pobj4_[i]->getLocation().z<<"Pobj1pos filename_18: "<<fileName4[7]<<std::endl; 
     
 	  }
 		  loadedFile<<"----endPobj4-----"<<std::endl;
@@ -332,7 +393,7 @@ void datas::saveToFile()
       	for(int i=0;i<Pobj5_.size();i++)
       	{
 		  
-     loadedFile<<"Pobj1pos PlocX_5: "<<Pobj5_[i]->getLocation().x<<"Pobj1pos PlocY1_5: "<<Pobj5_[i]->getLocation().y<<"Pobj1pos PlocY2_5: "<<Pobj5_[i]->getScale().y<<"Pobj1pos PlocY_5: "<<Pobj5_[i]->getScale().x<<"Pobj1pos PlocY3_5: "<<Pobj5_[i]->getScale().z<<"Pobj1pos PlocY5_5: "<<Pobj5_[i]->getRotation().y<<"Pobj1pos PlocY4_5: "<<Pobj5_[i]->getRotation().x<<"Pobj1pos PlocY6_5: "<<Pobj5_[i]->getRotation().z<<"Pobj1pos PlocY7_5: "<<Pobj5_[i]->getCouleur().x<<"Pobj1pos PlocY8_5: "<<Pobj5_[i]->getCouleur().y<<"Pobj1pos PlocY9_5: "<<Pobj5_[i]->getCouleur().z<<"Pobj1pos PlocZ_5: "<<Pobj5_[i]->getLocation().z<<"Pobj1pos filename_17: "<<fileName[6]<<std::endl; 
+     loadedFile<<"Pobj1pos PlocX_5: "<<Pobj5_[i]->getLocation().x<<"Pobj1pos PlocY1_5: "<<Pobj5_[i]->getLocation().y<<"Pobj1pos PlocY2_5: "<<Pobj5_[i]->getScale().y<<"Pobj1pos PlocY_5: "<<Pobj5_[i]->getScale().x<<"Pobj1pos PlocY3_5: "<<Pobj5_[i]->getScale().z<<"Pobj1pos PlocY5_5: "<<Pobj5_[i]->getRotation().y<<"Pobj1pos PlocY4_5: "<<Pobj5_[i]->getRotation().x<<"Pobj1pos PlocY6_5: "<<Pobj5_[i]->getRotation().z<<"Pobj1pos PlocY7_5: "<<Pobj5_[i]->getCouleur().x<<"Pobj1pos PlocY8_5: "<<Pobj5_[i]->getCouleur().y<<"Pobj1pos PlocY9_5: "<<Pobj5_[i]->getCouleur().z<<"Pobj1pos PlocZ_5: "<<Pobj5_[i]->getLocation().z<<"Pobj1pos filename_17: "<<fileName5[6]<<std::endl; 
     
 	  }
 		  loadedFile<<"----endPobj5-----"<<std::endl;
@@ -341,7 +402,7 @@ void datas::saveToFile()
       	for(int i=0;i<Pobj6_.size();i++)
       	{
 		  
-     loadedFile<<"Pobj1pos PlocX_6: "<<Pobj6_[i]->getLocation().x<<"Pobj1pos PlocY1_6: "<<Pobj6_[i]->getLocation().y<<"Pobj1pos PlocY2_6: "<<Pobj6_[i]->getScale().y<<"Pobj1pos PlocY_6: "<<Pobj6_[i]->getScale().x<<"Pobj1pos PlocY3_6: "<<Pobj6_[i]->getScale().z<<"Pobj1pos PlocY5_6: "<<Pobj6_[i]->getRotation().y<<"Pobj1pos PlocY4_6: "<<Pobj6_[i]->getRotation().x<<"Pobj1pos PlocY6_6: "<<Pobj6_[i]->getRotation().z<<"Pobj1pos PlocY7_6: "<<Pobj6_[i]->getCouleur().x<<"Pobj1pos PlocY8_6: "<<Pobj6_[i]->getCouleur().y<<"Pobj1pos PlocY9_6: "<<Pobj6_[i]->getCouleur().z<<"Pobj1pos PlocZ_6: "<<Pobj6_[i]->getLocation().z<<"Pobj1pos filename_16: "<<fileName[5]<<std::endl; 
+     loadedFile<<"Pobj1pos PlocX_6: "<<Pobj6_[i]->getLocation().x<<"Pobj1pos PlocY1_6: "<<Pobj6_[i]->getLocation().y<<"Pobj1pos PlocY2_6: "<<Pobj6_[i]->getScale().y<<"Pobj1pos PlocY_6: "<<Pobj6_[i]->getScale().x<<"Pobj1pos PlocY3_6: "<<Pobj6_[i]->getScale().z<<"Pobj1pos PlocY5_6: "<<Pobj6_[i]->getRotation().y<<"Pobj1pos PlocY4_6: "<<Pobj6_[i]->getRotation().x<<"Pobj1pos PlocY6_6: "<<Pobj6_[i]->getRotation().z<<"Pobj1pos PlocY7_6: "<<Pobj6_[i]->getCouleur().x<<"Pobj1pos PlocY8_6: "<<Pobj6_[i]->getCouleur().y<<"Pobj1pos PlocY9_6: "<<Pobj6_[i]->getCouleur().z<<"Pobj1pos PlocZ_6: "<<Pobj6_[i]->getLocation().z<<"Pobj1pos filename_16: "<<fileName6[5]<<std::endl; 
     
 	  }
 		  loadedFile<<"----endPobj6-----"<<std::endl;
@@ -350,7 +411,7 @@ void datas::saveToFile()
       	for(int i=0;i<Pobj7_.size();i++)
       	{
 		  
-     loadedFile<<"Pobj1pos PlocX_7: "<<Pobj7_[i]->getLocation().x<<"Pobj1pos PlocY1_7: "<<Pobj7_[i]->getLocation().y<<"Pobj1pos PlocY2_7: "<<Pobj7_[i]->getScale().y<<"Pobj1pos PlocY_7: "<<Pobj7_[i]->getScale().x<<"Pobj1pos PlocY3_7: "<<Pobj7_[i]->getScale().z<<"Pobj1pos PlocY5_7: "<<Pobj7_[i]->getRotation().y<<"Pobj1pos PlocY4_7: "<<Pobj7_[i]->getRotation().x<<"Pobj1pos PlocY6_7: "<<Pobj7_[i]->getRotation().z<<"Pobj1pos PlocY7_7: "<<Pobj7_[i]->getCouleur().x<<"Pobj1pos PlocY8_7: "<<Pobj7_[i]->getCouleur().y<<"Pobj1pos PlocY9_7: "<<Pobj7_[i]->getCouleur().z<<"Pobj1pos PlocZ_7: "<<Pobj7_[i]->getLocation().z<<"Pobj1pos filename_15: "<<fileName[4]<<std::endl; 
+     loadedFile<<"Pobj1pos PlocX_7: "<<Pobj7_[i]->getLocation().x<<"Pobj1pos PlocY1_7: "<<Pobj7_[i]->getLocation().y<<"Pobj1pos PlocY2_7: "<<Pobj7_[i]->getScale().y<<"Pobj1pos PlocY_7: "<<Pobj7_[i]->getScale().x<<"Pobj1pos PlocY3_7: "<<Pobj7_[i]->getScale().z<<"Pobj1pos PlocY5_7: "<<Pobj7_[i]->getRotation().y<<"Pobj1pos PlocY4_7: "<<Pobj7_[i]->getRotation().x<<"Pobj1pos PlocY6_7: "<<Pobj7_[i]->getRotation().z<<"Pobj1pos PlocY7_7: "<<Pobj7_[i]->getCouleur().x<<"Pobj1pos PlocY8_7: "<<Pobj7_[i]->getCouleur().y<<"Pobj1pos PlocY9_7: "<<Pobj7_[i]->getCouleur().z<<"Pobj1pos PlocZ_7: "<<Pobj7_[i]->getLocation().z<<"Pobj1pos filename_15: "<<fileName7[4]<<std::endl; 
     
 	  }
 		  loadedFile<<"----endPobj7-----"<<std::endl;
@@ -359,7 +420,7 @@ void datas::saveToFile()
       	for(int i=0;i<Pobj8_.size();i++)
       	{
 		  
-     loadedFile<<"Pobj1pos PlocX_8: "<<Pobj8_[i]->getLocation().x<<"Pobj1pos PlocY1_8: "<<Pobj8_[i]->getLocation().y<<"Pobj1pos PlocY2_8: "<<Pobj8_[i]->getScale().y<<"Pobj1pos PlocY_8: "<<Pobj8_[i]->getScale().x<<"Pobj1pos PlocY3_8: "<<Pobj8_[i]->getScale().z<<"Pobj1pos PlocY5_8: "<<Pobj8_[i]->getRotation().y<<"Pobj1pos PlocY4_8: "<<Pobj8_[i]->getRotation().x<<"Pobj1pos PlocY6_8: "<<Pobj8_[i]->getRotation().z<<"Pobj1pos PlocY7_8: "<<Pobj8_[i]->getCouleur().x<<"Pobj1pos PlocY8_8: "<<Pobj8_[i]->getCouleur().y<<"Pobj1pos PlocY9_8: "<<Pobj8_[i]->getCouleur().z<<"Pobj1pos PlocZ_8: "<<Pobj8_[i]->getLocation().z<<"Pobj1pos filename_14: "<<fileName[3]<<std::endl; 
+     loadedFile<<"Pobj1pos PlocX_8: "<<Pobj8_[i]->getLocation().x<<"Pobj1pos PlocY1_8: "<<Pobj8_[i]->getLocation().y<<"Pobj1pos PlocY2_8: "<<Pobj8_[i]->getScale().y<<"Pobj1pos PlocY_8: "<<Pobj8_[i]->getScale().x<<"Pobj1pos PlocY3_8: "<<Pobj8_[i]->getScale().z<<"Pobj1pos PlocY5_8: "<<Pobj8_[i]->getRotation().y<<"Pobj1pos PlocY4_8: "<<Pobj8_[i]->getRotation().x<<"Pobj1pos PlocY6_8: "<<Pobj8_[i]->getRotation().z<<"Pobj1pos PlocY7_8: "<<Pobj8_[i]->getCouleur().x<<"Pobj1pos PlocY8_8: "<<Pobj8_[i]->getCouleur().y<<"Pobj1pos PlocY9_8: "<<Pobj8_[i]->getCouleur().z<<"Pobj1pos PlocZ_8: "<<Pobj8_[i]->getLocation().z<<"Pobj1pos filename_14: "<<fileName8[3]<<std::endl; 
     
 	  }
 		  loadedFile<<"----endPobj8-----"<<std::endl;
@@ -368,7 +429,7 @@ void datas::saveToFile()
       	for(int i=0;i<Pobj9_.size();i++)
       	{
 		  
-     loadedFile<<"Pobj1pos PlocX_9: "<<Pobj9_[i]->getLocation().x<<"Pobj1pos PlocY1_9: "<<Pobj9_[i]->getLocation().y<<"Pobj1pos PlocY2_9: "<<Pobj9_[i]->getScale().y<<"Pobj1pos PlocY_9: "<<Pobj9_[i]->getScale().x<<"Pobj1pos PlocY3_9: "<<Pobj9_[i]->getScale().z<<"Pobj1pos PlocY5_9: "<<Pobj9_[i]->getRotation().y<<"Pobj1pos PlocY4_9: "<<Pobj9_[i]->getRotation().x<<"Pobj1pos PlocY6_9: "<<Pobj9_[i]->getRotation().z<<"Pobj1pos PlocY7_9: "<<Pobj9_[i]->getCouleur().x<<"Pobj1pos PlocY8_9: "<<Pobj9_[i]->getCouleur().y<<"Pobj1pos PlocY9_9: "<<Pobj9_[i]->getCouleur().z<<"Pobj1pos PlocZ_9: "<<Pobj9_[i]->getLocation().z<<"Pobj1pos filename_13: "<<fileName[2]<<std::endl; 
+     loadedFile<<"Pobj1pos PlocX_9: "<<Pobj9_[i]->getLocation().x<<"Pobj1pos PlocY1_9: "<<Pobj9_[i]->getLocation().y<<"Pobj1pos PlocY2_9: "<<Pobj9_[i]->getScale().y<<"Pobj1pos PlocY_9: "<<Pobj9_[i]->getScale().x<<"Pobj1pos PlocY3_9: "<<Pobj9_[i]->getScale().z<<"Pobj1pos PlocY5_9: "<<Pobj9_[i]->getRotation().y<<"Pobj1pos PlocY4_9: "<<Pobj9_[i]->getRotation().x<<"Pobj1pos PlocY6_9: "<<Pobj9_[i]->getRotation().z<<"Pobj1pos PlocY7_9: "<<Pobj9_[i]->getCouleur().x<<"Pobj1pos PlocY8_9: "<<Pobj9_[i]->getCouleur().y<<"Pobj1pos PlocY9_9: "<<Pobj9_[i]->getCouleur().z<<"Pobj1pos PlocZ_9: "<<Pobj9_[i]->getLocation().z<<"Pobj1pos filename_13: "<<fileName9[2]<<std::endl; 
     
 	  }
 		  loadedFile<<"----endPobj9-----"<<std::endl;
@@ -377,7 +438,7 @@ void datas::saveToFile()
       	for(int i=0;i<Pobj10_.size();i++)
       	{
 		  
-     loadedFile<<"Pobj1pos PlocX_10: "<<Pobj10_[i]->getLocation().x<<"Pobj1pos PlocY1_10: "<<Pobj10_[i]->getLocation().y<<"Pobj1pos PlocY2_10: "<<Pobj10_[i]->getScale().y<<"Pobj1pos PlocY_10: "<<Pobj10_[i]->getScale().x<<"Pobj1pos PlocY3_10: "<<Pobj10_[i]->getScale().z<<"Pobj1pos PlocY5_10: "<<Pobj10_[i]->getRotation().y<<"Pobj1pos PlocY4_10: "<<Pobj10_[i]->getRotation().x<<"Pobj1pos PlocY6_10: "<<Pobj10_[i]->getRotation().z<<"Pobj1pos PlocY7_10: "<<Pobj10_[i]->getCouleur().x<<"Pobj1pos PlocY8_10: "<<Pobj10_[i]->getCouleur().y<<"Pobj1pos PlocY9_10: "<<Pobj10_[i]->getCouleur().z<<"Pobj1pos PlocZ_10: "<<Pobj10_[i]->getLocation().z<<"Pobj1pos filename_12: "<<fileName[1]<<std::endl; 
+     loadedFile<<"Pobj1pos PlocX_10: "<<Pobj10_[i]->getLocation().x<<"Pobj1pos PlocY1_10: "<<Pobj10_[i]->getLocation().y<<"Pobj1pos PlocY2_10: "<<Pobj10_[i]->getScale().y<<"Pobj1pos PlocY_10: "<<Pobj10_[i]->getScale().x<<"Pobj1pos PlocY3_10: "<<Pobj10_[i]->getScale().z<<"Pobj1pos PlocY5_10: "<<Pobj10_[i]->getRotation().y<<"Pobj1pos PlocY4_10: "<<Pobj10_[i]->getRotation().x<<"Pobj1pos PlocY6_10: "<<Pobj10_[i]->getRotation().z<<"Pobj1pos PlocY7_10: "<<Pobj10_[i]->getCouleur().x<<"Pobj1pos PlocY8_10: "<<Pobj10_[i]->getCouleur().y<<"Pobj1pos PlocY9_10: "<<Pobj10_[i]->getCouleur().z<<"Pobj1pos PlocZ_10: "<<Pobj10_[i]->getLocation().z<<"Pobj1pos filename_12: "<<fileName10[1]<<std::endl; 
     
 	  }
 		  loadedFile<<"----endPobj10-----"<<std::endl;
@@ -2083,8 +2144,8 @@ void datas::loadToFile(	)
 		  		 	if(previousWord=="filename_20:")
 		  		{
 		  				tempFileName10=word.c_str();
-		  				fileName[9]=tempFileName10;
-		  				unsigned int map=objLoad.load(fileName[9]);	
+		  				fileName2[9]=tempFileName10;
+		  				unsigned int map=objLoad.load(fileName2[9]);	
 		  		Pobj2.push_back(new Pobject("map",map,vector3d(tempPLocation2.x,tempPLocation2.y,tempPLocation2.z),vector3d(tempCol.x,tempCol.y,tempCol.z),vector3d(tempPRotation2.x,tempPRotation2.y,tempPRotation2.z),vector3d(tempPScale2.x,tempPScale2.y,tempPScale2.z)));	
 		  		
 		  		
@@ -2093,8 +2154,8 @@ void datas::loadToFile(	)
 		  			if(previousWord=="filename_19:")
 		  		{
 		  			tempFileName9=word.c_str();
-		  				fileName[8]=tempFileName9;
-		  				unsigned int map=objLoad.load(fileName[8]);	
+		  				fileName3[8]=tempFileName9;
+		  				unsigned int map=objLoad.load(fileName3[8]);	
 		  		Pobj3.push_back(new Pobject("map",map,vector3d(tempPLocation3.x,tempPLocation3.y,tempPLocation3.z),vector3d(tempCol.x,tempCol.y,tempCol.z),vector3d(tempPRotation3.x,tempPRotation3.y,tempPRotation3.z),vector3d(tempPScale3.x,tempPScale3.y,tempPScale3.z)));	
 		  		
 		  		
@@ -2102,8 +2163,8 @@ void datas::loadToFile(	)
 		  			if(previousWord=="filename_18:")
 		  		{
 		  			tempFileName8=word.c_str();
-		  				fileName[7]=tempFileName8;
-		  				unsigned int map=objLoad.load(fileName[7]);	
+		  				fileName4[7]=tempFileName8;
+		  				unsigned int map=objLoad.load(fileName4[7]);	
 		  		Pobj4.push_back(new Pobject("map",map,vector3d(tempPLocation4.x,tempPLocation4.y,tempPLocation4.z),vector3d(tempCol.x,tempCol.y,tempCol.z),vector3d(tempPRotation4.x,tempPRotation4.y,tempPRotation4.z),vector3d(tempPScale4.x,tempPScale4.y,tempPScale4.z)));	
 		  		
 		  		
@@ -2112,8 +2173,8 @@ void datas::loadToFile(	)
 		  			if(previousWord=="filename_17:")
 		  		{
 		  				tempFileName7=word.c_str();
-		  				fileName[6]=tempFileName7;
-		  				unsigned int map=objLoad.load(fileName[6]);	
+		  				fileName5[6]=tempFileName7;
+		  				unsigned int map=objLoad.load(fileName5[6]);	
 		  		Pobj5.push_back(new Pobject("map",map,vector3d(tempPLocation5.x,tempPLocation5.y,tempPLocation5.z),vector3d(tempCol.x,tempCol.y,tempCol.z),vector3d(tempPRotation5.x,tempPRotation5.y,tempPRotation5.z),vector3d(tempPScale5.x,tempPScale5.y,tempPScale5.z)));	
 		  		
 		  		
@@ -2122,8 +2183,8 @@ void datas::loadToFile(	)
 		  			if(previousWord=="filename_16:")
 		  		{
 		  			tempFileName6=word.c_str();
-		  				fileName[5]=tempFileName6;
-		  				unsigned int map=objLoad.load(fileName[5]);	
+		  				fileName6[5]=tempFileName6;
+		  				unsigned int map=objLoad.load(fileName6[5]);	
 		  		Pobj6.push_back(new Pobject("map",map,vector3d(tempPLocation6.x,tempPLocation6.y,tempPLocation6.z),vector3d(tempCol.x,tempCol.y,tempCol.z),vector3d(tempPRotation6.x,tempPRotation6.y,tempPRotation6.z),vector3d(tempPScale6.x,tempPScale6.y,tempPScale6.z)));	
 		  		
 		  		
@@ -2132,8 +2193,8 @@ void datas::loadToFile(	)
 		  			if(previousWord=="filename_15:")
 		  		{
 		  			tempFileName5=word.c_str();
-		  				fileName[4]=tempFileName5;
-		  				unsigned int map=objLoad.load(fileName[4]);	
+		  				fileName7[4]=tempFileName5;
+		  				unsigned int map=objLoad.load(fileName7[4]);	
 		  		Pobj7.push_back(new Pobject("map",map,vector3d(tempPLocation7.x,tempPLocation7.y,tempPLocation7.z),vector3d(tempCol.x,tempCol.y,tempCol.z),vector3d(tempPRotation7.x,tempPRotation7.y,tempPRotation7.z),vector3d(tempPScale7.x,tempPScale7.y,tempPScale7.z)));	
 		  		
 		  		
@@ -2142,8 +2203,8 @@ void datas::loadToFile(	)
 		  			if(previousWord=="filename_14:")
 		  		{
 		  				tempFileName4=word.c_str();
-		  				fileName[3]=tempFileName4;
-		  				unsigned int map=objLoad.load(fileName[3]);	
+		  				fileName8[3]=tempFileName4;
+		  				unsigned int map=objLoad.load(fileName8[3]);	
 		  		Pobj8.push_back(new Pobject("map",map,vector3d(tempPLocation8.x,tempPLocation8.y,tempPLocation8.z),vector3d(tempCol.x,tempCol.y,tempCol.z),vector3d(tempPRotation8.x,tempPRotation8.y,tempPRotation8.z),vector3d(tempPScale8.x,tempPScale8.y,tempPScale8.z)));	
 		  		
 		  		
@@ -2152,8 +2213,8 @@ void datas::loadToFile(	)
 		  			if(previousWord=="filename_13:")
 		  		{
 		  			tempFileName3=word.c_str();
-		  				fileName[2]=tempFileName3;
-		  				unsigned int map=objLoad.load(fileName[2]);	
+		  				fileName9[2]=tempFileName3;
+		  				unsigned int map=objLoad.load(fileName9[2]);	
 		  		Pobj9.push_back(new Pobject("map",map,vector3d(tempPLocation9.x,tempPLocation9.y,tempPLocation9.z),vector3d(tempCol.x,tempCol.y,tempCol.z),vector3d(tempPRotation9.x,tempPRotation9.y,tempPRotation9.z),vector3d(tempPScale9.x,tempPScale9.y,tempPScale9.z)));	
 		  		
 		  		
@@ -2162,8 +2223,8 @@ void datas::loadToFile(	)
 		  			if(previousWord=="filename_12:")
 		  		{
 		  			tempFileName2=word.c_str();
-		  				fileName[1]=tempFileName2;
-		  				unsigned int map=objLoad.load(fileName[1]);	
+		  				fileName10[1]=tempFileName2;
+		  				unsigned int map=objLoad.load(fileName10[1]);	
 		  		Pobj10.push_back(new Pobject("map",map,vector3d(tempPLocation10.x,tempPLocation10.y,tempPLocation10.z),vector3d(tempCol.x,tempCol.y,tempCol.z),vector3d(tempPRotation10.x,tempPRotation10.y,tempPRotation10.z),vector3d(tempPScale10.x,tempPScale10.y,tempPScale10.z)));	
 		  		
 		  		

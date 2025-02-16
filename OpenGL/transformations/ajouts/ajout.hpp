@@ -44,7 +44,9 @@ class ajout
 		std::vector<Pobject*>& Pobj9,
 		std::vector<Pobject*>& Pobj10,
 		std::vector<prefab*>& pref,
-		std::vector<prefabAnim*>& prefAnim,std::string fileName[15],objloader& objLoad
+		std::vector<prefabAnim*>& prefAnim,std::string fileName[15],std::string fileName2[15],std::string fileName3[15],
+		std::string fileName4[15],std::string fileName5[15],std::string fileName6[15],std::string fileName7[15],std::string fileName8[15],
+		std::string fileName9[15],std::string fileName10[15],objloader& objLoad
 		);
 		bool selectObject(vector3d objectReference,vector3d objectPointer,vector3d color,float dist);
 	  

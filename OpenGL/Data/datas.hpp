@@ -64,16 +64,16 @@ class datas
 	 void WriteequalObj3(std::vector<object*> obj);
 	 void WriteequalObj4(std::vector<object*> obj);
 	 void WriteequalObj5(std::vector<object*> obj);
-	 void WriteequalPObj(std::vector<Pobject*> obj);
-	 void WriteequalPObj2(std::vector<Pobject*> obj);
-	 void WriteequalPObj3(std::vector<Pobject*> obj);
-	 void WriteequalPObj4(std::vector<Pobject*> obj);
-	 void WriteequalPObj5(std::vector<Pobject*> obj);
-	 void WriteequalPObj6(std::vector<Pobject*> obj);
-	 void WriteequalPObj7(std::vector<Pobject*> obj);
-	 void WriteequalPObj8(std::vector<Pobject*> obj);
-	 void WriteequalPObj9(std::vector<Pobject*> obj);
-	 void WriteequalPObj10(std::vector<Pobject*> obj);
+	 void WriteequalPObj(std::vector<Pobject*> obj,std::string fileName_[15]);
+	 void WriteequalPObj2(std::vector<Pobject*> obj,std::string fileName_[15]);
+	 void WriteequalPObj3(std::vector<Pobject*> obj,std::string fileName_[15]);
+	 void WriteequalPObj4(std::vector<Pobject*> obj,std::string fileName_[15]);
+	 void WriteequalPObj5(std::vector<Pobject*> obj,std::string fileName_[15]);
+	 void WriteequalPObj6(std::vector<Pobject*> obj,std::string fileName_[15]);
+	 void WriteequalPObj7(std::vector<Pobject*> obj,std::string fileName_[15]);
+	 void WriteequalPObj8(std::vector<Pobject*> obj,std::string fileName_[15]);
+	 void WriteequalPObj9(std::vector<Pobject*> obj,std::string fileName_[15]);
+	 void WriteequalPObj10(std::vector<Pobject*> obj,std::string fileName_[15]);
 	 void WriteequalPrefab(std::vector<prefab*> obj);
 	 void WriteequalPrefabAnim(std::vector<prefabAnim*> obj);
 	 void WriteequalCam(camera* obj);
@@ -81,7 +81,16 @@ class datas
 	 void WriteequalCam3(std::vector<camera*> obj3);
 	 void WriteequalCam4(std::vector<camera*> obj4);
 	 void WriteequalSky(generateSkybox* obj);
-	 
+	 std::string ReadFileName();
+	 std::string ReadFileName2();
+	 std::string ReadFileName3();
+	 std::string ReadFileName4();
+	 std::string ReadFileName5();
+	 std::string ReadFileName6();
+	 std::string ReadFileName7();
+	 std::string ReadFileName8();
+	 std::string ReadFileName9();
+	 std::string ReadFileName10();
 	 
 	private:
 	    std::vector<object*> obj;
@@ -103,8 +112,17 @@ class datas
 		std::vector<prefabAnim*> prefAnim;
 		std::vector<camera*> cam;
 		generateSkybox* sky;
-		std::string fileName[15];	
-		objloader objLoad;
+		std::string fileName[15];
+		std::string fileName2[15];
+		 std::string fileName3[15];
+		 std::string fileName4[15];
+		 std::string fileName5[15];
+		 std::string fileName6[15];
+		 std::string fileName7[15];
+		 std::string fileName8[15];
+		 std::string fileName9[15];
+		 std::string fileName10[15];	
+		 objloader objLoad;
 
 		std::vector<object*> obj_;
 	    std::vector<object*> obj2_;	

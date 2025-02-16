@@ -39,7 +39,9 @@ void ajout::update(pointer* p,
 		std::vector<Pobject*>& Pobj9,
 		std::vector<Pobject*>& Pobj10,
 		std::vector<prefab*>& pref,
-		std::vector<prefabAnim*>& prefAnim,std::string fileName[15],objloader& objLoad
+		std::vector<prefabAnim*>& prefAnim,std::string fileName[15],std::string fileName2[15],std::string fileName3[15],
+		std::string fileName4[15],std::string fileName5[15],std::string fileName6[15],std::string fileName7[15],std::string fileName8[15],
+		std::string fileName9[15],std::string fileName10[15],objloader& objLoad
 		)
 {
 if(value==1)
@@ -65,56 +67,56 @@ Pobj.push_back(new Pobject("decor",map,vector3d(p->getLocation()),vector3d(0.5,0
 }
 if(value==12)
 {
-fileName[9]="data/decor/map2.obj";
-unsigned int map=objLoad.load(fileName[9]);		
+fileName2[9]="data/decor/map2.obj";
+unsigned int map=objLoad.load(fileName2[9]);		
 Pobj2.push_back(new Pobject("decor",map,vector3d(p->getLocation()),vector3d(0.5,0.8,0.8),vector3d(0,0,0),vector3d(5,5,5)));
 }
 if(value==13)
 {
-fileName[8]="data/decor/map3.obj";
-unsigned int map=objLoad.load(fileName[8]);		
+fileName3[8]="data/decor/map3.obj";
+unsigned int map=objLoad.load(fileName3[8]);		
 Pobj3.push_back(new Pobject("decor",map,vector3d(p->getLocation()),vector3d(0.5,0.8,0.8),vector3d(0,0,0),vector3d(5,5,5)));
 }
 if(value==14)
 {
-fileName[7]="data/decor/map4.obj";
-unsigned int map=objLoad.load(fileName[7]);		
+fileName4[7]="data/decor/map4.obj";
+unsigned int map=objLoad.load(fileName4[7]);		
 Pobj4.push_back(new Pobject("decor",map,vector3d(p->getLocation()),vector3d(0.5,0.8,0.8),vector3d(0,0,0),vector3d(5,5,5)));
 }
 if(value==15)
 {
-fileName[6]="data/decor/map5.obj";
-unsigned int map=objLoad.load(fileName[6]);		
+fileName5[6]="data/decor/map5.obj";
+unsigned int map=objLoad.load(fileName5[6]);		
 Pobj5.push_back(new Pobject("decor",map,vector3d(p->getLocation()),vector3d(0.5,0.8,0.8),vector3d(0,0,0),vector3d(5,5,5)));
 }
 if(value==16)
 {
-fileName[5]="data/decor/map6.obj";
-unsigned int map=objLoad.load(fileName[5]);	
+fileName6[5]="data/decor/map6.obj";
+unsigned int map=objLoad.load(fileName6[5]);	
 Pobj6.push_back(new Pobject("decor",map,vector3d(p->getLocation()),vector3d(0.5,0.8,0.8),vector3d(0,0,0),vector3d(5,5,5)));
 }
 if(value==17)
 {
-fileName[4]="data/decor/map7.obj";
-unsigned int map=objLoad.load(fileName[4]);	
+fileName7[4]="data/decor/map7.obj";
+unsigned int map=objLoad.load(fileName7[4]);	
 Pobj7.push_back(new Pobject("decor",map,vector3d(p->getLocation()),vector3d(0.5,0.8,0.8),vector3d(0,0,0),vector3d(5,5,5)));
 }
 if(value==18)
 {
-fileName[3]="data/decor/map8.obj";
-unsigned int map=objLoad.load(fileName[3]);		
+fileName8[3]="data/decor/map8.obj";
+unsigned int map=objLoad.load(fileName8[3]);		
 Pobj8.push_back(new Pobject("decor",map,vector3d(p->getLocation()),vector3d(0.5,0.8,0.8),vector3d(0,0,0),vector3d(5,5,5)));
 }
 if(value==19)
 {
-fileName[2]="data/decor/map9.obj";
-unsigned int map=objLoad.load(fileName[2]);		
+fileName9[2]="data/decor/map9.obj";
+unsigned int map=objLoad.load(fileName9[2]);		
 Pobj9.push_back(new Pobject("decor",map,vector3d(p->getLocation()),vector3d(0.5,0.8,0.8),vector3d(0,0,0),vector3d(5,5,5)));
 }
 if(value==20)
 {
-fileName[1]="data/decor/map10.obj";
-unsigned int map=objLoad.load(fileName[1]);		
+fileName10[1]="data/decor/map10.obj";
+unsigned int map=objLoad.load(fileName10[1]);		
 Pobj10.push_back(new Pobject("decor",map,vector3d(p->getLocation()),vector3d(0.5,0.8,0.8),vector3d(0,0,0),vector3d(5,5,5)));
 }
 if(value==5)

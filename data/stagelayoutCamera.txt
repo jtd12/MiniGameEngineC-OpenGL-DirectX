@@ -1,15 +1,15 @@
 Draw Object
 ---beginPobj12-----
-Pobj1pos PlocX_12: 38.4351Pobj1pos PlocY1_12: 4Pobj1pos PlocZ_12: -11.8085
-Pobj1pos PlocX_12: 38.4351Pobj1pos PlocY1_12: 4Pobj1pos PlocZ_12: -11.8085
-Pobj1pos PlocX_12: 38.4351Pobj1pos PlocY1_12: 4Pobj1pos PlocZ_12: -11.8085
-Pobj1pos PlocX_12: 38.4351Pobj1pos PlocY1_12: 4Pobj1pos PlocZ_12: -11.8085
+Pobj1pos PlocX_12: 142.03Pobj1pos PlocY1_12: 0Pobj1pos PlocZ_12: -100.341
+Pobj1pos PlocX_12: 142.03Pobj1pos PlocY1_12: 0Pobj1pos PlocZ_12: -100.341
+Pobj1pos PlocX_12: 142.03Pobj1pos PlocY1_12: 0Pobj1pos PlocZ_12: -100.341
+Pobj1pos PlocX_12: 142.03Pobj1pos PlocY1_12: 0Pobj1pos PlocZ_12: -100.341
 ----endPobj12-----
 ---beginPobj13-----
-Pobj1pos PlocX_13: 72Pobj1pos PlocY1_13: 20Pobj1pos PlocZ_13: 28
-Pobj1pos PlocX_13: 72Pobj1pos PlocY1_13: 20Pobj1pos PlocZ_13: 28
-Pobj1pos PlocX_13: 72Pobj1pos PlocY1_13: 20Pobj1pos PlocZ_13: 28
-Pobj1pos PlocX_13: 72Pobj1pos PlocY1_13: 20Pobj1pos PlocZ_13: 28
+Pobj1pos PlocX_13: 171Pobj1pos PlocY1_13: 18Pobj1pos PlocZ_13: -38
+Pobj1pos PlocX_13: 171Pobj1pos PlocY1_13: 18Pobj1pos PlocZ_13: -38
+Pobj1pos PlocX_13: 171Pobj1pos PlocY1_13: 18Pobj1pos PlocZ_13: -38
+Pobj1pos PlocX_13: 171Pobj1pos PlocY1_13: 18Pobj1pos PlocZ_13: -38
 ----endPobj13-----
 ---beginPobj14-----
 Pobj1pos PlocX_14: 21Pobj1pos PlocY1_14: 57Pobj1pos PlocZ_14: 5
@@ -18,9 +18,9 @@ Pobj1pos PlocX_14: 21Pobj1pos PlocY1_14: 57Pobj1pos PlocZ_14: 5
 Pobj1pos PlocX_14: 21Pobj1pos PlocY1_14: 57Pobj1pos PlocZ_14: 5
 ----endPobj14-----
 ---beginPobj15-----
-Pobj1pos PlocX_15: 6Pobj1pos PlocY1_15: 3Pobj1pos PlocZ_15: 19
-Pobj1pos PlocX_15: 6Pobj1pos PlocY1_15: 3Pobj1pos PlocZ_15: 19
-Pobj1pos PlocX_15: 6Pobj1pos PlocY1_15: 3Pobj1pos PlocZ_15: 19
-Pobj1pos PlocX_15: 6Pobj1pos PlocY1_15: 3Pobj1pos PlocZ_15: 19
+Pobj1pos PlocX_15: 6Pobj1pos PlocY1_15: 3Pobj1pos PlocZ_15: 3
+Pobj1pos PlocX_15: 6Pobj1pos PlocY1_15: 3Pobj1pos PlocZ_15: 3
+Pobj1pos PlocX_15: 6Pobj1pos PlocY1_15: 3Pobj1pos PlocZ_15: 3
+Pobj1pos PlocX_15: 6Pobj1pos PlocY1_15: 3Pobj1pos PlocZ_15: 3
 ----endPobj15-----
 End Object

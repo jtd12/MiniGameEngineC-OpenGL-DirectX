@@ -1,5 +1,5 @@
 #ifndef DEF_PROJECTIONS_HPP
-#define dEF_PROJECTION_HPP
+#define DEF_PROJECTIONS_HPP
 #include <windows.h>
 #include <gl/gl.h>
 #include<gl/glu.h>
@@ -27,6 +27,9 @@ class view
 		void reshape(int width,int height);
 		void reshapeOrtho(int width,int height);
 		void focal();
+		float getAngle();
+		float getNearPlane();
+		float getFarPlane();
 		generateSkybox* sky;
 		
 	private:

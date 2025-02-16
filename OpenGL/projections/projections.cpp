@@ -13,6 +13,19 @@ view::~view()
 	delete sky;
 }
 
+float view::getAngle()
+{
+	return angle;
+}
+
+float view::getNearPlane()
+{
+	return nearPlane;
+}
+float view::getFarPlane()
+{
+	return farPlane;
+}
 void view::focal()
 {
 	if(value==2200)

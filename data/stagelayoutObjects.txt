@@ -1,48 +1,62 @@
 Draw Object
 ---beginObj1-----
-Obj1pos locX: 16Obj1pos locY1: 0Obj1pos locY2: 5Obj1pos locY: 5Obj1pos locY3: 5Obj1pos locY5: 0Obj1pos locY4: 0Obj1pos locY6: 0Obj1pos locY7: 0.5Obj1pos locY8: 0.8Obj1pos locY9: 0.8obj1pos locZ: 11
-Obj1pos locX: 26Obj1pos locY1: 5Obj1pos locY2: 5Obj1pos locY: 14Obj1pos locY3: 5Obj1pos locY5: 62Obj1pos locY4: 0Obj1pos locY6: 0Obj1pos locY7: 1Obj1pos locY8: 0.8Obj1pos locY9: 0.8obj1pos locZ: 15
+Obj1pos locX: -31Obj1pos locY1: -23Obj1pos locY2: 5Obj1pos locY: 5Obj1pos locY3: 5Obj1pos locY5: 0Obj1pos locY4: 0Obj1pos locY6: 0Obj1pos locY7: 0.5Obj1pos locY8: 0.8Obj1pos locY9: 0.8obj1pos locZ: -8
 ----endObj1-----
 ---beginObj2-----
-Obj1pos locX_2: 0Obj1pos locY1_2: 0Obj1pos locY2_2: 5Obj1pos locY_2: 5Obj1pos locY3_2: 5Obj1pos locY5_2: 0Obj1pos locY4_2: 0Obj1pos locY6_2: 0Obj1pos locY7_2: 0.5Obj1pos locY8_2: 0.8Obj1pos locY9_2: 0.8Obj1pos locZ_2: 0
-Obj1pos locX_2: 0Obj1pos locY1_2: 0Obj1pos locY2_2: 5Obj1pos locY_2: 5Obj1pos locY3_2: 5Obj1pos locY5_2: 1Obj1pos locY4_2: 0Obj1pos locY6_2: 0Obj1pos locY7_2: 0.5Obj1pos locY8_2: 0.8Obj1pos locY9_2: 0.8Obj1pos locZ_2: 0
-Obj1pos locX_2: 8Obj1pos locY1_2: 0Obj1pos locY2_2: 5Obj1pos locY_2: 5Obj1pos locY3_2: 5Obj1pos locY5_2: 0Obj1pos locY4_2: 0Obj1pos locY6_2: 0Obj1pos locY7_2: 0.5Obj1pos locY8_2: 0.8Obj1pos locY9_2: 0.8Obj1pos locZ_2: 3
-Obj1pos locX_2: 8Obj1pos locY1_2: 0Obj1pos locY2_2: 5Obj1pos locY_2: 5Obj1pos locY3_2: 5Obj1pos locY5_2: 0Obj1pos locY4_2: 0Obj1pos locY6_2: 0Obj1pos locY7_2: 0.5Obj1pos locY8_2: 0.8Obj1pos locY9_2: 0.8Obj1pos locZ_2: 3
-Obj1pos locX_2: 38Obj1pos locY1_2: 5Obj1pos locY2_2: 5Obj1pos locY_2: 5Obj1pos locY3_2: 5Obj1pos locY5_2: 0Obj1pos locY4_2: 0Obj1pos locY6_2: 0Obj1pos locY7_2: 0.5Obj1pos locY8_2: 0.8Obj1pos locY9_2: 0.8Obj1pos locZ_2: 19
-Obj1pos locX_2: 64Obj1pos locY1_2: 4Obj1pos locY2_2: 5Obj1pos locY_2: 20Obj1pos locY3_2: 5Obj1pos locY5_2: 67Obj1pos locY4_2: 0Obj1pos locY6_2: 0Obj1pos locY7_2: 1.2Obj1pos locY8_2: 0.8Obj1pos locY9_2: 0.8Obj1pos locZ_2: 6
+Obj1pos locX_2: -75Obj1pos locY1_2: 0Obj1pos locY2_2: 5Obj1pos locY_2: 5Obj1pos locY3_2: 5Obj1pos locY5_2: 0Obj1pos locY4_2: 0Obj1pos locY6_2: 0Obj1pos locY7_2: 0.5Obj1pos locY8_2: 0.8Obj1pos locY9_2: 0.8Obj1pos locZ_2: -28
+Obj1pos locX_2: -75Obj1pos locY1_2: 0Obj1pos locY2_2: 5Obj1pos locY_2: 5Obj1pos locY3_2: 5Obj1pos locY5_2: 1Obj1pos locY4_2: 0Obj1pos locY6_2: 0Obj1pos locY7_2: 0.5Obj1pos locY8_2: 0.8Obj1pos locY9_2: 0.8Obj1pos locZ_2: -28
+Obj1pos locX_2: -24Obj1pos locY1_2: -51Obj1pos locY2_2: 5Obj1pos locY_2: 5Obj1pos locY3_2: 5Obj1pos locY5_2: 0Obj1pos locY4_2: 0Obj1pos locY6_2: 0Obj1pos locY7_2: 0.5Obj1pos locY8_2: 0.8Obj1pos locY9_2: 0.8Obj1pos locZ_2: 62
+Obj1pos locX_2: 188Obj1pos locY1_2: 50Obj1pos locY2_2: 5Obj1pos locY_2: 5Obj1pos locY3_2: 5Obj1pos locY5_2: 0Obj1pos locY4_2: 0Obj1pos locY6_2: 0Obj1pos locY7_2: 0.5Obj1pos locY8_2: 0.8Obj1pos locY9_2: 0.8Obj1pos locZ_2: 0
+Obj1pos locX_2: 41Obj1pos locY1_2: 20Obj1pos locY2_2: 5Obj1pos locY_2: 5Obj1pos locY3_2: 5Obj1pos locY5_2: 0Obj1pos locY4_2: 0Obj1pos locY6_2: 0Obj1pos locY7_2: 0.5Obj1pos locY8_2: 0.8Obj1pos locY9_2: 0.8Obj1pos locZ_2: -20
 ----endObj2-----
 ---beginObj3-----
-Obj1pos locX_3: 37Obj1pos locY1_3: 0Obj1pos locY2_3: 5Obj1pos locY_3: 5Obj1pos locY3_3: 5Obj1pos locY5_3: 52Obj1pos locY4_3: 0Obj1pos locY6_2: 0Obj1pos locY7_3: 0.5Obj1pos locY8_3: 0.8Obj1pos locY9_3: 0.8Obj1pos locZ_3: 32
 ----endObj3-----
 ---beginObj4-----
 ----endObj4-----
 ---beginVehicule-----
-Obj1pos locX_5: 38Obj1pos locY1_5: 4Obj1pos locY2_5: 1Obj1pos locY_5: 1Obj1pos locY3_5: 1Obj1pos locY5_5: 0Obj1pos locY4_5: 0Obj1pos locY6_5: 0Obj1pos locZ_5: 0
-Obj1pos locX_5: 31Obj1pos locY1_5: 4Obj1pos locY2_5: 1Obj1pos locY_5: 1Obj1pos locY3_5: 1Obj1pos locY5_5: 0Obj1pos locY4_5: 0Obj1pos locY6_5: 0Obj1pos locZ_5: 10
+Obj1pos locX_5: 69Obj1pos locY1_5: 4Obj1pos locY2_5: 1Obj1pos locY_5: 1Obj1pos locY3_5: 1Obj1pos locY5_5: 0Obj1pos locY4_5: 0Obj1pos locY6_5: 0Obj1pos locZ_5: -44
 ----endVehicule-----
 ---beginCharacter-----
 ----endCharacter-----
 ---beginObj5-----
 ----endObj5-----
 ---beginPobj1-----
+Pobj1pos PlocX: 3Pobj1pos PlocY1: 0Pobj1pos PlocY2: 5Pobj1pos PlocY: 5Pobj1pos PlocY3: 5Pobj1pos PlocY5: 0Pobj1pos PlocY4: 0Pobj1pos PlocY6: 0Pobj1pos PlocY7: 0Pobj1pos PlocY8: 0Pobj1pos PlocY9: 0Pobj1pos PlocZ: 43Pobj1pos filename_21: data/decor/map.obj
+Pobj1pos PlocX: -37Pobj1pos PlocY1: 0Pobj1pos PlocY2: 5Pobj1pos PlocY: 5Pobj1pos PlocY3: 5Pobj1pos PlocY5: 0Pobj1pos PlocY4: 0Pobj1pos PlocY6: 0Pobj1pos PlocY7: 0Pobj1pos PlocY8: 0Pobj1pos PlocY9: 0Pobj1pos PlocZ: -26Pobj1pos filename_21: data/decor/map.obj
+Pobj1pos PlocX: -103Pobj1pos PlocY1: 0Pobj1pos PlocY2: 5Pobj1pos PlocY: 5Pobj1pos PlocY3: 5Pobj1pos PlocY5: 0Pobj1pos PlocY4: 0Pobj1pos PlocY6: 0Pobj1pos PlocY7: 0Pobj1pos PlocY8: 0Pobj1pos PlocY9: 0Pobj1pos PlocZ: 59Pobj1pos filename_21: data/decor/map.obj
 ----endPobj1-----
 ---beginPobj2-----
+Pobj1pos PlocX_2: -90Pobj1pos PlocY1_2: 0Pobj1pos PlocY2_2: 5Pobj1pos PlocY_2: 5Pobj1pos PlocY3_2: 5Pobj1pos PlocY5_2: 0Pobj1pos PlocY4_2: 0Pobj1pos PlocY6_2: 0Pobj1pos PlocY7_2: 0Pobj1pos PlocY8_2: 0Pobj1pos PlocY9_2: 0Pobj1pos PlocZ_2: 47Pobj1pos filename_20: data/decor/map2.obj
+Pobj1pos PlocX_2: -43Pobj1pos PlocY1_2: 0Pobj1pos PlocY2_2: 5Pobj1pos PlocY_2: 5Pobj1pos PlocY3_2: 5Pobj1pos PlocY5_2: 0Pobj1pos PlocY4_2: 0Pobj1pos PlocY6_2: 0Pobj1pos PlocY7_2: 0Pobj1pos PlocY8_2: 0Pobj1pos PlocY9_2: 0Pobj1pos PlocZ_2: -5Pobj1pos filename_20: data/decor/map2.obj
+Pobj1pos PlocX_2: 41Pobj1pos PlocY1_2: 0Pobj1pos PlocY2_2: 5Pobj1pos PlocY_2: 5Pobj1pos PlocY3_2: 5Pobj1pos PlocY5_2: 0Pobj1pos PlocY4_2: 0Pobj1pos PlocY6_2: 0Pobj1pos PlocY7_2: 0Pobj1pos PlocY8_2: 0Pobj1pos PlocY9_2: 0Pobj1pos PlocZ_2: -82Pobj1pos filename_20: data/decor/map2.obj
 ----endPobj2-----
 ---beginPobj3-----
+Pobj1pos PlocX_3: 47Pobj1pos PlocY1_3: 0Pobj1pos PlocY2_3: 5Pobj1pos PlocY_3: 5Pobj1pos PlocY3_3: 5Pobj1pos PlocY5_3: 0Pobj1pos PlocY4_3: 0Pobj1pos PlocY6_2: 0Pobj1pos PlocY7_3: 0Pobj1pos PlocY8_3: 0Pobj1pos PlocY9_3: 0Pobj1pos PlocZ_3: -91Pobj1pos filename_19: data/decor/map3.obj
 ----endPobj3-----
 ---beginPobj4-----
+Pobj1pos PlocX_4: 59Pobj1pos PlocY1_4: 0Pobj1pos PlocY2_4: 5Pobj1pos PlocY_4: 5Pobj1pos PlocY3_4: 5Pobj1pos PlocY5_4: 0Pobj1pos PlocY4_4: 0Pobj1pos PlocY6_4: 0Pobj1pos PlocY7_4: 0Pobj1pos PlocY8_4: 0Pobj1pos PlocY9_4: 0Pobj1pos PlocZ_4: -107Pobj1pos filename_18: data/decor/map4.obj
 ----endPobj4-----
 ---beginPobj5-----
+Pobj1pos PlocX_5: -18Pobj1pos PlocY1_5: 0Pobj1pos PlocY2_5: 5Pobj1pos PlocY_5: 5Pobj1pos PlocY3_5: 5Pobj1pos PlocY5_5: 0Pobj1pos PlocY4_5: 0Pobj1pos PlocY6_5: 0Pobj1pos PlocY7_5: 0Pobj1pos PlocY8_5: 0Pobj1pos PlocY9_5: 0Pobj1pos PlocZ_5: -47Pobj1pos filename_17: data/decor/map5.obj
 ----endPobj5-----
 ---beginPobj6-----
+Pobj1pos PlocX_6: 24Pobj1pos PlocY1_6: 0Pobj1pos PlocY2_6: 5Pobj1pos PlocY_6: 5Pobj1pos PlocY3_6: 5Pobj1pos PlocY5_6: 0Pobj1pos PlocY4_6: 0Pobj1pos PlocY6_6: 0Pobj1pos PlocY7_6: 0Pobj1pos PlocY8_6: 0Pobj1pos PlocY9_6: 0Pobj1pos PlocZ_6: -54Pobj1pos filename_16: data/decor/map6.obj
 ----endPobj6-----
 ---beginPobj7-----
+Pobj1pos PlocX_7: 11Pobj1pos PlocY1_7: 0Pobj1pos PlocY2_7: 5Pobj1pos PlocY_7: 5Pobj1pos PlocY3_7: 5Pobj1pos PlocY5_7: 0Pobj1pos PlocY4_7: 0Pobj1pos PlocY6_7: 0Pobj1pos PlocY7_7: 0Pobj1pos PlocY8_7: 0Pobj1pos PlocY9_7: 0Pobj1pos PlocZ_7: -40Pobj1pos filename_15: data/decor/map7.obj
+Pobj1pos PlocX_7: 17Pobj1pos PlocY1_7: 0Pobj1pos PlocY2_7: 5Pobj1pos PlocY_7: 5Pobj1pos PlocY3_7: 5Pobj1pos PlocY5_7: 0Pobj1pos PlocY4_7: 0Pobj1pos PlocY6_7: 0Pobj1pos PlocY7_7: 0Pobj1pos PlocY8_7: 0Pobj1pos PlocY9_7: 0Pobj1pos PlocZ_7: -48Pobj1pos filename_15: data/decor/map7.obj
 ----endPobj7-----
 ---beginPobj8-----
+Pobj1pos PlocX_8: -44Pobj1pos PlocY1_8: 0Pobj1pos PlocY2_8: 5Pobj1pos PlocY_8: 5Pobj1pos PlocY3_8: 5Pobj1pos PlocY5_8: 0Pobj1pos PlocY4_8: 0Pobj1pos PlocY6_8: 0Pobj1pos PlocY7_8: 0Pobj1pos PlocY8_8: 0Pobj1pos PlocY9_8: 0Pobj1pos PlocZ_8: -93Pobj1pos filename_14: data/decor/map8.obj
+Pobj1pos PlocX_8: 31Pobj1pos PlocY1_8: 0Pobj1pos PlocY2_8: 5Pobj1pos PlocY_8: 5Pobj1pos PlocY3_8: 5Pobj1pos PlocY5_8: 0Pobj1pos PlocY4_8: 0Pobj1pos PlocY6_8: 0Pobj1pos PlocY7_8: 0Pobj1pos PlocY8_8: 0Pobj1pos PlocY9_8: 0Pobj1pos PlocZ_8: -67Pobj1pos filename_14: data/decor/map8.obj
 ----endPobj8-----
 ---beginPobj9-----
+Pobj1pos PlocX_9: 136Pobj1pos PlocY1_9: 0Pobj1pos PlocY2_9: 5Pobj1pos PlocY_9: 5Pobj1pos PlocY3_9: 5Pobj1pos PlocY5_9: 0Pobj1pos PlocY4_9: 0Pobj1pos PlocY6_9: 0Pobj1pos PlocY7_9: 0Pobj1pos PlocY8_9: 0Pobj1pos PlocY9_9: 0Pobj1pos PlocZ_9: -93Pobj1pos filename_13: data/decor/map9.obj
 ----endPobj9-----
 ---beginPobj10-----
+Pobj1pos PlocX_10: 110Pobj1pos PlocY1_10: 0Pobj1pos PlocY2_10: 5Pobj1pos PlocY_10: 5Pobj1pos PlocY3_10: 5Pobj1pos PlocY5_10: 0Pobj1pos PlocY4_10: 0Pobj1pos PlocY6_10: 0Pobj1pos PlocY7_10: 0Pobj1pos PlocY8_10: 0Pobj1pos PlocY9_10: 0Pobj1pos PlocZ_10: -104Pobj1pos filename_12: data/decor/map10.obj
+Pobj1pos PlocX_10: 129Pobj1pos PlocY1_10: 0Pobj1pos PlocY2_10: 5Pobj1pos PlocY_10: 5Pobj1pos PlocY3_10: 5Pobj1pos PlocY5_10: 87Pobj1pos PlocY4_10: 0Pobj1pos PlocY6_10: 0Pobj1pos PlocY7_10: 0Pobj1pos PlocY8_10: 0Pobj1pos PlocY9_10: 0Pobj1pos PlocZ_10: -84Pobj1pos filename_12: data/decor/map10.obj
+Pobj1pos PlocX_10: 142.03Pobj1pos PlocY1_10: 0Pobj1pos PlocY2_10: 5Pobj1pos PlocY_10: 5Pobj1pos PlocY3_10: 5Pobj1pos PlocY5_10: 0Pobj1pos PlocY4_10: 0Pobj1pos PlocY6_10: 0Pobj1pos PlocY7_10: 0.5Pobj1pos PlocY8_10: 0.8Pobj1pos PlocY9_10: 0.8Pobj1pos PlocZ_10: -100.341Pobj1pos filename_12: data/decor/map10.obj
 ----endPobj10-----
 ---beginColorScreen-----
 Pobj1pos PlocX_16: 0.2Pobj1pos PlocY1_16: 0.5Pobj1pos PlocZ_16: 0.5

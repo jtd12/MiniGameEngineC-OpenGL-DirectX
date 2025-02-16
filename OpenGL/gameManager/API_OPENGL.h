@@ -29,6 +29,7 @@
 #include"../projections/projections.hpp"
 #include"../Data/datas.hpp"
 #include"../skybox/skyboxGeneration.hpp"
+#include"../GUI/gui.hpp"
 #include"../gameMode/gameMode.hpp"
 #include"../lighting/light.hpp"
 #include"../transformations/supressions/supressions.hpp"
@@ -113,22 +114,32 @@ bool mi;
 	std::vector<Pobject*> Pobj10;		
 	 boundingbox * b;
 	 std::string fileName[15];
-int nTue;
-bool keyup,keydown,keyright,keyleft,cc;
-int keyw;
-std::vector<prefab*> pref;
-std::vector<prefabAnim*> prefAnim;
-std::vector<hud*> hud_;
-objloader objLoad;
-std::vector<unsigned int>anim;
-view* view_;
-datas* data_;
-vector3d col;
-gameMode* gameMode_;
-light* light_;
-supression* supp;
-transformation* trans;
-ajout* add;
+	 std::string fileName2[15];
+	 std::string fileName3[15];
+	 std::string fileName4[15];
+	 std::string fileName5[15];
+	 std::string fileName6[15];
+	 std::string fileName7[15];
+	 std::string fileName8[15];
+	 std::string fileName9[15];
+	 std::string fileName10[15];
+	int nTue;
+	bool keyup,keydown,keyright,keyleft,cc;
+	int keyw;
+	std::vector<prefab*> pref;
+	std::vector<prefabAnim*> prefAnim;
+	std::vector<hud*> hud_;
+	objloader objLoad;
+	std::vector<unsigned int>anim;
+	view* view_;
+	datas* data_;
+	vector3d col;
+	gameMode* gameMode_;
+	light* light_;
+	supression* supp;
+	transformation* trans;
+	ajout* add;
+	gui* gui_;
 
 };
 

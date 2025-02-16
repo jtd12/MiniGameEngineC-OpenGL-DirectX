@@ -19,6 +19,7 @@
 #include"../entities/prefabAnim.h"
 #include"../entities/camera.h"
 #include"../menu/menu.h"
+#include"../projections/projections.hpp"
 
 class gui
 {
@@ -27,8 +28,9 @@ class gui
 		  std::vector<object*>obj5_,std::vector<Pobject*> Pobj_,std::vector<Pobject*> Pobj2_,std::vector<Pobject*> Pobj3_,std::vector<Pobject*> Pobj4_,
 		  std::vector<Pobject*> Pobj5_,std::vector<Pobject*> Pobj6_,std::vector<Pobject*> Pobj7_,std::vector<Pobject*> Pobj8_,
 		  std::vector<Pobject*> Pobj9_,std::vector<Pobject*> Pobj10_,std::vector<prefab*> pref_,
-		  std::vector<prefabAnim*> prefAnim_,pointer* pp);
+		  std::vector<prefabAnim*> prefAnim_,pointer* pp,view* viewProject);
 		~gui();
+		void updateTxt();
 		void drawText(float x, float y, std::string text);
 		void enable2D(int width, int height);
 		void enable2D(int width, int height,std::vector<object*> obj_);
@@ -59,6 +61,11 @@ class gui
 		std::vector<prefab*> pref;
 		std::vector<prefabAnim*> prefAnim;
 		pointer* p;
+		float timer;
+		float angle;
+		float nearPlane;
+		float farPlane;
+		view* viewP;
 		
 };
 #endif

@@ -4,7 +4,7 @@ gui::gui(std::vector<object*>obj_,  std::vector<object*>obj2_,  std::vector<obje
 		  std::vector<object*>obj5_,std::vector<Pobject*> Pobj_,std::vector<Pobject*> Pobj2_,std::vector<Pobject*> Pobj3_,std::vector<Pobject*> Pobj4_,
 		  std::vector<Pobject*> Pobj5_,std::vector<Pobject*> Pobj6_,std::vector<Pobject*> Pobj7_,std::vector<Pobject*> Pobj8_,
 		  std::vector<Pobject*> Pobj9_,std::vector<Pobject*> Pobj10_,std::vector<prefab*> pref_,
-		  std::vector<prefabAnim*> prefAnim_,pointer* pp)
+		  std::vector<prefabAnim*> prefAnim_,pointer* pp,view* viewProject)
 {
 	p=pp;
 	obj=obj_;
@@ -24,12 +24,23 @@ gui::gui(std::vector<object*>obj_,  std::vector<object*>obj2_,  std::vector<obje
 	Pobj10=Pobj10_;
 	pref=pref_;
 	prefAnim=prefAnim_;
+	 timer=0.01f;
+     angle=45.0f;
+	 nearPlane=0.01f;
+	 farPlane=5000.0f;
+	 viewP=viewProject;
+	 
 	
 }
 
 gui::~gui()
 {
 	delete p;
+}
+
+void gui::updateTxt()
+{
+	timer+=0.01f;
 }
 
 bool gui::selectObject(vector3d objectReference,vector3d objectPointer,vector3d color,float dist_)
@@ -98,16 +109,15 @@ std::string gui::float2str(float x) {
 void gui::enable2D(int width, int height){
 
 	glPushMatrix();
-/*	glColor3d(1.0,1.0,1.0);
-  drawText(-1,-0.8,"time: "+float2str(time*0.05f)); 	
+	glColor3d(1.0,1.0,1.0);
+  drawText(-1,-0.8,"time: "+float2str(timer*0.05f)); 	
   drawText(-1,0.9,"translation: "); 
   drawText(-1,0.8,"rotation: "); 
   drawText(-1,0.7,"scale: "); 
   drawText(-1,0.6,"color: "); 
-  drawText(-1,-0.2,"Angle View: "+float2str(angle)); 
-  drawText(-1,-0.1,"Near Plane: "+float2str(nearPlane)); 
-  drawText(-1,0.0,"Far Plane: "+float2str(farPlane)); 
-  */
+  drawText(-1,-0.2,"Angle View: "+float2str(viewP->getAngle())); 
+  drawText(-1,-0.1,"Near Plane: "+float2str(viewP->getNearPlane())); 
+  drawText(-1,0.0,"Far Plane: "+float2str(viewP->getFarPlane())); 
 	glPopMatrix();
 }
 void gui::enable2D(int width, int height,std::vector<object*> obj_) {
