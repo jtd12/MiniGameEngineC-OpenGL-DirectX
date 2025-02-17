@@ -29,7 +29,7 @@ IncludeVersionInfo=0
 SupportXPThemes=0
 CompilerSet=3
 CompilerSettings=0000000100000000000000000
-UnitCount=75
+UnitCount=77
 
 [VersionInfo]
 Major=1
@@ -793,6 +793,26 @@ BuildCmd=
 FileName=OpenGL\transformations\ajouts\ajout.hpp
 CompileCpp=1
 Folder=OpenGL/transformations/ajouts
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit77]
+FileName=OpenGL\GUI\pathFile.cpp
+CompileCpp=1
+Folder=OpenGL/GUI
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit76]
+FileName=OpenGL\GUI\pathFile.hpp
+CompileCpp=1
+Folder=OpenGL/GUI
 Compile=1
 Link=1
 Priority=1000

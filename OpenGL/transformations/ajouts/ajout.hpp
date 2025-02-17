@@ -21,12 +21,15 @@
 #include"../../entities/proceduralObject.h"
 #include"../../skybox/skyboxGeneration.hpp"
 #include"../../entities/skybox.h"
+#include"../../GUI/pathFile.hpp"
 
 class ajout
 {
 	public:
 	  ajout();
 	  ~ajout();
+	  void saisirPath();
+	  void clavierTxt(char key,int x, int y);
 	  void update(pointer* p,
 		std::vector<object*>& obj,
 		std::vector<object*>& obj2,
@@ -51,6 +54,7 @@ class ajout
 		bool selectObject(vector3d objectReference,vector3d objectPointer,vector3d color,float dist);
 	  
 	private:
+		pathFile* pf;
 		
 };
 #endif

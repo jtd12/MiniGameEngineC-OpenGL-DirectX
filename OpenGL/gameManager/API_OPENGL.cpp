@@ -32,6 +32,7 @@ void APIOPENGL::initGL()
 	gui_=new gui(obj, obj2, obj3, obj4, obj5, Pobj, Pobj2, Pobj3,Pobj4, Pobj5, Pobj6, Pobj7, Pobj8, Pobj9,Pobj10, pref,prefAnim, p,view_);
 	trans=new transformation(p);
 	add=new ajout();
+	ef=new effects();
 	WIDTH=960;
  	HEIGHT=540;
 
@@ -50,6 +51,7 @@ APIOPENGL::~APIOPENGL()
 	delete supp;
 	delete light_;
 	delete gui_;
+	delete ef;
 /*	for(int i=0;i<sky.size();i++)
 	delete sky[i];*/
 for(int i=0;i<cam.size();i++)
@@ -57,6 +59,7 @@ for(int i=0;i<cam.size();i++)
 	
 
 }
+
 
 void APIOPENGL::loadToFile()
 {
@@ -410,7 +413,8 @@ void APIOPENGL::saveToFile()
 
 void APIOPENGL::update()
 {
-	
+
+
 trans->separateObjects(obj, 20, 7);
 trans->separateObjects(obj2, 20, 7);
 trans->separateObjects(obj3, 20, 7);
@@ -568,7 +572,7 @@ gluLookAt(1,1,10,1,0,0,0,1,0);
 //gluLookAt(camX,8,camZ,r.avancerX,3,r.avancerZ,0,1,0);// afichage de la camera à lecran qui suit le robot
 p->setLocation(cam[0]->getLocation());
 cam[3]->update();
-	//fog();
+ef->fog();
 
 
 
@@ -576,15 +580,16 @@ g->show();
 p->show(); 
 
 
-/* 
-  if(fog_)
-  glEnable(GL_FOG);
-	if(fog_==false)
+
+if(ef->getFog())
+glEnable(GL_FOG);
+
+if(ef->getFog()==false)
 {
 glDisable(GL_FOG);
 
 }
-*/
+
 
 
 
@@ -631,6 +636,11 @@ for(int i=0;i<Pobj10.size();i++)
 Pobj10[i]->drawObject();
 
 view_->sky->colorSky();
+
+if(value==21)
+ add->saisirPath();	
+ 
+ 
 light_->lighting();
 gui_->mode2D();
 //clavier();
@@ -656,22 +666,22 @@ glLoadIdentity();// initialisation de la matrice
 gluLookAt(12,18,1,12,0,0,0,1,0);
 	p->setLocation(cam[0]->getLocation());
 cam[2]->update();
-//	fog();
+ef->fog();
 
 
 g->show();
 p->show(); 
 
 
-/*
-  if(fog_)
-  glEnable(GL_FOG);
-	if(fog_==false)
+
+if(ef->getFog())
+glEnable(GL_FOG);
+if(ef->getFog()==false)
 {
 glDisable(GL_FOG);
 
 }
-*/
+
 
 for(int i=0;i<obj.size();i++)
 obj[i]->drawCube();
@@ -715,6 +725,9 @@ Pobj10[i]->drawObject();
 
 view_->sky->colorSky();
 
+if(value==21)
+ add->saisirPath();	
+ 
 gui_->mode2D();
   light_->lighting();
 //clavier();
@@ -741,21 +754,21 @@ gluLookAt(12,1,1,0,0,0,0,1,0);
 p->setLocation(cam[0]->getLocation());	
 cam[1]->update();
 
-//	fog();
+ef->fog();
 
 
 g->show();
 p->show(); 
 
-/*
-  if(fog_)
-  glEnable(GL_FOG);
-	if(fog_==false)
+
+if(ef->getFog())
+glEnable(GL_FOG);
+if(ef->getFog()==false)
 {
 glDisable(GL_FOG);
 
 }
-*/
+
 
 
 for(int i=0;i<obj.size();i++)
@@ -797,7 +810,8 @@ Pobj9[i]->drawObject();
 for(int i=0;i<Pobj10.size();i++)
 Pobj10[i]->drawObject();
 
-
+if(value==21)
+ add->saisirPath();	
 
 view_->sky->colorSky();
 
@@ -861,20 +875,17 @@ if(gameMode_->getLook2() && gameMode_->getLook()==false && prefAnim[i]->getWalk(
 
 
 g->show();
-p->show(); 
+p->show();
+ 
+ef->fog();
 
-
- /* 
-  if(fog_)
-  glEnable(GL_FOG);
- // 	fog();
-	if(fog_==false)
+if(ef->getFog())
+glEnable(GL_FOG);
+if(ef->getFog()==false)
 {
 glDisable(GL_FOG);
 
 }
-
-*/
 
 
 for(int i=0;i<obj.size();i++)
@@ -927,9 +938,12 @@ view_->sky->colorSky();
 
 light_->lighting();
 
-
+if(value==21)
+ add->saisirPath();	
+ 
 gui_->mode2D();
-	
+
+
 
 
 //clavier();
@@ -960,10 +974,14 @@ void APIOPENGL::reshapeOrtho(int width,int height)
 void APIOPENGL::controlKeyboard(char key,int x, int y)
 {
 
+if(value==21)
+ add->clavierTxt(key,x,  y);
+    
 switch (key)
 	{
 		case 32:
 	
+    
 		 if(gameMode_->getLanchGame()==false )
 		 {
 		    light_->moveLight();
@@ -972,39 +990,26 @@ switch (key)
 	        light_->lightDiffuse();
 	        
 		reshape(glutGet(GLUT_WINDOW_WIDTH), glutGet(GLUT_WINDOW_HEIGHT));
-	/*	if(value==280)
-		fog_=true;
-			if(value==290)
-		fog_=false;
+		
+		if(value==280)
+		 ef->setFog(true);
+		if(value==290)
+		 ef->setFog(false);
 		if(value==300)
-		 intensity_fog+=0.001f;
-		 if(intensity_fog>=1.0f)
-		 intensity_fog=1.0f;
-		 	if(value==310)
-		 intensity_fog-=0.001f;
-		 if(intensity_fog<=0.0f)
-		 intensity_fog=0.0f;
+		 ef->setIntensity(0.001f);
+		if(value==310)
+		 ef->setIntensity(-0.001f);
 		 
-		 	if(value==320)
-		start_density+=0.1f;
-		 if(start_density>=100.0f)
-		 start_density=100.0f;
-		 	if(value==330)
-		 start_density-=0.1f;
-		 if(start_density<=5.0f)
-		 start_density=5.0f;
-		 
-		 
-		 	if(value==340)
-		end_density+=0.1f;
-		 if(end_density>=5000.0f)
-		 end_density=5000.0f;
-		 	if(value==350)
-		 end_density-=0.1f;
-		 if(end_density<=50.0f)
-		end_density=50.0f;
-		*/
-		 
+		if(value==320)
+		  ef->startDensity(0.1f);
+		if(value==330)
+		 ef->startDensity(-0.1f);
+
+		if(value==340)
+		  ef->endDensity(0.1f);
+		if(value==350)
+		 ef->endDensity(-0.1f);
+
 		trans->scaleObject(obj);
 		trans->scaleObject(obj2);
 		trans->scaleObject(obj3);
@@ -1072,7 +1077,18 @@ switch (key)
 	 	trans->colorObject(obj4);
 	 	trans->colorObject(obj5);
 	 	
-	 	
+	
+	if(value==2110)
+	{
+		saveToFile();
+	}
+
+	if(value==920)
+	{
+		cam[0]->setLocation(vector3d(0,0,0));
+		supp->update(obj,obj2,obj3,obj4,obj5,Pobj,Pobj2,Pobj3,Pobj4,Pobj5,Pobj6,Pobj7,Pobj8,Pobj9,Pobj10,pref,prefAnim);	
+	}
+	
 	if(value==2100)
 		data_->loadToFile();
 
@@ -1107,12 +1123,10 @@ if(value==145)
 
 			break;
 			case 'f':
-			cam[0]->setLocation(vector3d(0,0,0));
-			supp->update(obj,obj2,obj3,obj4,obj5,Pobj,Pobj2,Pobj3,Pobj4,Pobj5,Pobj6,Pobj7,Pobj8,Pobj9,Pobj10,pref,prefAnim);
+		
 			 break;
 			case 'm':
-
-				saveToFile();
+				
 				break;
 			
 		//case 'b':

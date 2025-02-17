@@ -35,6 +35,7 @@
 #include"../transformations/supressions/supressions.hpp"
 #include"../transformations/transformations.hpp"
 #include"../transformations/ajouts/ajout.hpp"
+#include"../effects/effect.hpp"
 #include"../lighting/light.hpp"
 using namespace std;
 
@@ -140,6 +141,7 @@ bool mi;
 	transformation* trans;
 	ajout* add;
 	gui* gui_;
+	effects* ef;
 
 };
 

@@ -23,6 +23,12 @@ class effects
 		effects();
 		~effects();
 		void fog();
+		bool getFog();
+		void setFog(bool b);
+		void setIntensity(float f);
+		void startDensity(float f);
+		void endDensity(float f);
+
 		
 	private:
 		bool fog_;

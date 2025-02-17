@@ -21,9 +21,21 @@ Obj1pos locX_5: 69Obj1pos locY1_5: 4Obj1pos locY2_5: 1Obj1pos locY_5: 1Obj1pos l
 ---beginObj5-----
 ----endObj5-----
 ---beginPobj1-----
-Pobj1pos PlocX: 3Pobj1pos PlocY1: 0Pobj1pos PlocY2: 5Pobj1pos PlocY: 5Pobj1pos PlocY3: 5Pobj1pos PlocY5: 0Pobj1pos PlocY4: 0Pobj1pos PlocY6: 0Pobj1pos PlocY7: 0Pobj1pos PlocY8: 0Pobj1pos PlocY9: 0Pobj1pos PlocZ: 43Pobj1pos filename_21: data/decor/map.obj
-Pobj1pos PlocX: -37Pobj1pos PlocY1: 0Pobj1pos PlocY2: 5Pobj1pos PlocY: 5Pobj1pos PlocY3: 5Pobj1pos PlocY5: 0Pobj1pos PlocY4: 0Pobj1pos PlocY6: 0Pobj1pos PlocY7: 0Pobj1pos PlocY8: 0Pobj1pos PlocY9: 0Pobj1pos PlocZ: -26Pobj1pos filename_21: data/decor/map.obj
-Pobj1pos PlocX: -103Pobj1pos PlocY1: 0Pobj1pos PlocY2: 5Pobj1pos PlocY: 5Pobj1pos PlocY3: 5Pobj1pos PlocY5: 0Pobj1pos PlocY4: 0Pobj1pos PlocY6: 0Pobj1pos PlocY7: 0Pobj1pos PlocY8: 0Pobj1pos PlocY9: 0Pobj1pos PlocZ: 59Pobj1pos filename_21: data/decor/map.obj
+Pobj1pos PlocX: 3Pobj1pos PlocY1: 0Pobj1pos PlocY2: 5Pobj1pos PlocY: 5Pobj1pos PlocY3: 5Pobj1pos PlocY5: 0Pobj1pos PlocY4: 0Pobj1pos PlocY6: 0Pobj1pos PlocY7: 0Pobj1pos PlocY8: 0Pobj1pos PlocY9: 0Pobj1pos PlocZ: 43Pobj1pos filename_21: data/decor/map3.obj
+Pobj1pos PlocX: -37Pobj1pos PlocY1: 0Pobj1pos PlocY2: 5Pobj1pos PlocY: 5Pobj1pos PlocY3: 5Pobj1pos PlocY5: 0Pobj1pos PlocY4: 0Pobj1pos PlocY6: 0Pobj1pos PlocY7: 0Pobj1pos PlocY8: 0Pobj1pos PlocY9: 0Pobj1pos PlocZ: -26Pobj1pos filename_21: data/decor/map3.obj
+Pobj1pos PlocX: -103Pobj1pos PlocY1: 0Pobj1pos PlocY2: 5Pobj1pos PlocY: 5Pobj1pos PlocY3: 5Pobj1pos PlocY5: 0Pobj1pos PlocY4: 0Pobj1pos PlocY6: 0Pobj1pos PlocY7: 0Pobj1pos PlocY8: 0Pobj1pos PlocY9: 0Pobj1pos PlocZ: 59Pobj1pos filename_21: data/decor/map3.obj
+Pobj1pos PlocX: 15Pobj1pos PlocY1: 0Pobj1pos PlocY2: 5Pobj1pos PlocY: 5Pobj1pos PlocY3: 5Pobj1pos PlocY5: 0Pobj1pos PlocY4: 0Pobj1pos PlocY6: 0Pobj1pos PlocY7: 0Pobj1pos PlocY8: 0Pobj1pos PlocY9: 0Pobj1pos PlocZ: 14Pobj1pos filename_21: data/decor/map3.obj
+Pobj1pos PlocX: 43Pobj1pos PlocY1: 0Pobj1pos PlocY2: 5Pobj1pos PlocY: 5Pobj1pos PlocY3: 5Pobj1pos PlocY5: 0Pobj1pos PlocY4: 0Pobj1pos PlocY6: 0Pobj1pos PlocY7: 0Pobj1pos PlocY8: 0Pobj1pos PlocY9: 0Pobj1pos PlocZ: -4Pobj1pos filename_21: data/decor/map3.obj
+Pobj1pos PlocX: 31Pobj1pos PlocY1: 0Pobj1pos PlocY2: 5Pobj1pos PlocY: 5Pobj1pos PlocY3: 5Pobj1pos PlocY5: 0Pobj1pos PlocY4: 0Pobj1pos PlocY6: 0Pobj1pos PlocY7: 0Pobj1pos PlocY8: 0Pobj1pos PlocY9: 0Pobj1pos PlocZ: 11Pobj1pos filename_21: data/decor/map3.obj
+Pobj1pos PlocX: 83Pobj1pos PlocY1: 0Pobj1pos PlocY2: 5Pobj1pos PlocY: 5Pobj1pos PlocY3: 5Pobj1pos PlocY5: 0Pobj1pos PlocY4: 0Pobj1pos PlocY6: 0Pobj1pos PlocY7: 0Pobj1pos PlocY8: 0Pobj1pos PlocY9: 0Pobj1pos PlocZ: -60Pobj1pos filename_21: data/decor/map3.obj
+Pobj1pos PlocX: 101Pobj1pos PlocY1: 0Pobj1pos PlocY2: 5Pobj1pos PlocY: 5Pobj1pos PlocY3: 5Pobj1pos PlocY5: 0Pobj1pos PlocY4: 0Pobj1pos PlocY6: 0Pobj1pos PlocY7: 0Pobj1pos PlocY8: 0Pobj1pos PlocY9: 0Pobj1pos PlocZ: -42Pobj1pos filename_21: data/decor/map3.obj
+Pobj1pos PlocX: 103Pobj1pos PlocY1: 0Pobj1pos PlocY2: 5Pobj1pos PlocY: 5Pobj1pos PlocY3: 5Pobj1pos PlocY5: 0Pobj1pos PlocY4: 0Pobj1pos PlocY6: 0Pobj1pos PlocY7: 0Pobj1pos PlocY8: 0Pobj1pos PlocY9: 0Pobj1pos PlocZ: -17Pobj1pos filename_21: data/decor/map3.obj
+Pobj1pos PlocX: 121Pobj1pos PlocY1: 0Pobj1pos PlocY2: 5Pobj1pos PlocY: 5Pobj1pos PlocY3: 5Pobj1pos PlocY5: 0Pobj1pos PlocY4: 0Pobj1pos PlocY6: 0Pobj1pos PlocY7: 0Pobj1pos PlocY8: 0Pobj1pos PlocY9: 0Pobj1pos PlocZ: 6Pobj1pos filename_21: data/decor/map3.obj
+Pobj1pos PlocX: 91Pobj1pos PlocY1: 0Pobj1pos PlocY2: 5Pobj1pos PlocY: 5Pobj1pos PlocY3: 5Pobj1pos PlocY5: 0Pobj1pos PlocY4: 0Pobj1pos PlocY6: 0Pobj1pos PlocY7: 0Pobj1pos PlocY8: 0Pobj1pos PlocY9: 0Pobj1pos PlocZ: -53Pobj1pos filename_21: data/decor/map3.obj
+Pobj1pos PlocX: 170Pobj1pos PlocY1: 0Pobj1pos PlocY2: 5Pobj1pos PlocY: 5Pobj1pos PlocY3: 5Pobj1pos PlocY5: 0Pobj1pos PlocY4: 0Pobj1pos PlocY6: 0Pobj1pos PlocY7: 0Pobj1pos PlocY8: 0Pobj1pos PlocY9: 0Pobj1pos PlocZ: 45Pobj1pos filename_21: data/decor/map3.obj
+Pobj1pos PlocX: 159Pobj1pos PlocY1: 0Pobj1pos PlocY2: 5Pobj1pos PlocY: 5Pobj1pos PlocY3: 5Pobj1pos PlocY5: 0Pobj1pos PlocY4: 0Pobj1pos PlocY6: 0Pobj1pos PlocY7: 0Pobj1pos PlocY8: 0Pobj1pos PlocY9: 0Pobj1pos PlocZ: 32Pobj1pos filename_21: data/decor/map3.obj
+Pobj1pos PlocX: 215Pobj1pos PlocY1: 0Pobj1pos PlocY2: 5Pobj1pos PlocY: 5Pobj1pos PlocY3: 5Pobj1pos PlocY5: 0Pobj1pos PlocY4: 0Pobj1pos PlocY6: 0Pobj1pos PlocY7: 0Pobj1pos PlocY8: 0Pobj1pos PlocY9: 0Pobj1pos PlocZ: 59Pobj1pos filename_21: data/decor/map3.obj
+Pobj1pos PlocX: 186.609Pobj1pos PlocY1: 0Pobj1pos PlocY2: 5Pobj1pos PlocY: 5Pobj1pos PlocY3: 5Pobj1pos PlocY5: 0Pobj1pos PlocY4: 0Pobj1pos PlocY6: 0Pobj1pos PlocY7: 0.5Pobj1pos PlocY8: 0.8Pobj1pos PlocY9: 0.8Pobj1pos PlocZ: 13.6181Pobj1pos filename_21: data/decor/map3.obj
 ----endPobj1-----
 ---beginPobj2-----
 Pobj1pos PlocX_2: -90Pobj1pos PlocY1_2: 0Pobj1pos PlocY2_2: 5Pobj1pos PlocY_2: 5Pobj1pos PlocY3_2: 5Pobj1pos PlocY5_2: 0Pobj1pos PlocY4_2: 0Pobj1pos PlocY6_2: 0Pobj1pos PlocY7_2: 0Pobj1pos PlocY8_2: 0Pobj1pos PlocY9_2: 0Pobj1pos PlocZ_2: 47Pobj1pos filename_20: data/decor/map2.obj
@@ -56,7 +68,7 @@ Pobj1pos PlocX_9: 136Pobj1pos PlocY1_9: 0Pobj1pos PlocY2_9: 5Pobj1pos PlocY_9: 5
 ---beginPobj10-----
 Pobj1pos PlocX_10: 110Pobj1pos PlocY1_10: 0Pobj1pos PlocY2_10: 5Pobj1pos PlocY_10: 5Pobj1pos PlocY3_10: 5Pobj1pos PlocY5_10: 0Pobj1pos PlocY4_10: 0Pobj1pos PlocY6_10: 0Pobj1pos PlocY7_10: 0Pobj1pos PlocY8_10: 0Pobj1pos PlocY9_10: 0Pobj1pos PlocZ_10: -104Pobj1pos filename_12: data/decor/map10.obj
 Pobj1pos PlocX_10: 129Pobj1pos PlocY1_10: 0Pobj1pos PlocY2_10: 5Pobj1pos PlocY_10: 5Pobj1pos PlocY3_10: 5Pobj1pos PlocY5_10: 87Pobj1pos PlocY4_10: 0Pobj1pos PlocY6_10: 0Pobj1pos PlocY7_10: 0Pobj1pos PlocY8_10: 0Pobj1pos PlocY9_10: 0Pobj1pos PlocZ_10: -84Pobj1pos filename_12: data/decor/map10.obj
-Pobj1pos PlocX_10: 142.03Pobj1pos PlocY1_10: 0Pobj1pos PlocY2_10: 5Pobj1pos PlocY_10: 5Pobj1pos PlocY3_10: 5Pobj1pos PlocY5_10: 0Pobj1pos PlocY4_10: 0Pobj1pos PlocY6_10: 0Pobj1pos PlocY7_10: 0.5Pobj1pos PlocY8_10: 0.8Pobj1pos PlocY9_10: 0.8Pobj1pos PlocZ_10: -100.341Pobj1pos filename_12: data/decor/map10.obj
+Pobj1pos PlocX_10: 142Pobj1pos PlocY1_10: 0Pobj1pos PlocY2_10: 5Pobj1pos PlocY_10: 5Pobj1pos PlocY3_10: 5Pobj1pos PlocY5_10: 0Pobj1pos PlocY4_10: 0Pobj1pos PlocY6_10: 0Pobj1pos PlocY7_10: 0Pobj1pos PlocY8_10: 0Pobj1pos PlocY9_10: 0Pobj1pos PlocZ_10: -100Pobj1pos filename_12: data/decor/map10.obj
 ----endPobj10-----
 ---beginColorScreen-----
 Pobj1pos PlocX_16: 0.2Pobj1pos PlocY1_16: 0.5Pobj1pos PlocZ_16: 0.5

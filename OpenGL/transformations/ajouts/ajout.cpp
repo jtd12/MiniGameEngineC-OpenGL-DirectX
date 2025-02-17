@@ -2,12 +2,22 @@
 
 ajout::ajout()
 {
-	
+	pf=new pathFile();
 }
 
 ajout::~ajout()
 {
+	delete pf;
+}
+
+ void ajout::saisirPath()
+ {
+ 	pf->saisirPath();
+ }
+ 
+void ajout::clavierTxt(char key,int x, int y){
 	
+	   	pf->clavierTxt(key,x,y);
 }
 
 bool ajout::selectObject(vector3d objectReference,vector3d objectPointer,vector3d color,float dist_)
@@ -61,7 +71,7 @@ if(value==10)
 obj5.push_back(new object(vector3d(p->getLocation()),vector3d(0.5,0.8,0.8),vector3d(0,0,0),vector3d(5,5,5)));
 if(value==11)
 {
-fileName[10]="data/decor/map.obj";
+fileName[10]=pf->getPathName();
 unsigned int map=objLoad.load(fileName[10]);		
 Pobj.push_back(new Pobject("decor",map,vector3d(p->getLocation()),vector3d(0.5,0.8,0.8),vector3d(0,0,0),vector3d(5,5,5)));
 }

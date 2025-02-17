@@ -41,6 +41,11 @@ class gui
 		bool selectObject(vector3d objectReference,vector3d objectPointer,vector3d color,float dist_);
 		std::string vector2str(vector3d x);
 		std::string float2str(float x);
+		void saisirPath();
+		void clavierTxt(char key,int x, int y);
+		void afficherTexte(float x, float y, char *texte) ;
+		char* getPathName();
+		char pathName[260]; // Assez grand pour stocker "add" + texte
 		
 	private:
 	  std::vector<object*> obj;
@@ -66,6 +71,7 @@ class gui
 		float nearPlane;
 		float farPlane;
 		view* viewP;
+		int position;     // Position actuelle dans le texte
 		
 };
 #endif
