@@ -2,20 +2,14 @@
 
 gameMode::gameMode()
 {
-	keyup=false;
-	keydown=false;
-	keyright=false;
-	keyleft=false;
+
 	lanchGame=false;
+	physicsMode=false;
 	look=false;	
 	time=0.0f;
-	p=new pointer();
+
 }
 
-gameMode::gameMode(pointer* pp)
-{
-	p=pp;
-}
 
 float gameMode::getTime()
 {
@@ -48,52 +42,26 @@ bool gameMode::getLook3()
 }
 		
 		
-void gameMode::update()
+void gameMode::update(std::vector<object*> obj_,std::vector<prefab*> pref_,std::vector<prefabAnim*> prefAnim_,pointer* p,bool keyup, bool keydown,bool keyright, 
+bool keyleft)
 {
 
 time+=0.1f;
 	
-collision( obj2,obj);
-collision( obj2,obj2);
-collision( obj2,obj3);
-collision( obj2,obj4);
-collision( obj2,obj5);
 
-collision( obj,obj);
-collision( obj,obj2);
-collision( obj,obj3);
-collision( obj,obj4);
-collision( obj,obj5);
 
-collision( obj3,obj);
-collision( obj3,obj2);
-collision( obj3,obj3);
-collision( obj3,obj4);
-collision( obj3,obj5);
-
-collision( obj4,obj);
-collision( obj4,obj2);
-collision( obj4,obj3);
-collision( obj4,obj4);
-collision( obj4,obj5);
-
-collision( pref,obj);
-collision( pref,obj2);
-collision( pref,obj3);
-collision( pref,obj4);
-collision( pref,obj5);
-
-collision( prefAnim,obj);
-collision( prefAnim,obj2);
-collision( prefAnim,obj3);
-collision( prefAnim,obj4);
-collision( prefAnim,obj5);
-
-GameMode(obj,pref,prefAnim);
+GameMode(obj_,pref_,prefAnim_,p,keyup,keydown,keyright,keyleft);
+/*
 GameMode(obj2,pref,prefAnim);
 GameMode(obj3,pref,prefAnim);
 GameMode(obj4,pref,prefAnim);
 GameMode(obj5,pref,prefAnim);
+*/
+
+
+applyDynamic(obj_, pref_, prefAnim_,p);
+
+
 }
 
 void gameMode::selectCam()
@@ -121,15 +89,15 @@ if(value==9)
 
 }
 
-void gameMode:: reinitialiseGame(std::vector<object*> obj_,std::vector<prefab*> pref_,std::vector<prefabAnim*> prefAnim_)
+void gameMode:: reinitialiseGame(std::vector<object*> obj_,std::vector<prefab*> pref_,std::vector<prefabAnim*> prefAnim_,pointer* p)
 {
-	for(int i=0;i<pref.size();i++)
+	for(int i=0;i<pref_.size();i++)
 
 pref_[i]->setLocation(vector3d(pref_[i]->getLocation().x,p->getLocation().y,pref_[i]->getLocation().z));
 
-for(int i=0;i<prefAnim.size();i++)
+for(int i=0;i<prefAnim_.size();i++)
 
-prefAnim_[i]->setLocation(vector3d(prefAnim_[i]->getLocation().x,p->getLocation().y,prefAnim[i]->getLocation().z));
+prefAnim_[i]->setLocation(vector3d(prefAnim_[i]->getLocation().x,p->getLocation().y,prefAnim_[i]->getLocation().z));
 
 for(int i=0;i<obj_.size();i++)
 if(obj_[i]->getDynamic())
@@ -137,7 +105,8 @@ obj_[i]->setLocation(vector3d(obj_[i]->getLocation().x,p->getLocation().y,obj_[i
 
 
 }
-void gameMode::GameMode(std::vector<object*> obj_,std::vector<prefab*> pref_,std::vector<prefabAnim*> prefAnim_)
+void gameMode::GameMode(std::vector<object*> obj_,std::vector<prefab*> pref_,std::vector<prefabAnim*> prefAnim_,pointer* p,bool keyup, bool keydown,bool keyright, 
+bool keyleft)
 {
 	
 
@@ -149,10 +118,8 @@ if(lanchGame && value==1100)
 
 lanchGame=false;
 	physicsMode=false;
-reinitialiseGame(obj,pref,prefAnim);
-reinitialiseGame(obj2,pref,prefAnim);
-reinitialiseGame(obj3,pref,prefAnim);
-reinitialiseGame(obj4,pref,prefAnim);
+reinitialiseGame(obj_,pref_,prefAnim_,p);
+
 }
 
 if(lanchGame==false)
@@ -197,7 +164,7 @@ if(lanchGame && value==1300)
 }
 
 		for(int i=0;i<pref_.size();i++)
-if(lanchGame && pref_[i]->getDrive() && physicsMode)
+if(lanchGame &&  physicsMode)
 {
 	
 
@@ -218,7 +185,7 @@ if(lanchGame && pref_[i]->getDrive() && physicsMode)
 
 }
 		for(int i=0;i<obj_.size();i++)
-if(lanchGame && obj_[i]->getDrive() && physicsMode)
+if(lanchGame && physicsMode)
 {
 	
 
@@ -372,186 +339,75 @@ obj_[i]->setLocation(posobj);
 
 }
 
-void gameMode::applyDynamic()
+void gameMode::applyDynamic(std::vector<object*> obj_,std::vector<prefab*> pref_,std::vector<prefabAnim*> prefAnim_,pointer* p)
 {
 
-		for(int i=0;i<obj.size();i++)
-if(value==1600 && selectObject(obj[i]->getLocation(),p->getLocation(),vector3d(0.2,0.5,0.5),5))
+		for(int i=0;i<obj_.size();i++)
+if(value==1600 && selectObject(obj_[i]->getLocation(),p->getLocation(),vector3d(0.2,0.5,0.5),5))
 {
-	obj[i]->setDynamic(true);
+	obj_[i]->setDynamic(true);
 }
-		for(int i=0;i<obj.size();i++)
-if(value==1700 && selectObject(obj[i]->getLocation(),p->getLocation(),vector3d(0.2,0.5,0.5),5))
+		for(int i=0;i<obj_.size();i++)
+if(value==1700 && selectObject(obj_[i]->getLocation(),p->getLocation(),vector3d(0.2,0.5,0.5),5))
 {
-	obj[i]->setDynamic(false);
-}
-
-
-		for(int i=0;i<obj2.size();i++)
-if(value==1600 && selectObject(obj2[i]->getLocation(),p->getLocation(),vector3d(0.2,0.5,0.5),5))
-{
-	obj2[i]->setDynamic(true);
-}
-		for(int i=0;i<obj2.size();i++)
-if(value==1700 && selectObject(obj2[i]->getLocation(),p->getLocation(),vector3d(0.2,0.5,0.5),5))
-{
-	obj2[i]->setDynamic(false);
-}
-
-		for(int i=0;i<obj3.size();i++)
-if(value==1600 && selectObject(obj3[i]->getLocation(),p->getLocation(),vector3d(0.2,0.5,0.5),5))
-{
-	obj3[i]->setDynamic(true);
-}
-		for(int i=0;i<obj3.size();i++)
-if(value==1700 && selectObject(obj3[i]->getLocation(),p->getLocation(),vector3d(0.2,0.5,0.5),5))
-{
-	obj3[i]->setDynamic(false);
+	obj_[i]->setDynamic(false);
 }
 
 
-		for(int i=0;i<obj4.size();i++)
-if(value==1600 && selectObject(obj4[i]->getLocation(),p->getLocation(),vector3d(0.2,0.5,0.5),5))
+		for(int i=0;i<pref_.size();i++)
+if(value==1600 && selectObject(pref_[i]->getLocation(),p->getLocation(),vector3d(0.2,0.5,0.5),5))
 {
-	obj4[i]->setDynamic(true);
+	pref_[i]->setDynamic(true);
 }
-		for(int i=0;i<obj4.size();i++)
-if(value==1700 && selectObject(obj4[i]->getLocation(),p->getLocation(),vector3d(0.2,0.5,0.5),5))
+		for(int i=0;i<pref_.size();i++)
+if(value==1700 && selectObject(pref_[i]->getLocation(),p->getLocation(),vector3d(0.2,0.5,0.5),5))
 {
-	obj4[i]->setDynamic(false);
-}
-		for(int i=0;i<pref.size();i++)
-if(value==1600 && selectObject(pref[i]->getLocation(),p->getLocation(),vector3d(0.2,0.5,0.5),5))
-{
-	pref[i]->setDynamic(true);
-}
-		for(int i=0;i<pref.size();i++)
-if(value==1700 && selectObject(pref[i]->getLocation(),p->getLocation(),vector3d(0.2,0.5,0.5),5))
-{
-	pref[i]->setDynamic(false);
+	pref_[i]->setDynamic(false);
 }
 
-		for(int i=0;i<prefAnim.size();i++)
-if(value==1600 && selectObject(prefAnim[i]->getLocation(),p->getLocation(),vector3d(0.2,0.5,0.5),5))
+		for(int i=0;i<prefAnim_.size();i++)
+if(value==1600 && selectObject(prefAnim_[i]->getLocation(),p->getLocation(),vector3d(0.2,0.5,0.5),5))
 {
-	prefAnim[i]->setDynamic(true);
+	prefAnim_[i]->setDynamic(true);
 }
-		for(int i=0;i<prefAnim.size();i++)
-if(value==1700 && selectObject(prefAnim[i]->getLocation(),p->getLocation(),vector3d(0.2,0.5,0.5),5))
+		for(int i=0;i<prefAnim_.size();i++)
+if(value==1700 && selectObject(prefAnim_[i]->getLocation(),p->getLocation(),vector3d(0.2,0.5,0.5),5))
 {
-	prefAnim[i]->setDynamic(false);
-}
-
-	for(int i=0;i<obj.size();i++)
-if(value==1200 && selectObject(obj[i]->getLocation(),p->getLocation(),vector3d(0.2,0.5,0.5),5))
-{
-	obj[i]->setDrive(true);
-}
-	for(int i=0;i<obj2.size();i++)
-if(value==1200 && selectObject(obj2[i]->getLocation(),p->getLocation(),vector3d(0.2,0.5,0.5),5))
-{
-	obj2[i]->setDrive(true);
+	prefAnim_[i]->setDynamic(false);
 }
 
-	for(int i=0;i<obj3.size();i++)
-if(value==1200 && selectObject(obj3[i]->getLocation(),p->getLocation(),vector3d(0.2,0.5,0.5),5))
+	for(int i=0;i<obj_.size();i++)
+if(value==1200 && selectObject(obj_[i]->getLocation(),p->getLocation(),vector3d(0.2,0.5,0.5),5))
 {
-	obj3[i]->setDrive(true);
-}
-	for(int i=0;i<obj4.size();i++)
-if(value==1200 && selectObject(obj4[i]->getLocation(),p->getLocation(),vector3d(0.2,0.5,0.5),5))
-{
-	obj4[i]->setDrive(true);
-}
-
-	for(int i=0;i<obj.size();i++)
-if(value==1230 && selectObject(obj[i]->getLocation(),p->getLocation(),vector3d(0.2,0.5,0.5),5))
-{
-	obj[i]->setDrive(false);
-}
-	for(int i=0;i<obj2.size();i++)
-if(value==1230 && selectObject(obj2[i]->getLocation(),p->getLocation(),vector3d(0.2,0.5,0.5),5))
-{
-	obj2[i]->setDrive(false);
-}
-
-	for(int i=0;i<obj3.size();i++)
-if(value==1230 && selectObject(obj3[i]->getLocation(),p->getLocation(),vector3d(0.2,0.5,0.5),5))
-{
-	obj3[i]->setDrive(false);
-}
-	for(int i=0;i<obj4.size();i++)
-if(value==1230 && selectObject(obj4[i]->getLocation(),p->getLocation(),vector3d(0.2,0.5,0.5),5))
-{
-	obj4[i]->setDrive(false);
+	obj_[i]->setDrive(true);
 }
 
 
-	for(int i=0;i<obj.size();i++)
-if(value==1250 && selectObject(obj[i]->getLocation(),p->getLocation(),vector3d(0.2,0.5,0.5),5))
+	for(int i=0;i<obj_.size();i++)
+if(value==1250 && selectObject(obj_[i]->getLocation(),p->getLocation(),vector3d(0.2,0.5,0.5),5))
 {
-	obj[i]->setWalk(true);
-}
-	for(int i=0;i<obj2.size();i++)
-if(value==1250 && selectObject(obj2[i]->getLocation(),p->getLocation(),vector3d(0.2,0.5,0.5),5))
-{
-	obj2[i]->setWalk(true);
+	obj_[i]->setWalk(true);
 }
 
-	for(int i=0;i<obj3.size();i++)
-if(value==1250 && selectObject(obj3[i]->getLocation(),p->getLocation(),vector3d(0.2,0.5,0.5),5))
+	for(int i=0;i<pref_.size();i++)
+if(value==1200 && selectObject(pref_[i]->getLocation(),p->getLocation(),vector3d(0.2,0.5,0.5),5))
 {
-	obj3[i]->setWalk(true);
+	pref_[i]->setDrive(true);
 }
-	for(int i=0;i<obj4.size();i++)
-if(value==1250 && selectObject(obj4[i]->getLocation(),p->getLocation(),vector3d(0.2,0.5,0.5),5))
+	for(int i=0;i<pref_.size();i++)
+if(value==1230 && pref_[i]->getDrive() && selectObject(pref_[i]->getLocation(),p->getLocation(),vector3d(0.2,0.5,0.5),5))
 {
-	obj4[i]->setWalk(true);
+	pref_[i]->setDrive(false);
 }
-
-
-
-	for(int i=0;i<obj.size();i++)
-if(value==1280 && selectObject(obj[i]->getLocation(),p->getLocation(),vector3d(0.2,0.5,0.5),5))
+	for(int i=0;i<prefAnim_.size();i++)
+if(value==1250 && selectObject(prefAnim_[i]->getLocation(),p->getLocation(),vector3d(0.2,0.5,0.5),5))
 {
-	obj[i]->setWalk(false);
+	prefAnim_[i]->setWalk(true);
 }
-	for(int i=0;i<obj2.size();i++)
-if(value==1280 && selectObject(obj2[i]->getLocation(),p->getLocation(),vector3d(0.2,0.5,0.5),5))
+	for(int i=0;i<prefAnim_.size();i++)
+if(value==1280 && prefAnim_[i]->getWalk() && selectObject(prefAnim_[i]->getLocation(),p->getLocation(),vector3d(0.2,0.5,0.5),5))
 {
-	obj2[i]->setWalk(false);
-}
-
-	for(int i=0;i<obj3.size();i++)
-if(value==1280 && selectObject(obj3[i]->getLocation(),p->getLocation(),vector3d(0.2,0.5,0.5),5))
-{
-	obj3[i]->setWalk(false);
-}
-	for(int i=0;i<obj4.size();i++)
-if(value==1280 && selectObject(obj4[i]->getLocation(),p->getLocation(),vector3d(0.2,0.5,0.5),5))
-{
-	obj4[i]->setWalk(false);
-}
-
-	for(int i=0;i<pref.size();i++)
-if(value==1200 && selectObject(pref[i]->getLocation(),p->getLocation(),vector3d(0.2,0.5,0.5),5))
-{
-	pref[i]->setDrive(true);
-}
-	for(int i=0;i<pref.size();i++)
-if(value==1230 && pref[i]->getDrive() && selectObject(pref[i]->getLocation(),p->getLocation(),vector3d(0.2,0.5,0.5),5))
-{
-	pref[i]->setDrive(false);
-}
-	for(int i=0;i<prefAnim.size();i++)
-if(value==1250 && selectObject(prefAnim[i]->getLocation(),p->getLocation(),vector3d(0.2,0.5,0.5),5))
-{
-	prefAnim[i]->setWalk(true);
-}
-	for(int i=0;i<prefAnim.size();i++)
-if(value==1280 && prefAnim[i]->getWalk() && selectObject(prefAnim[i]->getLocation(),p->getLocation(),vector3d(0.2,0.5,0.5),5))
-{
-	prefAnim[i]->setWalk(false);
+	prefAnim_[i]->setWalk(false);
 }
 }
 

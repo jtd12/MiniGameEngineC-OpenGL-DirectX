@@ -554,7 +554,49 @@ trans->separateObjects(prefAnim, pref, 20, 7);
 
 gui_->updateTxt();
 
-gameMode_->update();
+gameMode_->update(obj,pref,prefAnim, p,keyup,keydown,keyright,keyleft);
+gameMode_->update(obj2,pref,prefAnim, p,keyup,keydown,keyright,keyleft);
+gameMode_->update(obj3,pref,prefAnim, p,keyup,keydown,keyright,keyleft);
+gameMode_->update(obj4,pref,prefAnim, p,keyup,keydown,keyright,keyleft);
+gameMode_->update(obj5,pref,prefAnim, p,keyup,keydown,keyright,keyleft);
+
+
+gameMode_->collision( obj2,obj);
+gameMode_->collision( obj2,obj2);
+gameMode_->collision( obj2,obj3);
+gameMode_->collision( obj2,obj4);
+gameMode_->collision( obj2,obj5);
+
+gameMode_->collision( obj,obj);
+gameMode_->collision( obj,obj2);
+gameMode_->collision( obj,obj3);
+gameMode_->collision( obj,obj4);
+gameMode_->collision( obj,obj5);
+
+gameMode_->collision( obj3,obj);
+gameMode_->collision( obj3,obj2);
+gameMode_->collision( obj3,obj3);
+gameMode_->collision( obj3,obj4);
+gameMode_->collision( obj3,obj5);
+
+gameMode_->collision( obj4,obj);
+gameMode_->collision( obj4,obj2);
+gameMode_->collision( obj4,obj3);
+gameMode_->collision( obj4,obj4);
+gameMode_->collision( obj4,obj5);
+
+gameMode_->collision( pref,obj);
+gameMode_->collision( pref,obj2);
+gameMode_->collision( pref,obj3);
+gameMode_->collision( pref,obj4);
+gameMode_->collision( pref,obj5);
+
+gameMode_->collision( prefAnim,obj);
+gameMode_->collision( prefAnim,obj2);
+gameMode_->collision( prefAnim,obj3);
+gameMode_->collision( prefAnim,obj4);
+gameMode_->collision( prefAnim,obj5);
+
 
 }
 
@@ -928,7 +970,6 @@ for(int i=0;i<pref.size();i++)
 pref[i]->show();
 for(int i=0;i<prefAnim.size();i++)
 prefAnim[i]->show();
-
 
 
 //selectCam();

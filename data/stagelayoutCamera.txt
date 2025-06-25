@@ -1,9 +1,9 @@
 Draw Object
 ---beginPobj12-----
-Pobj1pos PlocX_12: 199.426Pobj1pos PlocY1_12: 0Pobj1pos PlocZ_12: -2.23935
-Pobj1pos PlocX_12: 199.426Pobj1pos PlocY1_12: 0Pobj1pos PlocZ_12: -2.23935
-Pobj1pos PlocX_12: 199.426Pobj1pos PlocY1_12: 0Pobj1pos PlocZ_12: -2.23935
-Pobj1pos PlocX_12: 199.426Pobj1pos PlocY1_12: 0Pobj1pos PlocZ_12: -2.23935
+Pobj1pos PlocX_12: 173.027Pobj1pos PlocY1_12: -11.64Pobj1pos PlocZ_12: 38.7252
+Pobj1pos PlocX_12: 173.027Pobj1pos PlocY1_12: -11.64Pobj1pos PlocZ_12: 38.7252
+Pobj1pos PlocX_12: 173.027Pobj1pos PlocY1_12: -11.64Pobj1pos PlocZ_12: 38.7252
+Pobj1pos PlocX_12: 173.027Pobj1pos PlocY1_12: -11.64Pobj1pos PlocZ_12: 38.7252
 ----endPobj12-----
 ---beginPobj13-----
 Pobj1pos PlocX_13: 171Pobj1pos PlocY1_13: 18Pobj1pos PlocZ_13: -38

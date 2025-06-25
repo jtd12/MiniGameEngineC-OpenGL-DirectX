@@ -214,9 +214,11 @@ void prefab::movement(bool up,bool down, bool right, bool left)
 }
 void prefab::physics()
 {
+
 		vector3d newPos(loc);
 			      	newPos.y-=0.2f;
 			       setLocation(newPos);	
+			   
 }
 
 void prefab::setDynamic(bool b)

@@ -28,21 +28,22 @@ class gameMode
 {
 	public:
 		gameMode();
-		gameMode(pointer* pp);
 		~gameMode();
 		void selectCam();
-		void reinitialiseGame(std::vector<object*> obj_,std::vector<prefab*> pref_,std::vector<prefabAnim*> prefAnim_);
-		void GameMode(std::vector<object*> obj_,std::vector<prefab*> pref_,std::vector<prefabAnim*> prefAnim_);
+		void reinitialiseGame(std::vector<object*> obj_,std::vector<prefab*> pref_,std::vector<prefabAnim*> prefAnim_,pointer* p);
+		void GameMode(std::vector<object*> obj_,std::vector<prefab*> pref_,std::vector<prefabAnim*> prefAnim_,pointer* p,bool keyup, bool keydown,bool keyright, 
+bool keyleft);
 		void collision(std::vector<object*> obj_,std::vector<object*> obj2_);
 		void collision(std::vector<prefab*> obj_,std::vector<object*> obj2_);
 		void collision(std::vector<prefabAnim*> obj_,std::vector<object*> obj2_);
-		void update();
+		void update(std::vector<object*> obj_,std::vector<prefab*> pref_,std::vector<prefabAnim*> prefAnim_,pointer* p,bool keyup, bool keydown,bool keyright, 
+bool keyleft);
 		bool getLook();
 		bool getLook2();
 		bool getLook3();
 		bool getLanchGame();
 		bool selectObject(vector3d objectReference,vector3d objectPointer,vector3d color,float dist_);
-		void applyDynamic();
+		void applyDynamic(std::vector<object*> obj_,std::vector<prefab*> pref_,std::vector<prefabAnim*> prefAnim_,pointer* p);
 		bool startG();
 		float getTime();
 		
@@ -50,26 +51,8 @@ class gameMode
 		bool physicsMode;
 		int look,look2,look3;
 		bool lanchGame;
-		std::vector<object*> obj;
-	  std::vector<object*> obj2;
-	  std::vector<object*> obj3; 
-	  std::vector<object*> obj4; 
-	std::vector<object*> obj5; 
-	std::vector<Pobject*> Pobj; 
-	std::vector<Pobject*> Pobj2;
-	std::vector<Pobject*> Pobj3;
-	std::vector<Pobject*> Pobj4;
-	std::vector<Pobject*> Pobj5;
-	std::vector<Pobject*> Pobj6;
-	std::vector<Pobject*> Pobj7;
-	std::vector<Pobject*> Pobj8;
-	std::vector<Pobject*> Pobj9;
-	std::vector<Pobject*> Pobj10;
-	bool keyup,keydown,keyright,keyleft,cc;
+	bool cc;
 	int keyw;
-	std::vector<prefab*> pref;
-	std::vector<prefabAnim*> prefAnim;
-	pointer *p;
 	float time;
 };
 

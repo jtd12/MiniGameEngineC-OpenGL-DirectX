@@ -1,13 +1,10 @@
 Draw Object
 ---beginObj1-----
 Obj1pos locX: -31Obj1pos locY1: -23Obj1pos locY2: 5Obj1pos locY: 5Obj1pos locY3: 5Obj1pos locY5: 0Obj1pos locY4: 0Obj1pos locY6: 0Obj1pos locY7: 0.5Obj1pos locY8: 0.8Obj1pos locY9: 0.8obj1pos locZ: -8
+Obj1pos locX: 214.914Obj1pos locY1: -95.182Obj1pos locY2: 5Obj1pos locY: 5Obj1pos locY3: 5Obj1pos locY5: 0Obj1pos locY4: 0Obj1pos locY6: 0Obj1pos locY7: 0.5Obj1pos locY8: 0.8Obj1pos locY9: 0.8obj1pos locZ: -50.6328
+Obj1pos locX: 171.667Obj1pos locY1: -13.568Obj1pos locY2: 5Obj1pos locY: 57.75Obj1pos locY3: 81Obj1pos locY5: 0Obj1pos locY4: 0Obj1pos locY6: 0Obj1pos locY7: 0.5Obj1pos locY8: 0.8Obj1pos locY9: 0.8obj1pos locZ: 36.4686
 ----endObj1-----
 ---beginObj2-----
-Obj1pos locX_2: -75Obj1pos locY1_2: 0Obj1pos locY2_2: 5Obj1pos locY_2: 5Obj1pos locY3_2: 5Obj1pos locY5_2: 0Obj1pos locY4_2: 0Obj1pos locY6_2: 0Obj1pos locY7_2: 0.5Obj1pos locY8_2: 0.8Obj1pos locY9_2: 0.8Obj1pos locZ_2: -28
-Obj1pos locX_2: -75Obj1pos locY1_2: 0Obj1pos locY2_2: 5Obj1pos locY_2: 5Obj1pos locY3_2: 5Obj1pos locY5_2: 1Obj1pos locY4_2: 0Obj1pos locY6_2: 0Obj1pos locY7_2: 0.5Obj1pos locY8_2: 0.8Obj1pos locY9_2: 0.8Obj1pos locZ_2: -28
-Obj1pos locX_2: -24Obj1pos locY1_2: -51Obj1pos locY2_2: 5Obj1pos locY_2: 5Obj1pos locY3_2: 5Obj1pos locY5_2: 0Obj1pos locY4_2: 0Obj1pos locY6_2: 0Obj1pos locY7_2: 0.5Obj1pos locY8_2: 0.8Obj1pos locY9_2: 0.8Obj1pos locZ_2: 62
-Obj1pos locX_2: 188Obj1pos locY1_2: 50Obj1pos locY2_2: 5Obj1pos locY_2: 5Obj1pos locY3_2: 5Obj1pos locY5_2: 0Obj1pos locY4_2: 0Obj1pos locY6_2: 0Obj1pos locY7_2: 0.5Obj1pos locY8_2: 0.8Obj1pos locY9_2: 0.8Obj1pos locZ_2: 0
-Obj1pos locX_2: 41Obj1pos locY1_2: 20Obj1pos locY2_2: 5Obj1pos locY_2: 5Obj1pos locY3_2: 5Obj1pos locY5_2: 0Obj1pos locY4_2: 0Obj1pos locY6_2: 0Obj1pos locY7_2: 0.5Obj1pos locY8_2: 0.8Obj1pos locY9_2: 0.8Obj1pos locZ_2: -20
 ----endObj2-----
 ---beginObj3-----
 ----endObj3-----
@@ -15,6 +12,8 @@ Obj1pos locX_2: 41Obj1pos locY1_2: 20Obj1pos locY2_2: 5Obj1pos locY_2: 5Obj1pos 
 ----endObj4-----
 ---beginVehicule-----
 Obj1pos locX_5: 69Obj1pos locY1_5: 4Obj1pos locY2_5: 1Obj1pos locY_5: 1Obj1pos locY3_5: 1Obj1pos locY5_5: 0Obj1pos locY4_5: 0Obj1pos locY6_5: 0Obj1pos locZ_5: -44
+Obj1pos locX_5: 183.87Obj1pos locY1_5: 4.00803Obj1pos locY2_5: 1Obj1pos locY_5: 1Obj1pos locY3_5: 1Obj1pos locY5_5: 0Obj1pos locY4_5: 0Obj1pos locY6_5: 0Obj1pos locZ_5: 44.2375
+Obj1pos locX_5: 241.251Obj1pos locY1_5: 54.7941Obj1pos locY2_5: 1Obj1pos locY_5: 1Obj1pos locY3_5: 1Obj1pos locY5_5: 0Obj1pos locY4_5: 0Obj1pos locY6_5: 0Obj1pos locZ_5: -82.4298
 ----endVehicule-----
 ---beginCharacter-----
 ----endCharacter-----
@@ -35,7 +34,7 @@ Pobj1pos PlocX: 91Pobj1pos PlocY1: 0Pobj1pos PlocY2: 5Pobj1pos PlocY: 5Pobj1pos 
 Pobj1pos PlocX: 170Pobj1pos PlocY1: 0Pobj1pos PlocY2: 5Pobj1pos PlocY: 5Pobj1pos PlocY3: 5Pobj1pos PlocY5: 0Pobj1pos PlocY4: 0Pobj1pos PlocY6: 0Pobj1pos PlocY7: 0Pobj1pos PlocY8: 0Pobj1pos PlocY9: 0Pobj1pos PlocZ: 45Pobj1pos filename_21: data/decor/map3.obj
 Pobj1pos PlocX: 159Pobj1pos PlocY1: 0Pobj1pos PlocY2: 5Pobj1pos PlocY: 5Pobj1pos PlocY3: 5Pobj1pos PlocY5: 0Pobj1pos PlocY4: 0Pobj1pos PlocY6: 0Pobj1pos PlocY7: 0Pobj1pos PlocY8: 0Pobj1pos PlocY9: 0Pobj1pos PlocZ: 32Pobj1pos filename_21: data/decor/map3.obj
 Pobj1pos PlocX: 215Pobj1pos PlocY1: 0Pobj1pos PlocY2: 5Pobj1pos PlocY: 5Pobj1pos PlocY3: 5Pobj1pos PlocY5: 0Pobj1pos PlocY4: 0Pobj1pos PlocY6: 0Pobj1pos PlocY7: 0Pobj1pos PlocY8: 0Pobj1pos PlocY9: 0Pobj1pos PlocZ: 59Pobj1pos filename_21: data/decor/map3.obj
-Pobj1pos PlocX: 186.609Pobj1pos PlocY1: 0Pobj1pos PlocY2: 5Pobj1pos PlocY: 5Pobj1pos PlocY3: 5Pobj1pos PlocY5: 0Pobj1pos PlocY4: 0Pobj1pos PlocY6: 0Pobj1pos PlocY7: 0.5Pobj1pos PlocY8: 0.8Pobj1pos PlocY9: 0.8Pobj1pos PlocZ: 13.6181Pobj1pos filename_21: data/decor/map3.obj
+Pobj1pos PlocX: 186Pobj1pos PlocY1: 0Pobj1pos PlocY2: 5Pobj1pos PlocY: 5Pobj1pos PlocY3: 5Pobj1pos PlocY5: 0Pobj1pos PlocY4: 0Pobj1pos PlocY6: 0Pobj1pos PlocY7: 0Pobj1pos PlocY8: 0Pobj1pos PlocY9: 0Pobj1pos PlocZ: 13Pobj1pos filename_21: data/decor/map3.obj
 ----endPobj1-----
 ---beginPobj2-----
 Pobj1pos PlocX_2: -90Pobj1pos PlocY1_2: 0Pobj1pos PlocY2_2: 5Pobj1pos PlocY_2: 5Pobj1pos PlocY3_2: 5Pobj1pos PlocY5_2: 0Pobj1pos PlocY4_2: 0Pobj1pos PlocY6_2: 0Pobj1pos PlocY7_2: 0Pobj1pos PlocY8_2: 0Pobj1pos PlocY9_2: 0Pobj1pos PlocZ_2: 47Pobj1pos filename_20: data/decor/map2.obj
